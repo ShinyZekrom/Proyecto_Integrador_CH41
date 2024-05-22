@@ -16,4 +16,7 @@ Brindar una plataforma donde los viajeros puedan compartir sus experiencias y co
 * Rosas Álvarez Claudia Angélica
 * Trejo García Alan Alfredo
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5a17e008d1f50ee8a20d35a0ba246d570d019b16
