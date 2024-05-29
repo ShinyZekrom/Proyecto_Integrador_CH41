@@ -1,7 +1,60 @@
 body {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
 }
+/* Nav */
+.acercade{
+    float: right;
+    margin-left: 1px;
+    border: none;
+    float: right;
+    margin-right: 100px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(218, 216, 213);
 
+
+}
+.descrip{
+    text-align: justify;
+    margin-right: 100px;
+    float: left;
+}
+.aboutus{
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0;
+
+    
+
+}
+.navbar{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.navbar a{
+    text-decoration: none ;
+    color: #333;
+    font-family: "Wellfleet", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+.logo{
+    width: 80px;
+    margin-left: 20px;
+}
+.fotoperfil{
+    width: 50px;
+}
+
+
+
+/*Acerca de nosotros*/
+
+
+/* Desarrolladores*/
 .devtitle{
     font-family: "Lily Script One", system-ui;
     font-weight: 400;
@@ -44,14 +97,11 @@ body {
     border-radius: 20px;
 }
 
-
-
 footer {
     text-align: center;
     padding: 10px;
     background-color: #fff;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
