@@ -1,0 +1,501 @@
+.devcontainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cuadro{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+    width: 350px;
+    height: 450px;
+    text-align: center;
+    padding: 22px;
+    margin: 15px;
+    border-radius: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/*------------------------------------------------------MODAL LUIS -------------------------------------------------*/
+/* El contenedor de la ventana modal */
+.ventanadev1 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana */
+.ventanadev1_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal*/
+.infodev1 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+/* El botón de cierre (x) */
+.cerrardev1 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrardev1:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón*/
+#abrirVentanadev1{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+
+/*------------------------------------------------------MODAL CLAUDIA -------------------------------------------------*/
+/* El contenedor de la ventana modal */
+.ventanadev2 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana */
+.ventanadev2_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal*/
+.infodev2 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+/* El botón de cierre (x) */
+.cerrardev2 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrardev2:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón*/
+#abrirVentanadev2{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*------------------------------------------------------MODAL CAROL -------------------------------------------------*/
+/* El contenedor de la ventana modal */
+.ventanadev3 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana */
+.ventanadev3_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal*/
+.infodev3 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+/* El botón de cierre (x) */
+.cerrardev3 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrardev3:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón*/
+#abrirVentanadev3{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+/*------------------------------------------------------MODAL KAREN -------------------------------------------------*/
+/* El contenedor de la ventana modal */
+.ventanadev4 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana */
+.ventanadev4_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal*/
+.infodev4 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+/* El botón de cierre (x) */
+.cerrardev4 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrardev4:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón*/
+#abrirVentanadev4{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+
+/*------------------------------------------------------MODAL GABRIEL -------------------------------------------------*/
+/* El contenedor de la ventana modal */
+.ventanadev5 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana */
+.ventanadev5_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal*/
+.infodev5 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+/* El botón de cierre (x) */
+.cerrardev5 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrardev5:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón*/
+#abrirVentanadev5{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+
+/*------------------------------------------------------MODAL ALAN -------------------------------------------------*/
+/* El contenedor de la ventana modal */
+.ventanadev6 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana */
+.ventanadev6_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal*/
+.infodev6 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+/* El botón de cierre (x) */
+.cerrardev6 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrardev6:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón*/
+#abrirVentanadev6{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+
+/*------------------------------------------------------MODAL PEDRO -------------------------------------------------*/
+/* El contenedor de la ventana modal */
+.ventanadev7 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana */
+.ventanadev7_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal*/
+.infodev7 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+/* El botón de cierre (x) */
+.cerrardev7 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrardev7:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón*/
+#abrirVentanadev7{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+
+/*------------------------------------------------------MODAL GIBRAN -------------------------------------------------*/
+/* El contenedor de la ventana modal */
+.ventanadev8 {
+    display: flex; /* Muestra el elemento y convierte en un contenedor flex*/
+    position: fixed; /* Mantiene la ventana fija en la pantalla */
+    z-index: 1; /* Asegura que la ventana esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite desplazarse si el contenido es mayor que la ventana */
+   background-color: #111111bd;
+   opacity: 0;
+   pointer-events: none;
+}
+/*Estilo mostrar ventana */
+.ventanadev8_mostrar{
+    opacity: 1;
+    pointer-events: unset;
+}
+/* Contenido de la ventana modal*/
+.infodev8 {
+    background-color: #d4b5ebbb;
+    margin:auto; 
+    width: 90%; /* Puede ajustar el ancho de la ventana */
+    max-width: 600px;
+    max-height: 90%;
+    padding: 3em 2.5em;
+    gap: 1 em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    border: 1px solid  rgba(129, 99, 158, 0.712);
+    border-radius: 60px;
+    box-shadow: 0 0 10px #61baad;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
+/* El botón de cierre (x) */
+.cerrardev8 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.cerrardev8:hover{
+    color: #8a2bea;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Elimina el margen, relleno y borde del botón*/
+#abrirVentanadev8{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer; /*Cambia el cursor por la manita */
+}
+
