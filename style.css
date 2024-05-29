@@ -1,3 +1,8 @@
+body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+
+}
+
 
 .row{
     margin: 40px;
@@ -17,8 +22,8 @@
     width: 35%;
     align-content: center;
     padding: 15px;
-
     
+
 }
 
 .card-title{
@@ -26,15 +31,16 @@
     align-items: center;
     padding: 10px;
     font-family: Sofia;
-
+    
+    ;
    
 }
 .card{
     border-radius: 28px;
     align-content: center;
     background: transparent;
-    opacity: 0.8;
-    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 .card-text{
     color: black;
