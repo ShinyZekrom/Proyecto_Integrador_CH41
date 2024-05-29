@@ -1,7 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
-    
 }
 
 .devtitle{
@@ -11,10 +9,23 @@ body {
     text-align: left;
     border-radius: 28px;
     align-content: center;
+<<<<<<< HEAD
     background-color:whitesmoke;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
+=======
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  }
+
+  .nombredev{
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+>>>>>>> 0cafd85bd26507d40cf057b24c156c525d7a9165
 .desarrolladores {
     text-align: center;
     padding: 20px;
@@ -38,7 +49,10 @@ body {
 
 .img_desarrolladores {
     width: 100%;
+    border-radius: 20px;
 }
+
+
 
 footer {
     text-align: center;
