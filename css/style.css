@@ -12,19 +12,19 @@ body {
     border-radius: 50%;
     background: rgb(218, 216, 213);
 
-    
-    
+
 }
 .descrip{
     text-align: justify;
     margin-right: 100px;
     float: left;
-    
-    
 }
 .aboutus{
     display: flex;
     flex-direction: row;
+    padding: 50px 0;
+
+    
 
 }
 .navbar{
