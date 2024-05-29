@@ -1,0 +1,43 @@
+
+.row{
+    margin: 40px;
+}
+
+.tittle{
+    text-align: center;
+   /* font-family: */
+}
+
+.col{
+    width: 65%;
+    text-align: justify;
+    align-items: center;
+}
+.col-tittle{
+    width: 35%;
+    align-content: center;
+    padding: 15px;
+
+    
+}
+
+.card-title{
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    font-family: Sofia;
+
+   
+}
+.card{
+    border-radius: 28px;
+    align-content: center;
+    background: transparent;
+    opacity: 0.8;
+    color: black;
+}
+.card-text{
+    color: black;
+    font-family: Roboto;
+
+}
