@@ -39,8 +39,6 @@
     font-weight: 400;
     font-style: normal;
   }
-  
-=======
 body {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
 }
@@ -99,4 +97,3 @@ footer {
     width: 100%;
     bottom: 0;
 }
->>>>>>> 0cafd85bd26507d40cf057b24c156c525d7a9165
