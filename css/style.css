@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .acercade{
     float: right;
     margin-left: 1px;
@@ -39,63 +38,10 @@
     font-weight: 400;
     font-style: normal;
   }
-  
-=======
-body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+.logo{
+    width: 80px;
+    margin-left: 20px;
 }
-
-.devtitle{
-    font-family: "Lily Script One", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    text-align: left;
-    border-radius: 28px;
-    align-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-  }
-
-  .nombredev{
-    font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-.desarrolladores {
-    text-align: center;
-    padding: 20px;
-}
-
-.devcontainer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.developer {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 200px;
-}
-
-.img_desarrolladores {
-    width: 100%;
-    border-radius: 20px;
-}
-
-
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.fotoperfil{
+    width: 50px;
 }
