@@ -1,6 +1,7 @@
 body {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
 }
+
 /* Nav */
 .acercade{
     float: right;
@@ -16,34 +17,34 @@ body {
 }
 .descrip{
     text-align: justify;
-    margin-right: 100px;
-    float: left;
+    margin-right: 100px ;
+    margin-left: 20px;
+  
 }
 .aboutus{
     display: flex;
     flex-direction: row;
-    padding: 50px 0;
-
-    
+    padding: 20px 0;
+    margin-top: 20px;
 
 }
 .navbar{
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 20px;
+    flex-direction: row;
 }
 .navbar a{
     text-decoration: none ;
-    color: #333;
-    font-family: "Wellfleet", monospace;
-    font-weight: 400;
+    color: #333 ;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
     font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
   }
 .logo{
     width: 80px;
-    margin-left: 20px;
 }
 .fotoperfil{
     width: 50px;
@@ -56,7 +57,7 @@ body {
 
 /* Desarrolladores*/
 .devtitle{
-    font-family: "Lily Script One", system-ui;
+    font-family: "Patrick Hand", cursive;
     font-weight: 400;
     font-style: normal;
     text-align: left;
@@ -66,7 +67,7 @@ body {
   }
 
   .nombredev{
-    font-family: "Lobster", sans-serif;
+    font-family: "Patrick Hand", cursive;
     font-weight: 400;
     font-style: normal;
   }
@@ -95,6 +96,13 @@ body {
 .img_desarrolladores {
     width: 100%;
     border-radius: 20px;
+}
+
+.biografia{
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
 }
 
 footer {
@@ -128,11 +136,11 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
     grid-template-areas:
     "header"
     "navbar"
-    "division"
-    "sidebar"
     "articulo"
-    "footer" ;
-}
+    "sidebar"
+    "division"
+    "footer" 
+};
 /*Vista tablet*/
 @media(min-width:768px){
     .grid-container{
@@ -140,9 +148,9 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
         grid-template-areas:
         "header header"
         "navbar navbar"
-        "division division"
-        "sidebar sidebar"
         "articulo articulo"
+        "sidebar sidebar"
+        "division division"
         "footer footer";
     }
 }
@@ -150,10 +158,30 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
     .grid-container{
         grid-template-columns: auto;
         grid-template-areas:
-        "navbar navbar navbar"
         "header header header"
+        "navbar navbar navbar"
+        "articulo articulo articulo"
         "division division division"
-        "articulo articulo sidebar"
         "footer footer footer";
     }
 }
+
+@media(max-width:767px){
+    .row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .col-tittle{
+      width: 100%;
+    }
+    .col{
+      width: 100%;
+    }
+    .aboutus{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }

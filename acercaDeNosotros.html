@@ -10,58 +10,88 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Lobster&family=Wellfleet&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patrick+Hand&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patrick+Hand&display=swap');
+      
+      .row{
+      margin: 40px;
+      }
 
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+      .title{
+      text-align: center;
+      font-family: "Patrick Hand", cursive;
+      font-weight: 400;
+      font-style: normal;
+      }
 
-.row{
-margin: 40px;
-}
+      .col{
+      width: 65%;
+      text-align: justify;
+      align-items: center;
+      }
+      .col-tittle{
+      width: 35%;
+      align-content: center;
+      padding: 15px;
 
-.tittle{
-text-align: center;
-/* font-family: */
-}
+      }
 
-.col{
-width: 65%;
-text-align: justify;
-align-items: center;
-}
-.col-tittle{
-width: 35%;
-align-content: center;
-padding: 15px;
+      .card-title{
+      text-align: center;
+      align-items: center;
+      padding: 10px;
+      font-family: Sofia;
 
-}
+      }
+      .card{
+      border-radius: 28px;
+      align-content: center;
+      background: transparent;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-.card-title{
-text-align: center;
-align-items: center;
-padding: 10px;
-font-family: Sofia;
+      }
+      .card-text{
+      color: black;
+      font-family: "Comic Neue", cursive;
+      font-weight: 400;
+      font-style: normal;
 
-}
-.card{
-border-radius: 28px;
-align-content: center;
-background: transparent;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      @media(max-width:767px){
+        .row{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
 
-}
-.card-text{
-color: black;
-font-family: Roboto;
-
-}
+        .col-tittle{
+          width: 100%;
+        }
+        .col{
+          width: 100%;
+        }
+        .aboutus{
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: center;
+          width: 100% ;
+        }
+        .descrip{
+          margin: 20px;
+        }
+        .acercade{
+          margin: 20px;
+        }
+      }
 
 </style>
         
   </head>
-  <body class="grid-container">
+  <body>
 
 <!--Nav-->
     
@@ -93,11 +123,11 @@ font-family: Roboto;
     </nav>
 </header>
 <section class="aboutus" id="inicio">
-  <div style="justify-content: left;" class="descrip"><p>“Delhaz Travel conecta a viajeros de todo el mundo para compartir experiencias, consejos y aventuras. Descubre nuevos destinos, haz amigos y vive la emocion de viajar juntos.”</p></div>
+  <div class="descrip"><p>“Delhaz Travel conecta a viajeros de todo el mundo para compartir experiencias, consejos y aventuras. Descubre nuevos destinos, haz amigos y vive la emocion de viajar juntos.”</p></div>
   <div class="acercade"><h2>Acerca de Nosotros</h2></div>
   <img class="logo" src="./src/logo.png" alt="Imagen de Logo">
 </section>
-    
+<br>
     <!--Acerca de nosotros-->
 
     <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -332,7 +362,7 @@ font-family: Roboto;
                                     <p>
                                         <strong class=>Biografía:</strong>
                                         <br>
-                                        Le gusta mucho estar saludable para estar al día con los proyectos y adversidades que se presentan en la vida.
+                                        Desarrolador web especializado en Java Full Stack Jr me llamo la atención el ámbito del It ya que hay varias empresas y persona que necesitan ayuda en este ámbito ya sea para empezar su empresa o mejor un servicio, en mis tiempos libres me gusta ver video de como va avanzando la tecnología y así estar al actualizado en este ámbito del IT.
                                         <br>
                                         <span class="biografia">
                                             </span>
@@ -354,7 +384,7 @@ font-family: Roboto;
                                     <p>
                                         <strong class=>Biografía:</strong>
                                         <br>
-                                        Soy Fernando Gibran Díaz Páez  soy una persona divertida, carismática y me gusta pasar el tiempo jugando basquetbol y leyendo libros de terror, me gusta ir aprendiendo mas y mas acerca de las cosas que me gustan y me interesan.
+                                        soy Fernando Gibran Díaz Páez  desarrollador java full stock JR  me gusta la programación o lo referente a las tecnologías y siempre me ha gustado aprender más acerca de ello y me gusta buscar información y mantenerme actualizado soy una persona divertida, carismática y me gusta pasar el tiempo jugando basquetbol y leyendo libros de terror, me gusta ir aprendiendo mas y mas acerca de las cosas que me gustan y me interesan
                                         <br>
                                         <span class="biografia">
                                             </span>
@@ -365,7 +395,7 @@ font-family: Roboto;
                         </div>
             </div> 
         </section>
-        <footer class="footer">
+        <footer>
             <p>©2021-2024 DELHAZ TRAVEL. All Rights Reserved.</p>
         </footer>
     
