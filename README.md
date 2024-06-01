@@ -2,7 +2,7 @@
 # DELHAZ TRAVEL
 
 ## Resumen
-### Brindar una plataforma donde los viajeros puedan compartir sus experiencias y
+Brindar una plataforma donde los viajeros puedan compartir sus experiencias y
 conocimientos sobre destinos, lugares y actividades, conectarse con otros viajeros y obtener
 recomendaciones personalizadas para planificar sus viajes de manera efectiva y segura.
 Buscamos fomentar una comunidad inclusiva y colaborativa donde los miembros puedan
