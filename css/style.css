@@ -1,9 +1,83 @@
+<<<<<<< HEAD
+=======
+body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+}
+/* Nav */
+>>>>>>> a0dc6182e8dc1d86cab63cea3ec42d55439ef877
 .acercade{
     float: right;
     margin-left: 1px;
     border: none;
     float: right;
     margin-right: 100px;
+<<<<<<< HEAD
+=======
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(218, 216, 213);
+
+
+}
+.descrip{
+    text-align: justify;
+    margin-right: 100px;
+    float: left;
+}
+.aboutus{
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0;
+
+    
+
+}
+.navbar{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.navbar a{
+    text-decoration: none ;
+    color: #333;
+    font-family: "Wellfleet", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+.logo{
+    width: 80px;
+    margin-left: 20px;
+}
+.fotoperfil{
+    width: 50px;
+}
+
+
+
+/*Acerca de nosotros*/
+
+
+/* Desarrolladores*/
+.devtitle{
+    font-family: "Lily Script One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    border-radius: 28px;
+    align-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nombredev{
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.desarrolladores {
+>>>>>>> a0dc6182e8dc1d86cab63cea3ec42d55439ef877
     text-align: center;
     border-radius: 50%;
     background: rgb(218, 216, 213);
@@ -42,6 +116,70 @@
     width: 80px;
     margin-left: 20px;
 }
+<<<<<<< HEAD
 .fotoperfil{
     width: 50px;
 }
+=======
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    bottom: 0;
+}
+/*-----RESPONSIVIDAD------*/
+.grid-container>*{
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+}
+.desarrolladores{
+    grid-area: division;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #ffffff;
+}
+/*Vista para el telefono*/
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "header"
+    "navbar"
+    "division"
+    "sidebar"
+    "articulo"
+    "footer" ;
+}
+/*Vista tablet*/
+@media(min-width:768px){
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header header"
+        "navbar navbar"
+        "division division"
+        "sidebar sidebar"
+        "articulo articulo"
+        "footer footer";
+    }
+}
+@media(min-width:900px){
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-areas:
+        "navbar navbar navbar"
+        "header header header"
+        "division division division"
+        "articulo articulo sidebar"
+        "footer footer footer";
+    }
+}
+>>>>>>> a0dc6182e8dc1d86cab63cea3ec42d55439ef877
