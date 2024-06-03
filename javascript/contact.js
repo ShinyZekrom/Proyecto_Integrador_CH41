@@ -13,7 +13,7 @@
       const messageError = document.getElementById("messageError");
 
       // Inicializar bandera de validación
-      let valid = true;
+      let Isvalid = true;
 
       // Resetear mensajes de error
       nameError.textContent = "";
@@ -25,31 +25,31 @@
       const namePattern = /^[a-zA-Z\s]+$/;
       if (!namePattern.test(name)) {
         nameError.textContent = "El nombre debe contener solo letras y espacios.";
-        valid = false;
+        Isvalid = false;
       }
 
       // Validar teléfono (solo números)
       const phonePattern = /^[0-9]{10}$/; //{10} significa que solo pueden ser 10 números
       if (!phonePattern.test(phone)) {
         phoneError.textContent = "Ingresa tu número a 10 dígitos.";
-        valid = false;
+        Isvalid = false;
       }
 
       // Validar correo electrónico
       const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
       if (!emailPattern.test(email)) {
         emailError.textContent = "Ingresa un correo electrónico válido.";
-        valid = false;
+        Isvalid = false;
       }
 
       // Validar mensaje
       if (message.trim() === "") {
         messageError.textContent = "El mensaje no puede estar vacío.";
-        valid = false;
+        Isvalid = false;
       }
 
       // Retornar el estado de validación
-      return valid;
+      return Isvalid;
     }
 /* 
     function validateAndSendEmail(event) {
