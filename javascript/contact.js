@@ -79,7 +79,7 @@
           from_email: email,
           message: message
         }).then(function(response) {
-          alert("Mensaje enviado exitosamente.") 
+          alert("Mensaje enviado") 
           limpiarFormulario();
         });
       } else {console.log("datos invalidos")};

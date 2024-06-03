@@ -25,7 +25,7 @@
           <li class="nav-item"><a class="nav-link" href="#acerca">Acerca de Nosotros</a></li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input id="navsearcher" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         <div class="dropdown">
@@ -51,17 +51,17 @@
           <form id="contactForm">
             <div class="mb-3">
               <label for="name" class="form-label">Nombre(s)</label>
-              <input type="text" class="form-control" id="name" placeholder="Nombre y apellido">
+              <input type="text" class="form-control" id="name" placeholder="Nombre y apellido" autocomplete="on">
               <div id="nameError" class="form-text text-danger"></div>
             </div>
             <div class="mb-3">
               <label for="phone" class="form-label">Teléfono</label>
-              <input type="text" class="form-control" id="phone" placeholder="Número de Celular">
+              <input type="text" class="form-control" id="phone" placeholder="Número de Celular" autocomplete="on">
               <div id="phoneError" class="form-text text-danger"></div>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Correo Electrónico</label>
-              <input type="email" class="form-control" id="email" placeholder="abc@example.com">
+              <input type="email" class="form-control" id="email" placeholder="abc@example.com" autocomplete="on">
               <div id="emailError" class="form-text text-danger"></div>
             </div>
             <div class="mb-3">
