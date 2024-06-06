@@ -17,7 +17,6 @@
     border-radius: 60px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-<<<<<<< HEAD
 
 /*------------------------------------------------------MODAL LUIS -------------------------------------------------*/
 /* El contenedor de la ventana modal */
@@ -79,8 +78,6 @@
     margin: 0;
     cursor: pointer; /*Cambia el cursor por la manita */
 }
-=======
->>>>>>> d060c24a1b1c06a45e4b8e779b92bb3d1bfa7d01
 
 /* Ajustes para pantallas grandes */
 @media (min-width: 768px) {
