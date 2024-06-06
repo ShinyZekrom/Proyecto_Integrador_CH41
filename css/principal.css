@@ -49,9 +49,19 @@ a.nav-link {
         /* Fondo blanco */
         padding: 20px;
         /* Espacio interno */
+        top: 20px;
 
     }
 }
+.crear-post{
+    border-radius: 20px;
+    border: 6px solid #ff69b4;
+    background-color: #ffffff;
+    top: 20px;
+}
+
+
+
 
 .detalle-usuario {
     display: flex;
