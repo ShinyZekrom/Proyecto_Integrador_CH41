@@ -34,8 +34,9 @@ body {
 }
 
 .navbar {
-    background-color: #fff;
     position: fixed;
+    top: 0;
+    background-color: #fff;
   }
   .nav-item {
     margin-right: 20px; /* Espacio entre los elementos del nav */

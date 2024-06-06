@@ -5,6 +5,7 @@ body {
 
 /* Nav */
 .navbar {
+  position: fixed;
     background-color: #fff;
     position: fixed;
   }
