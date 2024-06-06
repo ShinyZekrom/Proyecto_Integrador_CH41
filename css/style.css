@@ -1,7 +1,7 @@
+
 body {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
 }
-
 /* Nav */
 .acercade{
     float: right;
@@ -28,9 +28,6 @@ body {
 .logo{
     width: 80px;
     margin-right: 20px;
-}
-.fotoperfil{
-    width: 50px;
 }
 .navbar {
     background-color: #fff;
@@ -81,28 +78,24 @@ body {
   
 .desarrolladores {
     text-align: center;
-    padding: 20px;
-}
+    border-radius: 50%;
+    background: rgb(218, 216, 213);
 
-.devcontainer {
+    
+    
+}
+.descrip{
+    text-align: justify;
+    margin-right: 100px;
+    border: 20px solid rgb(247, 249, 249);
+    float: left;
+    
+    
+}
+.aboutus{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+    flex-direction: row;
 
-.developer {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 200px;
-}
-
-.img_desarrolladores {
-    width: 100%;
-    border-radius: 20px;
 }
 
 .biografia{
@@ -111,6 +104,7 @@ body {
     font-style: normal;
     text-align: justify;
 }
+
 
 footer {
     text-align: center;
@@ -143,11 +137,12 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
     grid-template-areas:
     "header"
     "navbar"
-    "articulo"
-    "sidebar"
     "division"
-    "footer" 
-};
+    "sidebar"
+    "articulo"
+    "footer" ;
+}
+
 /*Vista tablet*/
 @media(min-width:768px){
     .grid-container{
@@ -155,9 +150,9 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
         grid-template-areas:
         "header header"
         "navbar navbar"
-        "articulo articulo"
-        "sidebar sidebar"
         "division division"
+        "sidebar sidebar"
+        "articulo articulo"
         "footer footer";
     }
 }
@@ -165,12 +160,14 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
     .grid-container{
         grid-template-columns: auto;
         grid-template-areas:
-        "header header header"
+
         "navbar navbar navbar"
-        "articulo articulo articulo"
+        "header header header"
         "division division division"
+        "articulo articulo sidebar"
         "footer footer footer";
     }
+
 }
 
 @media(max-width:767px){
@@ -192,3 +189,5 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
       align-items: center;
     }
   }
+
+
