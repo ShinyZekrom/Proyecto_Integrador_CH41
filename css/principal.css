@@ -109,6 +109,17 @@ a.nav-link {
     margin-right: 10px;
 }
 
+/*MODAL DE PUBLICACIONES */
+/*Solo respeta el css dentro del index*/
+/*.modal-custom {
+    max-width: 55%;
+    margin: auto;
+  }
+  .modal-content {
+    border-radius: 20px;
+}*/
+  
+
 /*FOOTER*/
 footer {
     text-align: center;

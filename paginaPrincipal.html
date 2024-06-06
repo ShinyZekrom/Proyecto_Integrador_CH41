@@ -15,6 +15,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patrick+Hand&display=swap"
     rel="stylesheet">
+<style>
+    .modal-content {
+      border-radius: 20px;
+    }
+    .modal-dialog {
+      max-width: 60%; /* Ajusta el ancho del modal */
+    }
+  </style>
 
 </head>
 
@@ -66,11 +74,46 @@
         <div class="card-body">
           <h5 class="card-title">Comparte tu experiencia</h5>
           <p class="card-text">Inspira a otros viajeros a descubrir destinos sorprendentes</p>
-          <a href="#" class="btn btn-primary">Crear publicación</a>
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal">
+            Crear publicación
+          </button>
         </div>
         <div class="card-footer text-body-secondary"></div>
       </div>
     </div>
+
+
+
+    <!-- Modal -->
+     <div class="modal-post">
+    <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="demoModalLabel">Crea una publicación</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <textarea class="form-control mt-3" rows="4" placeholder="Escribe tu publicación aquí..."></textarea>
+            <div class="input-group mt-3">
+              <input type="file" class="form-control" id="inputGroupFile04" accept="image/*"
+                aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+              <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Subir multimedia</button>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">Publicar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
     <div class="post">
       <div class="card">
