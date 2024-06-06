@@ -8,7 +8,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/inicio.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/formularioPublicacion.html">Publica aquí</a></li>
           <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contactanos</a></li>
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
         </ul>
@@ -23,6 +24,7 @@
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Registrate</a></li>
             <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
+            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
           </ul>
         </div>
       </div>

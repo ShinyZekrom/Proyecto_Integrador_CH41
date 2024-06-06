@@ -32,8 +32,10 @@ body {
 .fotoperfil{
     width: 50px;
 }
+
 .navbar {
     background-color: #fff;
+    position: fixed;
   }
   .nav-item {
     margin-right: 20px; /* Espacio entre los elementos del nav */
@@ -118,7 +120,6 @@ footer {
     background-color: #fff;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    bottom: 0;
 }
 /*-----RESPONSIVIDAD------*/
 .grid-container>*{
