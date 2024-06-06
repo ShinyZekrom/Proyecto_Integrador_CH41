@@ -8,7 +8,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="/inicio.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/paginaPrincipal.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="/formularioPublicacion.html">Publica aquí</a></li>
           <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contactanos</a></li>
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
