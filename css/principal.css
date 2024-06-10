@@ -41,11 +41,13 @@ body {
     left: auto;
   }
 /*GRID*/
-.grid-container>* {
+.grid-container> {
+    
     text-align: center;
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px;
     margin: 0;
+    
 }
 
 .header {
@@ -152,6 +154,7 @@ body {
     /* Espacio entre la imagen y el nombre de usuario */
 }
 
+
 .name-usuario {
     margin: 0;
     /* Elimina el margen predeterminado del h5 */
@@ -162,9 +165,11 @@ body {
     /*La imagen ocupará el 100% del ancho del contenedor */
     /* La altura se ajustará automáticamente para mantener la relación de aspecto original */
     /*max-width: calc(75% - 20px); /* Ancho máximo igual a la mitad del espacio disponible para dos columnas (restando el espacio entre columnas) */
-    align-items: center;
+    place-items: center;
     align-content: center;
-    justify-content: center;
+    
+    text-align: center;
+   
 }
 
 .post-text {
@@ -216,10 +221,14 @@ body {
     text-align: left;
 }
 /*Publicidad*/
+.title_publicidad{
+    text-align: center;
+    background-color: #FFB17D;
+    border-radius: 20px;
+}
 .containers{
     grid-column: 3/4;
-    display: grid;
-    gap: 20px;
+    padding: 10px;
 }
 .container1 {
     border: 1px solid #ccc;
@@ -259,6 +268,26 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+}
+.container3 img {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    
+}
+.container3 a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.container3 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #858080;
+    align-self: start;
+    border-radius: 15px;
+    
 }
 /*FOOTER*/
 footer {
