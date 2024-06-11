@@ -145,6 +145,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
 
 /*Vista tablet*/
 @media(min-width:768px){
+  
     .grid-container{
         grid-template-columns: auto;
         grid-template-areas:
@@ -155,6 +156,8 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
         "articulo articulo"
         "footer footer";
     }
+
+    
 }
 @media(min-width:900px){
     .grid-container{
