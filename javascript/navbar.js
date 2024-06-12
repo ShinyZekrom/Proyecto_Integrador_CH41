@@ -14,8 +14,8 @@
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
         </ul>
         <form class="d-flex" role="search">
-          <input id="navsearcher" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input id="navsearcher" class="form-control me-2" type="search" placeholder="Buscar aquí" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
