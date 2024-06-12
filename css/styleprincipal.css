@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+    /*background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);*/
     /*display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: auto;*/
@@ -48,20 +48,12 @@ body {
     margin: 0;
 }
 
-.header {
-    grid-area: header;
-
-}
 
 .navbar {
     grid-area: navbar;
 
 }
 
-.trends_container {
-    grid-area: trends_container;
-
-}
 
 .publicaciones {
     grid-area: publicaciones;
@@ -84,7 +76,6 @@ body {
     grid-template-columns: auto;
     grid-template-areas:
         "navbar"
-        "trends_container"
         "publicaciones"
         "publicidad"
         "footer";
@@ -96,7 +87,6 @@ body {
         grid-template-columns: auto;
         grid-template-areas:
             "navbar navbar"
-            "trends_container trends_container"
             "publicaciones publicaciones"
             "publicidad publicidad"
             "footer footer";
@@ -110,7 +100,7 @@ body {
         gap: 10px; /*Aplica gap solo en esta resolucion*/
         grid-template-areas:
             "navbar navbar navbar navbar "
-            "trends_container publicaciones publicaciones publicidad"
+            "publicaciones publicaciones publicaciones publicidad"
             "footer footer footer footer";
     }
 }
@@ -197,47 +187,6 @@ body {
     margin-right: 10px;
     font-family: "Open Sans", sans-serif;
    
-}
-
-/*TRENDS*/
-.trends_container{
-    display: flex;
-    align-items: center;
-    /*flex-direction: column;
-    /*margin-right: 500px;*/
-}
-.card_group_trends{
-    /*background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(165, 77, 212) 100%);*/
-    padding: 10px;
-}
-.card-img-top{
-    max-width: 250px;
-    height: auto;
-    border-radius: 20%;
-    display: flex;
-    padding: 10px;
-}
-.card-text{
-    text-align: center;
-    font-family: "Comic Neue", cursive;
-}
-.card-body{
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgb(192, 184, 197) 100%);
-    border-radius: 10px;
-}
-.title_Trends{
-    text-align: center;
-    background-color: #FFB17D;
-    border-radius: 20px;
-    font-family: "Patrick Hand", cursive;
-}
-
-.card-title, .card-texttime{
-    text-align: left;
-    font-family: "Patrick Hand", cursive;
-}
-.interacciones1{
-    text-align: left;
 }
 
 /*Publicidad*/
