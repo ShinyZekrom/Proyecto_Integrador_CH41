@@ -10,9 +10,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patrick+Hand&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 
 <body class="grid-container">
@@ -21,7 +19,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">DELHAZ</a>
+      <a class="navbar-brand" href="index.html"><img src="/src/logooficial.svg" alt="" class="logoOficial"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,8 +32,8 @@
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Buscar aquí" aria-label="Search">
+          <button class="btn-buscar" type="submit">Buscar</button>
         </form>
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,85 +48,9 @@
     </div>
   </nav>
 
-  <!--trends-->
-  <div class="trends_container">
-    <div class="card_group_trends">
-      <h3 class="title_Trends">TRENDS</h3>
-      <div class="card_trend">
-        <div class="card-body">
-          <h5 class="card-title">Jess Pat</h5>
-          <p class="card-texttime"><small class="text-body-secondary">3 mins ago</small></p>
-          <img src="./src/destinos/destino1.jpg" class="card-img-top" alt="...">
-          <div class="interacciones">
-            <button type="btn-like" class="btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
-                width="24px" fill="#5f6368">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path
-                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-              </svg>Me gusta</button>
-            <button type="btn-commet" class="btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                viewBox="0 0 24 24" width="24px" fill="#5f6368">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path
-                  d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z" />
-              </svg>Comentar</button>
-          </div>
-        </div>
-      </div>  
-      <br>
-      <div class="card_trend">
-        <div class="card-body">
-
-          <h5 class="card-title">Jess Pat</h5>
-          <p class="card-texttime"><small class="text-body-secondary">3 mins ago</small></p>
-          <img src="./src/destinos/destino1.jpg" class="card-img-top" alt="...">
-          <div class="interacciones">
-            <button type="btn-like" class="btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
-                width="24px" fill="#5f6368">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path
-                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-              </svg>Me gusta</button>
-            <button type="btn-commet" class="btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                viewBox="0 0 24 24" width="24px" fill="#5f6368">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path
-                  d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z" />
-              </svg>Comentar</button>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="card_trend">
-        <div class="card-body">
-          <h5 class="card-title">Jess Pat</h5>
-          <p class="card-texttime"><small class="text-body-secondary">3 mins ago</small></p>
-          <img src="./src/destinos/destino1.jpg" class="card-img-top" alt="...">
-          <div class="interacciones">
-            <button type="btn-like" class="btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
-                width="24px" fill="#5f6368">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path
-                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-              </svg>Me gusta</button>
-            <button type="btn-commet" class="btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                viewBox="0 0 24 24" width="24px" fill="#5f6368">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path
-                  d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z" />
-              </svg>Comentar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-  </div>
-  
-
   <!--Publicaciones-->
 
   <div class="publicaciones">
-
 
     <div class="crear-post">
       <div class="card text-center">
@@ -136,53 +58,19 @@
         <div class="card-body">
           <h5 class="card-title">Comparte tu experiencia</h5>
           <p class="card-text">Inspira a otros viajeros a descubrir destinos sorprendentes</p>
-          <a href="#" class="btn btn-primary">Crear publicación</a>
+          <a href="/formularioPublicacion.html" class="btn btn-primary">Crear publicación</a>
         </div>
         <div class="card-footer text-body-secondary"></div>
       </div>
     </div>
 
-    <div class="post">
-      <div class="card">
-        <div class="card-body">
-          <div class="detalle-usuario">
-            <div class="perfil-imagen">
-              <img
-                src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos-810x540.jpg"
-                alt="Imagen de perfil">
-            </div>
-            <h5 class="name-usuario">Nombre usuario</h5>
-          </div>
-
-          <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, recusandae a
-            soluta
-            quasi porro et voluptatum esse voluptatibus fugit reprehenderit, explicabo saepe voluptates,
-            laboriosam eius neque modi debitis officia perferendis.</p>
-          <p class="date-act"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-        </div>
-        <img
-          src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGxheWFzfGVufDB8fDB8fHww"
-          class="img-poster" alt="...">
-
-        <div class="interacciones">
-          <button type="btn-like" class="btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
-              width="24px" fill="#5f6368">
-              <path d="M0 0h24v24H0V0z" fill="none" />
-              <path
-                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-            </svg>Me gusta</button>
-          <button type="btn-commet" class="btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-              viewBox="0 0 24 24" width="24px" fill="#5f6368">
-              <path d="M0 0h24v24H0V0z" fill="none" />
-              <path
-                d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z" />
-            </svg>Comentar</button>
-        </div>
-
+    <div id="list-items" class="container mt-2">
+    </div>
 
       </div>
     </div>
   </div>
+  
   <!--Publicidad-->
   <div class="publicidad">
     <div class="containers">    
@@ -217,6 +105,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-</body>
+    <script src="/javascript/postlist.js"></script>
+  </body>
 
 </html>
