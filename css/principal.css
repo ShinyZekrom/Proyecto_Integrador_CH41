@@ -111,7 +111,7 @@
     .post .card {
         border-radius: 50px;
         /* Esquinas redondeadas */
-        border: 25px solid #046CB8;
+        border: 10px solid #046CB8;
         /* Borde grueso de color rosa */
         background-color: #ffffff;
         /* Fondo blanco */
@@ -122,12 +122,12 @@
 }
 .crear-post{
     border-radius: 20px;
-    border: 15px solid #AAC9E5;
+    border: 5px solid #AAC9E5;
     background-color: #ffffff;
     top: 20px;
     width: 600px;
     height: auto;
-    margin-left: 230px;
+    margin-left: 150px;
     padding: 10px;
     font-family: "Comic Neue", cursive;
 }
