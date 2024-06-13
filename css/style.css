@@ -2,19 +2,20 @@
     
 =======
 body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+    background: white;
 }
 
 /* Nav */
 .acercade{
-    float: right;
-    margin-left: 1px;
-    border: none;
-    float: right;
     margin-right: 100px;
-    text-align: center;
-    border-radius: 50%;
-    background: rgb(218, 216, 213);
+    border-radius: 45%;
+    background: #AAC9E5;
+    padding: 10px 150px;
+    display: inline-block;
+    line-height: normal;
+    box-sizing: border-box;
+    white-space: nowrap;                                 
+    
 }
 .descrip{
     text-align: justify;
@@ -39,7 +40,7 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    background-color: #fff;
+    background-color: #046CB8;
   }
   .nav-item {
     margin-right: 20px; /* Espacio entre los elementos del nav */
@@ -48,6 +49,7 @@ body {
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     font-style: normal;
+    color: #ffffff;
   }
 
   .navbar-brand {
@@ -63,6 +65,34 @@ body {
     right: 0; /* Asegura que el menú se alinee a la derecha */
     left: auto;
   }
+  .navbar .navbar-toggler{
+    background-color: #ffffff; 
+    color: #046CB8; 
+    border: none; 
+  }
+  
+  .btn-buscar {
+    background-color: #ffffff; 
+    color: #046CB8;
+    border: none; 
+    height: 38px;
+    border-radius: 5px; 
+    padding: 5px 5px; 
+    font-size: 16px; 
+    font-family: "Comic Neue", cursive;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+.btn-buscar:hover {
+    background-color: #04b822;
+    color: #ffffff; 
+}
+
+  .logoOficial{
+    max-height: 38px; 
+    width: auto; 
+    filter: invert(100%);
+  }
 
 
 /*Acerca de nosotros*/
@@ -70,13 +100,14 @@ body {
 
 /* Desarrolladores*/
 .devtitle{
+  background-color: #AAC9E5;
     font-family: "Patrick Hand", cursive;
     font-weight: 400;
     font-style: normal;
     text-align: left;
     border-radius: 28px;
     align-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
   }
 
   .nombredev{
@@ -101,7 +132,7 @@ body {
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: ;
     text-align: center;
     width: 200px;
 }
@@ -121,9 +152,10 @@ body {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #046CB8;
+    box-shadow: ;
     width: 100%;
+    
 }
 /*-----RESPONSIVIDAD------*/
 .grid-container>*{
@@ -133,12 +165,12 @@ footer {
 }
 .desarrolladores{
     grid-area: division;
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+    background: white;
 }
 
 .footer{
     grid-area: footer;
-    background-color: #ffffff;
+    background-color: #046CB8;
 }
 /*Vista para el telefono*/
 .grid-container{
