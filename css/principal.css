@@ -10,7 +10,7 @@
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     font-style: normal;
-    color: black
+    color: white;
   }
 
   .navbar-brand {
@@ -27,9 +27,33 @@
     right: 0; /* Asegura que el menú se alinee a la derecha */
     left: auto;
   }
+  .navbar .navbar-toggler{
+    background-color: #ffffff; 
+    color: #046CB8; 
+    border: none; 
+  }
+  
+  .btn-buscar {
+    background-color: #ffffff; 
+    color: #046CB8;
+    border: none; 
+    height: 38px;
+    border-radius: 5px; 
+    padding: 5px 5px; 
+    font-size: 16px; 
+    font-family: "Comic Neue", cursive;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+.btn-buscar:hover {
+    background-color: #04b822;
+    color: #ffffff; 
+}
 
   .logoOficial{
-    width: 100%;
+    max-height: 38px; 
+    width: auto; 
+    filter: invert(100%);
   }
 /*GRID*/
 .grid-container>* {
