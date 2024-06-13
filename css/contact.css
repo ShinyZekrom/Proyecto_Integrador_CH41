@@ -1,6 +1,9 @@
+body {
+    background: white;
+
 /* Nav */
 .navbar {
-    background-color: #046CB8;
+    background-color: rgba(4, 108, 184, 1);
   }
   .nav-item {
     margin-right: 20px; /* Espacio entre los elementos del nav */
@@ -9,11 +12,13 @@
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     font-style: normal;
+    color: white;
   }
 
   .navbar-brand {
     font-family: 'Patrick Hand', cursive;
     font-size: 1.5rem;
+    color: white; //logo
   }
   .fotoperfil {
     width: 30px;
@@ -57,7 +62,7 @@
   .contact-section {
     display: flex;
     justify-content: center;
-
+    align-items: center;
     padding: 20px;
     min-height: 100vh;
   }
@@ -83,7 +88,7 @@
     font-size: 3rem;
   }
   .btn-submit {
-    background: linear-gradient(to right, #f6d365, #fda085);
+    background:  rgba(4, 108, 184, 1);
     border: none;
     color: white;
   }
@@ -124,8 +129,9 @@
     footer {
         text-align: center;
         padding: 10px;
-        background-color: #fff;
+        background-color: rgba(4, 108, 184, 1);
         box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         width: 100%;
         bottom: 0;
+        color: white;
     }

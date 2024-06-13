@@ -1,7 +1,17 @@
-
 /* Nav */
+.acercade{
+    float: right;
+    margin-left: 1px;
+    border: none;
+    float: right;
+    margin-right: 100px;
+    text-align: center;
+    border-radius: 50%;
+    background: #046CB8;
+}
 .navbar {
     background-color: #046CB8;
+    color: #FFFFFF;
   }
   .nav-item {
     margin-right: 20px; /* Espacio entre los elementos del nav */
@@ -10,14 +20,19 @@
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     font-style: normal;
-    color: white;
+    color: #FFFFFF;
   }
 
   .navbar-brand {
     font-family: 'Patrick Hand', cursive;
     font-size: 1.5rem;
-    color: black;
+    color: #FFFFFF;
   }
+  .logoOficial{
+    width: 150px;
+    color: #ffffff;
+  }
+
   .fotoperfil {
     width: 30px;
     height: 30px;
@@ -63,15 +78,12 @@
     margin: 0;
 }
 
-.header {
-    grid-area: header;
-
-}
 
 .navbar {
     grid-area: navbar;
 
 }
+
 
 .publicaciones {
     grid-area: publicaciones;
@@ -125,37 +137,37 @@
 /*PUBLICACIONES*/
 .publicaciones {
     .post .card {
-        border-radius: 20px;
+        border-radius: 50px;
         /* Esquinas redondeadas */
-        border: 6px solid #ff69b4;
+        border: 10px solid #046CB8;
         /* Borde grueso de color rosa */
         background-color: #ffffff;
         /* Fondo blanco */
-        padding: 20px;
+        padding: 50px;
         /* Espacio interno */
         top: 20px;
-
     }
 }
 .crear-post{
     border-radius: 20px;
-    border: 6px solid #ff69b4;
+    border: 5px solid #AAC9E5;
     background-color: #ffffff;
     top: 20px;
+    width: 600px;
+    height: auto;
+    margin-left: 150px;
+    padding: 10px;
+    font-family: "Comic Neue", cursive;
+}
+.card-title{
+    font-family: "Patrick Hand", cursive;
 }
 
 .detalle-usuario {
     display: flex;
     align-items: center;
     /* Centra verticalmente los elementos */
-}
-
-.post { 
-    margin-bottom: 20px; 
-}
-.card-body .detalle-usuario { 
-    display: flex; 
-    align-items: center; 
+    font-family: "Patrick Hand", cursive;
 }
 
 .perfil-imagen img {
@@ -164,52 +176,58 @@
     height: 50px;
     border-radius: 50%;
     /* Para hacerla redonda */
-    margin-right: 15px;
+    margin-right: 10px;
     /* Espacio entre la imagen y el nombre de usuario */
-
 }
 
 .name-usuario {
     margin: 0;
-    font-size: 1.25rem;
     /* Elimina el margen predeterminado del h5 */
+    font-family: "Patrick Hand", cursive;
+}
+.publicaciones{
+    width: 900px;
+    margin-left: 100px;
+}
+.card-body-public{
+    width: 700px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-left: 30px;
 }
 
 .img-poster {
-    width: 100%;
+    width: 600px;
     /*La imagen ocupará el 100% del ancho del contenedor */
+    height: auto;
     /* La altura se ajustará automáticamente para mantener la relación de aspecto original */
     /*max-width: calc(75% - 20px); /* Ancho máximo igual a la mitad del espacio disponible para dos columnas (restando el espacio entre columnas) */
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    margin-left: 90px;
+    border-radius: 20px;
 }
 
 .post-text {
-    margin: 10px 0;
     text-align: justify;
+    font-family: "Comic Neue", cursive;
+    
 }
 
 .date-act {
     text-align: left;
 }
 
-.interacciones { 
-    display: flex; 
-    justify-content: space-around; 
-    padding: 10px 0; 
+.interacciones {
+    text-align: left;
+    margin-left: 100px;
 }
 
-.interacciones .btn { 
-    background: none; 
-    border: none; 
-    cursor: pointer; 
+.btn {
+    margin-right: 10px;
+    font-family: "Open Sans", sans-serif;
+    
+   
 }
-
-.interacciones .btn svg { 
-    fill: #9fa1a3; 
-}
-
 
 /*Publicidad*/
 .containers{
@@ -243,6 +261,7 @@
     background-color: #858080;
     align-self: start;
     border-radius: 15px;
+    /*grid-template-columns: ;*/
     
 }
 .container2 img {
@@ -260,8 +279,9 @@
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #fff;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     bottom: 0;
+    background-color: #046CB8;
+    color: #FFFFFF;
 }

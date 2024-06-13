@@ -1,8 +1,12 @@
+body {
+    background: linear-gradient(white);
+
+}
 
 /* Nav */
 .navbar {
   position: fixed;
-    background-color: #046CB8;
+    background-color: #046cb8;
     position: fixed;
   }
   .nav-item {
@@ -12,11 +16,13 @@
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     font-style: normal;
+    color: white;
   }
 
   .navbar-brand {
     font-family: 'Patrick Hand', cursive;
     font-size: 1.5rem;
+    color: white;
   }
   .fotoperfil {
     width: 30px;
@@ -64,11 +70,27 @@ h1 {
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
+div p {
+  color: white;
+  font-family: 'Comic Neue';
+}
+
+
+.logo {
+    width: 100%;
+    max-width: 500px;
+}
+h2 {
+    font-size: calc(1rem + 1vw);
+    font-family: 'Patrick Hand';
+}
+
+
 .comment {
-    background: white;
+    background: #046cb8;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px white;
     margin: 5px;
     text-align: center;
     display: flex;
