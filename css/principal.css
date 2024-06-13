@@ -129,12 +129,17 @@
     height: auto;
     margin-left: 230px;
     padding: 10px;
+    font-family: "Comic Neue", cursive;
+}
+.card-title{
+    font-family: "Patrick Hand", cursive;
 }
 
 .detalle-usuario {
     display: flex;
     align-items: center;
     /* Centra verticalmente los elementos */
+    font-family: "Patrick Hand", cursive;
 }
 
 .perfil-imagen img {
