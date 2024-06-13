@@ -29,7 +29,16 @@ body {
     width: 80px;
     margin-right: 20px;
 }
+<<<<<<< HEAD
+=======
+.fotoperfil{
+    width: 50px;
+}
+
+>>>>>>> 6c651bb1ab44567e74d00fb35adb41353777f06c
 .navbar {
+    position: fixed;
+    top: 0;
     background-color: #fff;
   }
   .nav-item {
@@ -112,7 +121,6 @@ footer {
     background-color: #fff;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    bottom: 0;
 }
 /*-----RESPONSIVIDAD------*/
 .grid-container>*{
