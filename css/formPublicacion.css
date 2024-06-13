@@ -1,10 +1,7 @@
-body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
-}
 
 /* Nav */
 .navbar {
-    background-color: #fff;
+    background-color: #046CB8;
   }
   .nav-item {
     margin-right: 20px; /* Espacio entre los elementos del nav */
