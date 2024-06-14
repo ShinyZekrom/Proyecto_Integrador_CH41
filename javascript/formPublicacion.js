@@ -10,11 +10,7 @@ function getCurrentDateTime() {
   return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
 }
 
-// Event listener para el botón de publicar
-document.getElementById('submit-btn').addEventListener('click', function(event) {
-  // Validar el formulario al hacer clic en el botón de publicar
-  if (!validateForm()) {
-    // Prevenir el envío del formulario si hay errores
-    event.preventDefault();
-  }
-});
+    // Actualizar el campo de fecha y hora en el formulario
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("timestamp").value = getCurrentDateTime();
+    });
