@@ -10,6 +10,10 @@ function getCurrentDateTime() {
     return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
   }
   
+
+
+
+  
   // Event listener para el botón de publicar
   document.getElementById('submit-btn').addEventListener('click', function(event) {
     // Validar el formulario al hacer clic en el botón de publicar
