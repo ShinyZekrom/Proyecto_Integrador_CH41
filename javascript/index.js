@@ -1,3 +1,5 @@
+//funciones de cloudinary para el funcionamiento de la API para obtener el url de imágenes
+
 // Import the Cloudinary class.
 import { Cloudinary } from "@cloudinary/url-gen";
 
