@@ -1,54 +1,95 @@
 body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+    background: white;
 }
+
 /* Nav */
 .acercade{
-    float: right;
-    margin-left: 1px;
-    border: none;
-    float: right;
     margin-right: 100px;
-    text-align: center;
-    border-radius: 50%;
-    background: rgb(218, 216, 213);
-
-
+    border-radius: 45%;
+    background: #AAC9E5;
+    padding: 10px 150px;
+    display: inline-block;
+    line-height: normal;
+    box-sizing: border-box;
+    white-space: nowrap;                                 
+    
 }
 .descrip{
     text-align: justify;
-    margin-right: 100px;
-    float: left;
+    margin-right: 100px ;
+    margin-left: 20px;
+  
 }
 .aboutus{
     display: flex;
     flex-direction: row;
-    padding: 50px 0;
-
-    
-
+    padding: 20px 0;
+    margin-top: 20px;
 }
-.navbar{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-.navbar a{
-    text-decoration: none ;
-    color: #333;
-    font-family: "Wellfleet", monospace;
-    font-weight: 400;
-    font-style: normal;
-  }
 .logo{
     width: 80px;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 .fotoperfil{
     width: 50px;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    background-color: #046CB8;
+  }
+  .nav-item {
+    margin-right: 20px; /* Espacio entre los elementos del nav */
+  }
+  a.nav-link{
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+
+  .navbar-brand {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+  }
+  .fotoperfil {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .dropdown-menu {
+    right: 0; /* Asegura que el menú se alinee a la derecha */
+    left: auto;
+  }
+  .navbar .navbar-toggler{
+    background-color: #ffffff; 
+    color: #046CB8; 
+    border: none; 
+  }
+  
+  .btn-buscar {
+    background-color: #ffffff; 
+    color: #046CB8;
+    border: none; 
+    height: 38px;
+    border-radius: 5px; 
+    padding: 5px 5px; 
+    font-size: 16px; 
+    font-family: "Comic Neue", cursive;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+.btn-buscar:hover {
+    background-color: #04b822;
+    color: #ffffff; 
+}
+
+  .logoOficial{
+    max-height: 38px; 
+    width: auto; 
+    filter: invert(100%);
+  }
 
 
 /*Acerca de nosotros*/
@@ -56,18 +97,18 @@ body {
 
 /* Desarrolladores*/
 .devtitle{
-    font-family: "Lily Script One", system-ui;
+  background-color: #AAC9E5;
+    font-family: "Patrick Hand", cursive;
     font-weight: 400;
     font-style: normal;
     text-align: left;
     border-radius: 28px;
     align-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+    box-sizing: border-box;
   }
 
   .nombredev{
-    font-family: "Lobster", sans-serif;
+    font-family: "Patrick Hand", cursive;
     font-weight: 400;
     font-style: normal;
   }
@@ -88,7 +129,7 @@ body {
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
     text-align: center;
     width: 200px;
 }
@@ -98,11 +139,89 @@ body {
     border-radius: 20px;
 }
 
+.biografia{
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+}
+
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #046CB8;
     width: 100%;
-    bottom: 0;
+    
 }
+/*-----RESPONSIVIDAD------*/
+.grid-container>*{
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+}
+.desarrolladores{
+    grid-area: division;
+    background: white;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #046CB8;
+}
+/*Vista para el telefono*/
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "header"
+    "navbar"
+    "articulo"
+    "sidebar"
+    "division"
+    "footer" 
+};
+/*Vista tablet*/
+@media(min-width:768px){
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header header"
+        "navbar navbar"
+        "articulo articulo"
+        "sidebar sidebar"
+        "division division"
+        "footer footer";
+    }
+}
+@media(min-width:900px){
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header header header"
+        "navbar navbar navbar"
+        "articulo articulo articulo"
+        "division division division"
+        "footer footer footer";
+    }
+}
+
+@media(max-width:767px){
+    .row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .col-tittle{
+      width: 100%;
+    }
+    .col{
+      width: 100%;
+    }
+    .aboutus{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
