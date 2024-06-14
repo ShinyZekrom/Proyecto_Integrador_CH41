@@ -87,6 +87,10 @@ document.addEventListener("DOMContentLoaded", function() {
           };
           
           console.log("Datos del formulario en formato JSON:", JSON.stringify(formData));
+
+
+        //Guardar el objeto JSON en localStorage
+        localStorage.setItem(`formData`, JSON.stringify(formData));
     
           // Limpiar el formulario
           form.reset();
