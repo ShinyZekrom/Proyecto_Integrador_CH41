@@ -1,10 +1,9 @@
 body {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
-}
+    background: white;
 
 /* Nav */
 .navbar {
-    background-color: #fff;
+    background-color: rgba(4, 108, 184, 1);
   }
   .nav-item {
     margin-right: 20px; /* Espacio entre los elementos del nav */
@@ -13,11 +12,13 @@ body {
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     font-style: normal;
+    color: white;
   }
 
   .navbar-brand {
     font-family: 'Patrick Hand', cursive;
     font-size: 1.5rem;
+    color: white;
   }
   .fotoperfil {
     width: 30px;
@@ -27,6 +28,34 @@ body {
   .dropdown-menu {
     right: 0; /* Asegura que el menú se alinee a la derecha */
     left: auto;
+  }
+  .navbar .navbar-toggler{
+    background-color: #ffffff; 
+    color: #046CB8; 
+    border: none; 
+  }
+  
+  .btn-buscar {
+    background-color: #ffffff; 
+    color: #046CB8;
+    border: none; 
+    height: 38px;
+    border-radius: 5px; 
+    padding: 5px 5px; 
+    font-size: 16px; 
+    font-family: "Comic Neue", cursive;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+.btn-buscar:hover {
+    background-color: #04b822;
+    color: #ffffff; 
+}
+
+  .logoOficial{
+    max-height: 38px; 
+    width: auto; 
+    filter: invert(100%);
   }
 
   /*Contact*/
@@ -38,10 +67,10 @@ body {
     min-height: 100vh;
   }
   .contact-form {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     height: 100%;
     font-family: "Comic Neue", cursive;
     font-weight: 400;
@@ -59,7 +88,7 @@ body {
     font-size: 3rem;
   }
   .btn-submit {
-    background: linear-gradient(to right, #f6d365, #fda085);
+    background:  rgba(4, 108, 184, 1);
     border: none;
     color: white;
   }
@@ -69,6 +98,7 @@ body {
     border-radius: 10px;
     object-fit: cover;
     justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   }
   @media (max-width: 768px) {
         .contact-section {
@@ -100,8 +130,10 @@ body {
     footer {
         text-align: center;
         padding: 10px;
-        background-color: #fff;
+        background-color: rgba(4, 108, 184, 1);
         box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         width: 100%;
         bottom: 0;
+        color: white;
     }
+  }
