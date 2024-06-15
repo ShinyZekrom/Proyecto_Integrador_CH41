@@ -194,6 +194,7 @@ footer {
         "footer footer";
     }
 }
+
 @media(min-width:900px){
     .grid-container{
         grid-template-columns: auto;
