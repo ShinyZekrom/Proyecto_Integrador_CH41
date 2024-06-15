@@ -5,7 +5,7 @@ function getCurrentDateTime() {
   var mm = String(today.getMonth() + 1); // Enero inicia en 0
   var dd = String(today.getDate());
   var hh = String(today.getHours());
-  var min = String(today.getMinutes());
+  var min = String(today.getMinutes()).padStart(2, '0');
 
 //Se obtiene la fecha a través de date para obtenerla completa
   return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
@@ -22,62 +22,61 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("DOMContentLoaded", function() {
       const form = document.getElementById('post-form');
       const submitBtn = document.getElementById('submit-btn');
-      const alertContainer = document.getElementById('alert-container');
       const alertValidaciones = document.getElementById('alertValidaciones');
-      const alertText = document.getElementById('alertValidacionesTexto');
+      const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
+      const alertSuccess = document.getElementById('alertSuccess');
     
-      //Se crean constantes con las expresiones regulares para utilizarlas en las validaciones.
       const usernameRegex = /^[a-zA-Z0-9_-]{1,15}$/;
-      //ihateregex url regex
-      const urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/;
-      
-      submitBtn.addEventListener('click', function() { //evento del boton
+      const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+    
+      submitBtn.addEventListener('click', function() {
         let errors = [];
-        //utilizamos el value.trim() oara eliminar espacios en blanco al principio y final de la cadena
+        
         const username = document.getElementById('username').value.trim();
         const profileImg = document.getElementById('profileImg').value.trim();
         const description = document.getElementById('description').value.trim();
         const img = document.getElementById('img').value.trim();
-        const timestamp = document.getElementById('timestamp').value.trim();
+        const timestamp = new Date().toLocaleString(); // Obtener fecha y hora actual
         
         // Validación del nombre de usuario
-        if (!username) { //verifica si el campo de usuario esta vacio
+        if (!username) {
           errors.push('El nombre de usuario es obligatorio.');
           document.getElementById('username').classList.add('is-invalid');
-        } else if (!usernameRegex.test(username)) { // verficia si lo ingresado no cumple con la regex y si es aspu manda mensaje de error
+        } else if (!usernameRegex.test(username)) {
           errors.push('El nombre de usuario debe tener máximo 15 caracteres y solo puede contener letras, números, guiones y guiones bajos.');
           document.getElementById('username').classList.add('is-invalid');
-        } else { // si no hay erroreres remueve algún error previo del campo
+        } else {
           document.getElementById('username').classList.remove('is-invalid');
         }
         
         // Validación de la descripción
-        if (!description) { // verifica si el campo de descripción está vacio
-          errors.push('La descripción es obligatoria.'); // si es así manda mansaje de error
-          document.getElementById('description').classList.add('is-invalid'); // y marca como invalido el campo
-        } else { //Si no hay errores remueve errores previos del campo para continuar con la validación
+        if (!description) {
+          errors.push('La descripción es obligatoria.');
+          document.getElementById('description').classList.add('is-invalid');
+        } else {
           document.getElementById('description').classList.remove('is-invalid');
         }
     
         // Validación de la imagen de perfil
-        if (profileImg && !urlRegex.test(profileImg)) { //si el campo no está vacio y no cumple con la regex
-          errors.push('La URL de la imagen de perfil no es válida.'); //manda un mensaje de error
-          document.getElementById('profileImg').classList.add('is-invalid');// e invalida el campo
-        } else { // si no hay errores
-          document.getElementById('profileImg').classList.remove('is-invalid'); //remueve los errores previos del campo
+        if (profileImg && !urlRegex.test(profileImg)) {
+          errors.push('La URL de la imagen de perfil no es válida.');
+          document.getElementById('profileImg').classList.add('is-invalid');
+        } else {
+          document.getElementById('profileImg').classList.remove('is-invalid');
         }
     
         // Validación de la imagen/video
-        if (img && !urlRegex.test(img)) { //si el campo no está vacio y no cumple con la regex
-          errors.push('La URL de la imagen/video no es válida.'); //manda un mensaje de error
-          document.getElementById('img').classList.add('is-invalid'); // e invalida el campo
-        } else { // si no hay errores
-          document.getElementById('img').classList.remove('is-invalid'); //remueve los errores previos del campo
+        if (img && !urlRegex.test(img)) {
+          errors.push('La URL de la imagen/video no es válida.');
+          document.getElementById('img').classList.add('is-invalid');
+        } else {
+          document.getElementById('img').classList.remove('is-invalid');
         }
     
         if (errors.length > 0) {
           alertValidaciones.style.display = 'block';
-          alertText.innerHTML = errors.join('<br>');
+          alertValidacionesTexto.innerHTML = errors.join('<br>');
+          alertSuccess.style.display = 'none';
         } else {
           alertValidaciones.style.display = 'none';
           
@@ -92,12 +91,16 @@ document.addEventListener("DOMContentLoaded", function() {
           
           console.log("Datos del formulario en formato JSON:", JSON.stringify(formData));
 
-
-        //Guardar el objeto JSON en localStorage
-        localStorage.setItem(`formData`, JSON.stringify(formData));
     
+          // Guardar el objeto actualizado en LocalStorage
+          localStorage.setItem('formData', JSON.stringify(formData));
+          
           // Limpiar el formulario
           form.reset();
+    
+          // Mostrar mensaje de éxito
+          alertSuccess.style.display = 'block';
         }
       });
     });
+    

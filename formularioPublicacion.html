@@ -18,11 +18,7 @@
    <div class="container mt-4">
     <h1>Crea tu Publicación</h1>
     <h6>Tu opinión es importante para nosotros</h6>
-    <div id="alert-container">
-      <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
-        <p id="alertValidacionesTexto"></p>
-      </div>
-    </div>
+    <div id="alert-container"></div>
     <form id="post-form">
       <div class="form-group">
         <label for="username">Nombre de usuario</label>
@@ -31,7 +27,8 @@
       </div>
       <div class="form-group">
         <label for="profileImg">Imagen de perfil</label>
-        <input type="url" class="form-control" id="profileImg">
+        <input type="url" class="form-control" id="profileImg" placeholder="URL imgPerfil">
+        <button id="upload_widget2" class="cloudinary-button" type="button">Imagen de Perfil</button>
       </div>
       <div class="form-group">
         <label for="timestamp">Fecha y hora de publicación</label>
@@ -44,19 +41,21 @@
       </div>
       <div class="form-group">
         <label for="img">Imagen/Video</label>
-        <input type="url" class="form-control" id="img">
+        <input type="url" class="form-control" id="img" placeholder="URL multimedia">
+        <button id="upload_widget" class="cloudinary-button" type="button">Subir Archivo</button>
       </div>
       <br>
       <button type="button" class="btn btn-primary" id="submit-btn">Publicar</button>
     </form>
+    <div class="alert alert-success fade show mt-3" style="display:none;" role="alert" id="alertSuccess">
+      Publicación exitosa!
+    </div>
+    <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+      <p id="alertValidacionesTexto"></p>
+    </div>
   </div>
   
-  
   <!-- Cloudinary upload widget button -->
-  <button id="upload_widget" class="cloudinary-button">Subir Archivo</button>
-  <button id="upload_widget2" class="cloudinary-button">Imagen de Perfil</button>
-
-
   <!--Footer-->
   <footer class="bg-primary text-center py-2">
     <p>©2024 DELHAZ TRAVEL. All Rights Reserved.</p>
