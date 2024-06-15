@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
       const alertSuccess = document.getElementById('alertSuccess');
     
-      const usernameRegex = /^[a-zA-Z0-9_-]{1,15}$/;
+      const usernameRegex = /^[a-zA-Z0-9]{5,10}$/;
       const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
     
       submitBtn.addEventListener('click', function() {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
           errors.push('El nombre de usuario es obligatorio.');
           document.getElementById('username').classList.add('is-invalid');
         } else if (!usernameRegex.test(username)) {
-          errors.push('El nombre de usuario debe tener máximo 15 caracteres y solo puede contener letras, números, guiones y guiones bajos.');
+          errors.push('El nombre de usuario debe iniciar con letra y tener 3ntre 5 y 10 carácteres, solo puede contener letras y números.');
           document.getElementById('username').classList.add('is-invalid');
         } else {
           document.getElementById('username').classList.remove('is-invalid');

@@ -82,9 +82,7 @@ padding: 5px;
 font-size: 16px; 
 font-family: "Comic Neue", cursive;
 }
-#description, #img {
-    height: 100px;
-}
+
 .btn-primary {
     width: 100%;
     padding: 10px;
