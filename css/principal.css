@@ -1,14 +1,6 @@
 /* Nav */
-.acercade{
-    float: right;
-    margin-left: 1px;
-    border: none;
-    float: right;
-    margin-right: 100px;
-    text-align: center;
-    border-radius: 50%;
-    background: #046CB8;
-}
+
+
 .navbar {
     background-color: #046CB8;
     color: #FFFFFF;
@@ -218,8 +210,7 @@
 }
 
 .interacciones {
-    text-align: left;
-    margin-left: 100px;
+    text-align: center;
 }
 
 .btn {
