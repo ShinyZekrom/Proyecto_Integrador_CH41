@@ -25,7 +25,7 @@ function addPost(post){
                 </div>
             </div>
         </div>
-    `;
+    <br>`;
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += postHTML;
 }
@@ -92,7 +92,7 @@ const posts = [
         'username': 'usuario9',
         'profileImg': 'https://m.media-amazon.com/images/I/712Z3RqOOJL._AC_UF894,1000_QL80_.jpg',
         'timestamp': '2024-06-10 20:30',
-        'description': '', //post sin descripción pero con imágen 
+        'description': 'Hola', //post sin descripción pero con imágen 
         'img': 'https://i.pinimg.com/originals/cf/32/28/cf32289918dc21d4b4f79ec1f9fac0fb.jpg'
     },
     {
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
               </div>
           </div>
       </div>
-  `;
+      <br>`;
       
       // Añadir el contenido HTML al contenedor
       publicationContainer.innerHTML = publicationHTML;
