@@ -11,7 +11,11 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="/paginaPrincipal.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="/formularioPublicacion.html">Publica aquí</a></li>
+<<<<<<< HEAD
           <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contactanos</a></li>
+=======
+          <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contáctanos</a></li>
+>>>>>>> 97ea74c9f912f221efca804d7392604849f03833
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
         </ul>
         <form class="d-flex" role="search">
@@ -35,4 +39,7 @@
 
     document.addEventListener("DOMContentLoaded", cargarNavbar);
     //cargará el navbar
+<<<<<<< HEAD
   
+=======
+>>>>>>> 97ea74c9f912f221efca804d7392604849f03833
