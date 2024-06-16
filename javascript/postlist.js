@@ -149,6 +149,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // Añadir el contenido HTML al contenedor
       publicationContainer.innerHTML = publicationHTML;
     } else {
-      publicationContainer.innerHTML = '<p>No hay publicaciones para mostrar.</p>';
+      publicationContainer.innerHTML = '<p>No hay publicaciones nuevas.</p>';
     }
   });
