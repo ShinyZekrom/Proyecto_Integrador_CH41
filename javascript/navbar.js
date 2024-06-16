@@ -35,3 +35,4 @@
 
     document.addEventListener("DOMContentLoaded", cargarNavbar);
     //cargará el navbar
+  
