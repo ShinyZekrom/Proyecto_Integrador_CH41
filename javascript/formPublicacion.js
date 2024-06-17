@@ -2,15 +2,18 @@
 function getCurrentDateTime() {
   var today = new Date();
   var yyyy = today.getFullYear();
-  var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-  var dd = String(today.getDate()).padStart(2, '0');
-  var hh = String(today.getHours()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1); // Enero inicia en 0
+  var dd = String(today.getDate());
+  var hh = String(today.getHours());
   var min = String(today.getMinutes()).padStart(2, '0');
 
+//Se obtiene la fecha a través de date para obtenerla completa
   return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
 }
 
-    // Actualizar el campo de fecha y hora en el formulario
+    // Actualiza el campo de fecha y hora en el formulario
+    // este se ejecuta cuando el DOM ha sido cargado y busca al
+    // elemento con el id "timestamp" y establece su valor con la fecha y hora actual.
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("timestamp").value = getCurrentDateTime();
     });
@@ -19,14 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("DOMContentLoaded", function() {
       const form = document.getElementById('post-form');
       const submitBtn = document.getElementById('submit-btn');
-      const alertContainer = document.getElementById('alert-container');
       const alertValidaciones = document.getElementById('alertValidaciones');
-      const alertText = document.getElementById('alertValidacionesTexto');
+      const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
+      const alertSuccess = document.getElementById('alertSuccess');
     
-      const usernameRegex = /^[a-zA-Z0-9_-]{1,15}$/;
-      //ihateregex url regex
-      const urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/;
-      
+      const usernameRegex = /^[a-zA-Z0-9]{5,10}$/;
+      const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+    
       submitBtn.addEventListener('click', function() {
         let errors = [];
         
@@ -34,14 +36,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const profileImg = document.getElementById('profileImg').value.trim();
         const description = document.getElementById('description').value.trim();
         const img = document.getElementById('img').value.trim();
-        const timestamp = document.getElementById('timestamp').value.trim();
+        const timestamp = new Date().toLocaleString(); // Obtener fecha y hora actual
         
         // Validación del nombre de usuario
         if (!username) {
           errors.push('El nombre de usuario es obligatorio.');
           document.getElementById('username').classList.add('is-invalid');
         } else if (!usernameRegex.test(username)) {
-          errors.push('El nombre de usuario debe tener máximo 15 caracteres y solo puede contener letras, números, guiones y guiones bajos.');
+          errors.push('El nombre de usuario debe iniciar con letra y tener 3ntre 5 y 10 carácteres, solo puede contener letras y números.');
           document.getElementById('username').classList.add('is-invalid');
         } else {
           document.getElementById('username').classList.remove('is-invalid');
@@ -73,7 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
         if (errors.length > 0) {
           alertValidaciones.style.display = 'block';
-          alertText.innerHTML = errors.join('<br>');
+          alertValidacionesTexto.innerHTML = errors.join('<br>');
+          alertSuccess.style.display = 'none';
         } else {
           alertValidaciones.style.display = 'none';
           
@@ -87,11 +90,17 @@ document.addEventListener("DOMContentLoaded", function() {
           };
           
           console.log("Datos del formulario en formato JSON:", JSON.stringify(formData));
+
     
+          // Guardar el objeto actualizado en LocalStorage
+          localStorage.setItem('formData', JSON.stringify(formData));
+          
           // Limpiar el formulario
           form.reset();
+    
+          // Mostrar mensaje de éxito
+          alertSuccess.style.display = 'block';
         }
       });
     });
-
-  
+    
