@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
           errors.push('El nombre de usuario es obligatorio.');
           document.getElementById('username').classList.add('is-invalid');
         } else if (!usernameRegex.test(username)) {
-          errors.push('El nombre de usuario debe iniciar con letra y tener 3ntre 5 y 10 carácteres, solo puede contener letras y números.');
+          errors.push('El nombre de usuario debe iniciar con letra y tener entre 5 y 10 carácteres, solo puede contener letras y números.');
           document.getElementById('username').classList.add('is-invalid');
         } else {
           document.getElementById('username').classList.remove('is-invalid');
