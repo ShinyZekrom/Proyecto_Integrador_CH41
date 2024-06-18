@@ -136,11 +136,10 @@ h2 {
 
 /*Footer*/
 
-    footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #fff;
-        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        position: inherit;
-    }
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #046CB8;
+  width: 100%;
+  color: white;
+}
