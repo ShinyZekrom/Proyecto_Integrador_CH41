@@ -5,7 +5,7 @@ function getCurrentDateTime() {
   var mm = String(today.getMonth() + 1); // Enero inicia en 0
   var dd = String(today.getDate());
   var hh = String(today.getHours());
-  var min = String(today.getMinutes()).padStart(2, '0');
+  var min = String(today.getMinutes());
 
 //Se obtiene la fecha a través de date para obtenerla completa
   return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
