@@ -1,146 +1,149 @@
 body {
-    background: linear-gradient(white);
+  background: linear-gradient(white);
 
 }
 
 /* Nav */
+<<<<<<< HEAD
 .navbar { 
+=======
+.navbar {
+position: fixed;
+  background-color: #046cb8;
+>>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
   position: fixed;
-    background-color: #046cb8;
-    position: fixed;
-  }
-  .nav-item {
-    margin-right: 20px; /* Espacio entre los elementos del nav */
-  }
-  a.nav-link{
-    font-family: "Comic Neue", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-  }
+}
+.nav-item {
+  margin-right: 20px; /* Espacio entre los elementos del nav */
+}
+a.nav-link{
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
 
-  .navbar-brand {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 1.5rem;
-    color: white;
-  }
-  .fotoperfil {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-  }
-  .dropdown-menu {
-    right: 0; /* Asegura que el menú se alinee a la derecha */
-    left: auto;
-  }
-  .navbar .navbar-toggler{
-    background-color: #ffffff; 
-    color: #046CB8; 
-    border: none; 
-  }
-  
-  .btn-buscar {
-    background-color: #ffffff; 
-    color: #046CB8;
-    border: none; 
-    height: 38px;
-    border-radius: 5px; 
-    padding: 5px 5px; 
-    font-size: 16px; 
-    font-family: "Comic Neue", cursive;
-    cursor: pointer; 
-    margin-right: 10px;
+.navbar-brand {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5rem;
+  color: white;
+}
+.fotoperfil {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.dropdown-menu {
+  right: 0; /* Asegura que el menú se alinee a la derecha */
+  left: auto;
+}
+.navbar .navbar-toggler{
+  background-color: #ffffff; 
+  color: #046CB8; 
+  border: none; 
+}
+
+.btn-buscar {
+  background-color: #ffffff; 
+  color: #046CB8;
+  border: none; 
+  height: 38px;
+  border-radius: 5px; 
+  padding: 5px 5px; 
+  font-size: 16px; 
+  font-family: "Comic Neue", cursive;
+  cursor: pointer; 
+  margin-right: 10px;
 }
 .btn-buscar:hover {
-    background-color: #04b822;
-    color: #ffffff; 
+  background-color: #04b822;
+  color: #ffffff; 
 }
 
-  .logoOficial{
-    max-height: 38px; 
-    width: auto; 
-    filter: invert(100%);
-  }
+.logoOficial{
+  max-height: 38px; 
+  width: auto; 
+  filter: invert(100%);
+}
 
 
 /* main*/
 
 h1 {
-    font-size: 4rem;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 4rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 div p {
-  color: white;
-  font-family: 'Comic Neue';
+color: white;
+font-family: 'Comic Neue';
 }
 
 
 .logo {
-    width: 100%;
-    max-width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 h2 {
-    font-size: calc(1rem + 1vw);
-    font-family: 'Patrick Hand';
+  font-size: calc(1rem + 1vw);
+  font-family: 'Patrick Hand';
 }
 
 
 .comment {
-    background: #046cb8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px white;
-    margin: 5px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  background: #046cb8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+  margin: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .comment p {
-  text-align: justify; /* Justifica el texto dentro de los comentarios */
+text-align: justify; /* Justifica el texto dentro de los comentarios */
 }
 
 
 
 .comment img {
-    margin-right: 10px;
-    width: 30%;
-    height: 60%;
+  margin-right: 10px;
+  width: 30%;
+  height: 60%;
 }
 
 .comments-carousel .slick-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 767px) {
-    .row {
-        flex-direction: column;
-        align-items: center;
-    }
+  .row {
+      flex-direction: column;
+      align-items: center;
+  }
 
-    .col-md-6 {
-        width: 100%;
-        text-align: center;
-    }
+  .col-md-6 {
+      width: 100%;
+      text-align: center;
+  }
 
-    .comment img {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
+  .comment img {
+      margin-bottom: 10px;
+      margin-right: 0;
+  }
 
 }
 
 /*Footer*/
 
-    footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #fff;
-        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        position: inherit;
-    }
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #046CB8;
+  width: 100%;
+  color: white;
+}
