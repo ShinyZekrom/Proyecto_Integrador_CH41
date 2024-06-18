@@ -24,7 +24,8 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
+            <li><a class="dropdown-item" href="/registrate.html">Registrate</a></li>
           </ul>
         </div>
       </div>
