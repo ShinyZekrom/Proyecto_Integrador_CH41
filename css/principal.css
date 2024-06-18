@@ -1,5 +1,4 @@
 /* Nav */
-<<<<<<< HEAD
 .acercade{
     float: right;
     margin-left: 1px;
@@ -18,21 +17,10 @@
     margin-right: 20px; /* Espacio entre los elementos del nav */
   }
   a.nav-link{
-=======
-.navbar {
-    background-color: #046CB8;
-    color: #FFFFFF;
-}
-.nav-item {
-    margin-right: 20px; /* Espacio entre los elementos del nav */
-}
-a.nav-link {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     font-style: normal;
     color: #FFFFFF;
-<<<<<<< HEAD
   }
 
   .navbar-brand {
@@ -70,50 +58,10 @@ a.nav-link {
     font-size: 16px; 
     font-family: "Comic Neue", cursive;
     cursor: pointer; 
-=======
-}
-
-.navbar-brand {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 1.5rem;
-    color: #FFFFFF;
-}
-.logoOficial {
-    width: 150px;
-    color: #ffffff;
-}
-
-.fotoperfil {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-.dropdown-menu {
-    right: 0; /* Asegura que el menú se alinee a la derecha */
-    left: auto;
-}
-.navbar .navbar-toggler {
-    background-color: #ffffff;
-    color: #046CB8;
-    border: none;
-}
-
-.btn-buscar {
-    background-color: #ffffff;
-    color: #046CB8;
-    border: none;
-    height: 38px;
-    border-radius: 5px;
-    padding: 5px 5px;
-    font-size: 16px;
-    font-family: "Comic Neue", cursive;
-    cursor: pointer;
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     margin-right: 10px;
 }
 .btn-buscar:hover {
     background-color: #04b822;
-<<<<<<< HEAD
     color: #ffffff; 
 }
 
@@ -123,18 +71,6 @@ a.nav-link {
     filter: invert(100%);
   }
 /*GRID*/
-=======
-    color: #ffffff;
-}
-
-.logoOficial {
-    max-height: 38px;
-    width: auto;
-    filter: invert(100%);
-}
-
-/* GRID */
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 .grid-container>* {
     text-align: center;
     border-radius: 15px;
@@ -142,7 +78,6 @@ a.nav-link {
     margin: 0;
 }
 
-<<<<<<< HEAD
 
 .navbar {
     grid-area: navbar;
@@ -153,39 +88,20 @@ a.nav-link {
 .publicaciones {
     grid-area: publicaciones;
 
-=======
-.navbar {
-    grid-area: navbar;
-}
-
-.publicaciones {
-    grid-area: publicaciones;
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 }
 
 .publicidad {
     grid-area: publicidad;
-<<<<<<< HEAD
-
-=======
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 }
 
 .footer {
     grid-area: footer;
 }
 
-<<<<<<< HEAD
 /*Vista para el telefono*/
 .grid-container {
     display: grid;
     gap: 0px; /*15 px para hacer el gap de las columans*/
-=======
-/* Vista para el teléfono */
-.grid-container {
-    display: grid;
-    gap: 0px; /* 15 px para hacer el gap de las columnas */
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     grid-template-columns: auto;
     grid-template-areas:
         "navbar"
@@ -194,13 +110,8 @@ a.nav-link {
         "footer";
 }
 
-<<<<<<< HEAD
 /*Vista tablet*/
 @media(min-width:768px) {
-=======
-/* Vista tablet */
-@media (min-width: 768px) {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     .grid-container {
         grid-template-columns: auto;
         grid-template-areas:
@@ -208,7 +119,6 @@ a.nav-link {
             "publicaciones publicaciones"
             "publicidad publicidad"
             "footer footer";
-<<<<<<< HEAD
 
     }
 }
@@ -219,44 +129,16 @@ a.nav-link {
         gap: 10px; /*Aplica gap solo en esta resolucion*/
         grid-template-areas:
             "navbar navbar navbar navbar "
-=======
-    }
-}
-
-/* Vista escritorio */
-@media (min-width: 900px) {
-    .grid-container {
-        grid-template-columns: 190px auto auto 190px;
-        gap: 10px; /* Aplica gap solo en esta resolución */
-        grid-template-areas:
-            "navbar navbar navbar navbar"
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
             "publicaciones publicaciones publicaciones publicidad"
             "footer footer footer footer";
     }
 }
-<<<<<<< HEAD
 /*PUBLICACIONES*/
 .publicaciones {
     .post .card {
         border-radius: 50px;
         /* Esquinas redondeadas */
         border: 10px solid #046CB8;
-=======
-
-/* PUBLICACIONES */
-.publicaciones {
-    width: 100%;
-    margin: auto;
-}
-
-.publicaciones {
-    .post .card {
-        margin: auto;
-        border-radius: 50px;
-        /* Esquinas redondeadas */
-        border: 5px solid #046CB8;
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
         /* Borde grueso de color rosa */
         background-color: #ffffff;
         /* Fondo blanco */
@@ -265,7 +147,6 @@ a.nav-link {
         top: 20px;
     }
 }
-<<<<<<< HEAD
 .crear-post{
     border-radius: 20px;
     border: 5px solid #AAC9E5;
@@ -278,51 +159,28 @@ a.nav-link {
     font-family: "Comic Neue", cursive;
 }
 .card-title{
-=======
-
-.crear-post {
-    border-radius: 20px;
-    border: 5px solid #AAC9E5;
-    background-color: #ffffff;
-    margin: 20px auto;
-    padding: 10px;
-    font-family: "Comic Neue", cursive;
-    max-width: 600px;
-}
-.card-title {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     font-family: "Patrick Hand", cursive;
 }
 
 .detalle-usuario {
     display: flex;
     align-items: center;
-<<<<<<< HEAD
     /* Centra verticalmente los elementos */
-=======
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     font-family: "Patrick Hand", cursive;
 }
 
 .perfil-imagen img {
     width: 50px;
-<<<<<<< HEAD
     /* Tamaño de la imagen de perfil */
     height: 50px;
     border-radius: 50%;
     /* Para hacerla redonda */
     margin-right: 10px;
     /* Espacio entre la imagen y el nombre de usuario */
-=======
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 }
 
 .name-usuario {
     margin: 0;
-<<<<<<< HEAD
     /* Elimina el margen predeterminado del h5 */
     font-family: "Patrick Hand", cursive;
 }
@@ -345,61 +203,27 @@ a.nav-link {
     /* La altura se ajustará automáticamente para mantener la relación de aspecto original */
     /*max-width: calc(75% - 20px); /* Ancho máximo igual a la mitad del espacio disponible para dos columnas (restando el espacio entre columnas) */
     margin-left: 90px;
-=======
-    font-family: "Patrick Hand", cursive;
-}
-
-.card-body-public {
-    max-width: 100%;
-    background: #ffffff;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.img-poster {
-    width: 100%;
-    height: auto;
-    margin: 20px auto;
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     border-radius: 20px;
 }
 
 .post-text {
     text-align: justify;
     font-family: "Comic Neue", cursive;
-<<<<<<< HEAD
     
-=======
-    margin: 10px 0;
-    padding-bottom: 10px; /* Espacio antes de la línea */
-
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 }
 
 .date-act {
     text-align: left;
-<<<<<<< HEAD
 }
 
 .interacciones {
     text-align: left;
     margin-left: 100px;
-=======
-    padding-bottom: 10px; /* Espacio antes de la línea */
-
-}
-
-.interacciones {
-    text-align: center;
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 }
 
 .btn {
     margin-right: 10px;
     font-family: "Open Sans", sans-serif;
-<<<<<<< HEAD
     
    
 }
@@ -411,24 +235,12 @@ a.nav-link {
     gap: 20px;
 }
 .container1 {
-=======
-}
-
-/* Publicidad */
-.containers {
-    display: grid;
-    gap: 20px;
-
-}
-.container1, .container2 {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
     background-color: #928f8f;
     align-self: start;
     border-radius: 15px;
-<<<<<<< HEAD
 }
 .container1 img {
     max-width: 100%;
@@ -437,22 +249,10 @@ a.nav-link {
     
 }
 .container1 a {
-=======
-    max-width: 300px;
-    margin: auto;
-}
-.container1 img, .container2 img {
-    max-width: 100%;
-    height: 200px;
-    border-radius: 10px;
-}
-.container1 a, .container2 a {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     text-decoration: none;
     color: #333;
     font-weight: bold;
 }
-<<<<<<< HEAD
 .container2 {
     border: 1px solid #ccc;
     padding: 10px;
@@ -475,10 +275,6 @@ a.nav-link {
     font-weight: bold;
 }
 /*FOOTER*/
-=======
-
-/* FOOTER */
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 footer {
     text-align: center;
     padding: 10px;
@@ -487,25 +283,4 @@ footer {
     bottom: 0;
     background-color: #046CB8;
     color: #FFFFFF;
-<<<<<<< HEAD
 }
-=======
-}
-
-/* Ajustes adicionales para responsividad */
-@media (max-width: 600px) {
-    .btn-buscar {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .crear-post, .card-body-public {
-        width: 90%;
-    }
-    .publicaciones {
-        width: 100%;
-    }
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-}
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833

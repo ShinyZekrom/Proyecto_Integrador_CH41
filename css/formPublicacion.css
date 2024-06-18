@@ -10,10 +10,6 @@
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     font-style: normal;
-<<<<<<< HEAD
-=======
-    color: white;
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
   }
 
   .navbar-brand {
@@ -58,7 +54,6 @@
     filter: invert(100%);
   }
 
-<<<<<<< HEAD
  /*Contact*/
  .contact-section {
     display: flex;
@@ -95,45 +90,10 @@
   }
 
 
-=======
-.container {
-    max-width: 450px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: left;
-    margin: 15px;
-}
-h1 {
-    font-size: 5 rem;
-    margin-bottom: 10px;
-    text-align: center;
-    font-family: "Patrick Hand", cursive;
-}
-h6 {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: gray;
-    text-align: center;
-    font-family: "Patrick Hand", cursive;
-}
-.form-group label {
-padding: 5px;
-font-size: 16px; 
-font-family: "Comic Neue", cursive;
-}
-
-.btn-primary {
-    width: 100%;
-    padding: 10px;
-}
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 
 /*Footer*/
 
 footer {
-<<<<<<< HEAD
     text-align: center;
     padding: 10px;
     background-color: #fff;
@@ -141,28 +101,3 @@ footer {
     width: 100%;
     position: sticky;
 }
-=======
-  text-align: center;
-  padding: 10px;
-  background-color: #046CB8;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  color: white;
-}
-
-.bg-primary {
-  background-color: #046CB8;
-}
-
-@media (max-width: 576px) {
-  h1 {
-      font-size: 1.5rem;
-  }
-  h6 {
-      font-size: 0.8rem;
-  }
-  #description, #img {
-      height: 60px;
-  }
-}
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833

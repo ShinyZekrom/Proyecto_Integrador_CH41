@@ -5,7 +5,6 @@ body {
 }
 
 /* Nav */
-<<<<<<< HEAD
 .acercade{
     margin-right: 100px;
     border-radius: 45%;
@@ -16,25 +15,9 @@ body {
     box-sizing: border-box;
     white-space: nowrap;                                 
     
-=======
-.acercade {
-    border-radius: 45%;
-    background: #AAC9E5;
-    padding: 50px 50px;
-    display: inline-block;
-    line-height: normal;
-    box-sizing: border-box;
-    white-space: nowrap;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    font-family: "Patrick Hand", cursive;
-    font-style: normal;
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 }
 .descrip {
     text-align: justify;
-<<<<<<< HEAD
     margin-right: 100px ;
     margin-left: 20px;
   
@@ -48,10 +31,6 @@ body {
 .logo{
     width: 80px;
     margin-right: 20px;
-=======
-    margin-right: 100px;
-    margin-left: 20px;
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 }
 .aboutus {
     display: flex;
@@ -72,25 +51,16 @@ body {
     position: fixed;
     top: 0;
     background-color: #046CB8;
-<<<<<<< HEAD
-  }
-  .nav-item {
-    margin-right: 20px; /* Espacio entre los elementos del nav */
-  }
-  a.nav-link{
-=======
     width: 100%;
 }
 .nav-item {
     margin-right: 20px;
 }
 a.nav-link {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     font-style: normal;
     color: #ffffff;
-<<<<<<< HEAD
   }
 
   .navbar-brand {
@@ -134,9 +104,6 @@ a.nav-link {
     width: auto; 
     filter: invert(100%);
   }
-=======
-}
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 
 .navbar-brand {
     font-family: 'Patrick Hand', cursive;
@@ -252,14 +219,9 @@ a.nav-link {
     }
 }
 
-<<<<<<< HEAD
 /* Desarrolladores*/
 .devtitle{
   background-color: #AAC9E5;
-=======
-.devtitle {
-    background-color: #AAC9E5;
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     font-family: "Patrick Hand", cursive;
     font-weight: 400;
     font-style: normal;
@@ -267,14 +229,9 @@ a.nav-link {
     border-radius: 28px;
     align-content: center;
     box-sizing: border-box;
-<<<<<<< HEAD
   }
 
   .nombredev{
-=======
-}
-.nombredev {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     font-family: "Patrick Hand", cursive;
     font-weight: 400;
     font-style: normal;
@@ -293,10 +250,7 @@ a.nav-link {
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
-<<<<<<< HEAD
     box-shadow: ;
-=======
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     text-align: center;
     width: 200px;
 }
@@ -304,43 +258,27 @@ a.nav-link {
     width: 100%;
     border-radius: 20px;
 }
-<<<<<<< HEAD
 
 .biografia{
-=======
-.biografia {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     font-family: "Comic Neue", cursive;
     font-weight: 400;
     font-style: normal;
     text-align: justify;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
 footer {
     text-align: center;
     padding: 10px;
     background-color: #046CB8;
-<<<<<<< HEAD
     box-shadow: ;
     width: 100%;
     
 }
 /*-----RESPONSIVIDAD------*/
 .grid-container>*{
-=======
-    width: 100%;
-}
-
-.grid-container > * {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     text-align: center;
     border-radius: 15px;
     padding: 10px;
 }
-<<<<<<< HEAD
 .desarrolladores{
     grid-area: division;
     background: white;
@@ -352,20 +290,6 @@ footer {
 }
 /*Vista para el telefono*/
 .grid-container{
-=======
-.desarrolladores {
-    grid-area: division;
-    background: white;
-}
-.footer {
-    grid-area: footer;
-    background-color: #046CB8;
-    width: 100%;
-}
-
-/* Vista para el teléfono */
-.grid-container {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
     display: grid;
     gap: 10px;
     grid-template-columns: auto;
@@ -375,20 +299,11 @@ footer {
     "articulo"
     "sidebar"
     "division"
-<<<<<<< HEAD
     "footer" 
 };
 /*Vista tablet*/
 @media(min-width:768px){
     .grid-container{
-=======
-    "footer";
-}
-
-/* Vista tablet */
-@media (min-width: 768px) {
-    .grid-container {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
         grid-template-columns: auto;
         grid-template-areas:
         "header header"
@@ -399,14 +314,8 @@ footer {
         "footer footer";
     }
 }
-<<<<<<< HEAD
 @media(min-width:900px){
     .grid-container{
-=======
-
-@media (min-width: 900px) {
-    .grid-container {
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
         grid-template-columns: auto;
         grid-template-areas:
         "header header header"
@@ -417,7 +326,6 @@ footer {
     }
 }
 
-<<<<<<< HEAD
 @media(max-width:767px){
     .row{
       display: flex;
@@ -437,23 +345,3 @@ footer {
       align-items: center;
     }
   }
-=======
-@media (max-width: 767px) {
-    .row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .col-tittle {
-        width: 100%;
-    }
-    .col {
-        width: 100%;
-    }
-    .aboutus {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-}
->>>>>>> 97ea74c9f912f221efca804d7392604849f03833
