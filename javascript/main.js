@@ -34,40 +34,6 @@ function iniciarVentanadev1() {
 window.addEventListener("DOMContentLoaded", iniciarVentanadev1);
 
 
-//-----------------------------------------MODAL CLAUDIA --------------------------------------
-function abrirVentanadev2() {
-    const ventanadev2 = document.getElementById("desarrollador2");
-    ventanadev2.classList.add("ventanadev2_mostrar");
-}
-
-//Función para cerrar ventana flotante (modal)
-function cerrarVentanadev2() {
-    const ventanadev2 = document.getElementById("desarrollador2");
-    ventanadev2.classList.remove("ventanadev2_mostrar");
-}
-
-//Función para cerrar la ventana cuando se da click fuera del contenedor 
-function fueraVentanadev2(evento) {
-    const ventanadev2 = document.getElementById("desarrollador2");
-    if (evento.target == ventanadev2) {
-        ventanadev2.classList.remove("ventanadev2_mostrar");
-    }
-}
-
-// Agregar los event listeners 
-function iniciarVentanadev2() {
-    const abrirVentanadev2boton = document.getElementById("abrirVentanadev2");
-    const cerrarVentanadev2boton = document.querySelector(".cerrardev2");
-
-    abrirVentanadev2boton.addEventListener("click", abrirVentanadev2);
-    cerrarVentanadev2boton.addEventListener("click", cerrarVentanadev2);
-    window.addEventListener("click", fueraVentanadev2);
-}
-
-//Inicializar los event listeners 
-window.addEventListener("DOMContentLoaded", iniciarVentanadev2);
-
-
 //-----------------------------------------MODAL CAROL --------------------------------------
 function abrirVentanadev3() {
     const ventanadev3 = document.getElementById("desarrollador3");
