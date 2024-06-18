@@ -11,7 +11,11 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="/paginaPrincipal.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="/formularioPublicacion.html">Publica aquí</a></li>
+<<<<<<< HEAD
           <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contactanos</a></li>
+=======
+          <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contáctanos</a></li>
+>>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
         </ul>
         <form class="d-flex" role="search">
@@ -24,7 +28,8 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
+            <li><a class="dropdown-item" href="/registrate.html">Registrate</a></li>
           </ul>
         </div>
       </div>
@@ -33,6 +38,11 @@
         document.getElementById("navbarAqui").innerHTML = navbarHTML;
     } // función cargar navbar
 
+<<<<<<< HEAD
     document.addEventListener("DOMContentLoaded", cargarNavbar);
     //cargará el navbar
   
+=======
+document.addEventListener("DOMContentLoaded", cargarNavbar);
+//cargará el navbar
+>>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb

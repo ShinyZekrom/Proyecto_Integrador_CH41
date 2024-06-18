@@ -1,20 +1,21 @@
 body {
-    background: white;
+  background: white;
 
 /* Nav */
 .navbar {
-    background-color: rgba(4, 108, 184, 1);
-  }
-  .nav-item {
-    margin-right: 20px; /* Espacio entre los elementos del nav */
-  }
-  a.nav-link{
-    font-family: "Comic Neue", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-  }
+  background-color: rgba(4, 108, 184, 1);
+}
+.nav-item {
+  margin-right: 20px; /* Espacio entre los elementos del nav */
+}
+a.nav-link{
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
 
+<<<<<<< HEAD
   .navbar-brand {
     font-family: 'Patrick Hand', cursive;
     font-size: 1.5rem;
@@ -46,26 +47,119 @@ body {
     font-family: "Comic Neue", cursive;
     cursor: pointer; 
     margin-right: 10px;
+=======
+.navbar-brand {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5rem;
+  color: white;
+}
+.fotoperfil {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.dropdown-menu {
+  right: 0; /* Asegura que el menú se alinee a la derecha */
+  left: auto;
+}
+.navbar .navbar-toggler{
+  background-color: #ffffff; 
+  color: #046CB8; 
+  border: none; 
+}
+
+.btn-buscar {
+  background-color: #ffffff; 
+  color: #046CB8;
+  border: none; 
+  height: 38px;
+  border-radius: 5px; 
+  padding: 5px 5px; 
+  font-size: 16px; 
+  font-family: "Comic Neue", cursive;
+  cursor: pointer; 
+  margin-right: 10px;
+>>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
 }
 .btn-buscar:hover {
-    background-color: #04b822;
-    color: #ffffff; 
+  background-color: #04b822;
+  color: #ffffff; 
 }
 
-  .logoOficial{
-    max-height: 38px; 
-    width: auto; 
-    filter: invert(100%);
-  }
+.logoOficial{
+  max-height: 38px; 
+  width: auto; 
+  filter: invert(100%);
+}
 
-  /*Contact*/
-  .contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    min-height: 100vh;
+/*Contact*/
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+.contact-form {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  height: 100%;
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+}
+.contact-title {
+  font-size: 2.3rem;
+  text-align: center;
+}
+.contact-form h2{
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+}
+.btn-submit {
+  background:  rgba(4, 108, 184, 1);
+  border: none;
+  color: white;
+}
+.contact-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+      .contact-section {
+      flex-direction: column-reverse;
+      }
+      .contact-form, .contact-image {
+      width: 100%;
+      height: auto;
+      }
+      .contact-title {
+      font-size: 1.5rem; /* Tamaño de fuente más pequeño para móviles */
+      }
+      .contact-form {
+      order: 1;
+      }
+      .contact-image {
+      order: 2;
+      margin-bottom: 20px; /* Espacio entre imagen y formulario */
+      }
+      .contact-form h2{
+          font-family: "Patrick Hand", cursive;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 2rem;
+      }
   }
+<<<<<<< HEAD
   .contact-form {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -135,3 +229,17 @@ body {
         bottom: 0;
         color: white;
     }
+=======
+  /*Footer*/
+
+  footer {
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(4, 108, 184, 1);
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      bottom: 0;
+      color: white;
+  }
+}
+>>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
