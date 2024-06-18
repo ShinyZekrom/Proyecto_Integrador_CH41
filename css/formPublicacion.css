@@ -71,15 +71,15 @@ h1 {
   font-family: "Patrick Hand", cursive;
 }
 h6 {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: gray;
-  text-align: center;
-  font-family: "Patrick Hand", cursive;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: gray;
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
 }
 .form-group label {
 padding: 5px;
-font-size: 16px; 
+font-size: 18px; 
 font-family: "Comic Neue", cursive;
 }
 <<<<<<< HEAD

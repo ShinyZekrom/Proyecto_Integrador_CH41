@@ -113,6 +113,7 @@ a.nav-link{
     text-align: justify;
     margin-right: 100px;
     margin-left: 20px;
+    font-family: "Comic Neue", cursive;
 }
 .aboutus {
     display: flex;
@@ -188,6 +189,9 @@ a.nav-link {
 >>>>>>> LAMC
 
 /*Acerca de nosotros*/
+
+
+
 .row {
     margin: 40px;
     width: 100%;
@@ -198,6 +202,7 @@ a.nav-link {
     font-family: "Patrick Hand", cursive;
     font-weight: 400;
     font-style: normal;
+    font-size: 24px;
 }
 .col {
     width: 65%;
@@ -214,8 +219,9 @@ a.nav-link {
     border-radius: 25px;
     text-align: center;
     padding: 15px;
-    font-family: Sofia;
-    font-size: 24px;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
     color: black;
     box-sizing: border-box;
     margin: 10px;
@@ -426,6 +432,7 @@ footer {
     padding: 10px;
     background-color: #046CB8;
     width: 100%;
+    color: white;
 }
 
 .grid-container > * {

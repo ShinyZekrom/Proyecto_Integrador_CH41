@@ -5,7 +5,7 @@ function getCurrentDateTime() {
   var mm = String(today.getMonth() + 1); // Enero inicia en 0
   var dd = String(today.getDate());
   var hh = String(today.getHours());
-  var min = String(today.getMinutes()).padStart(2, '0');
+  var min = String(today.getMinutes()) ;
 
 //Se obtiene la fecha a través de date para obtenerla completa
   return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
       const alertSuccess = document.getElementById('alertSuccess');
     
-      const usernameRegex = /^[a-zA-Z0-9]{5,10}$/;
+      const usernameRegex = /^[a-zA-Z0-9]{5,15}$/;
       const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
     
       submitBtn.addEventListener('click', function() {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
           errors.push('El nombre de usuario es obligatorio.');
           document.getElementById('username').classList.add('is-invalid');
         } else if (!usernameRegex.test(username)) {
-          errors.push('El nombre de usuario debe iniciar con letra y tener 3ntre 5 y 10 carácteres, solo puede contener letras y números.');
+          errors.push('El nombre de usuario debe iniciar con letra y tener entre 5 y 15 carácteres, solo puede contener letras y números.');
           document.getElementById('username').classList.add('is-invalid');
         } else {
           document.getElementById('username').classList.remove('is-invalid');
