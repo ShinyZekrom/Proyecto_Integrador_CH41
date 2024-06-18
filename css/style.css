@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patrick+Hand&display=swap');
 
 body {
@@ -262,10 +263,65 @@ a.nav-link {
     filter: invert(100%);
 }
 >>>>>>> LAMC
+=======
+body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+}
+/* Nav */
+.acercade{
+    float: right;
+    margin-left: 1px;
+    border: none;
+    float: right;
+    margin-right: 100px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(218, 216, 213);
+
+
+}
+.descrip{
+    text-align: justify;
+    margin-right: 100px;
+    float: left;
+}
+.aboutus{
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0;
+
+    
+
+}
+.navbar{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.navbar a{
+    text-decoration: none ;
+    color: #333;
+    font-family: "Wellfleet", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+.logo{
+    width: 80px;
+    margin-left: 20px;
+}
+.fotoperfil{
+    width: 50px;
+}
+
+
+>>>>>>> develop
 
 /*Acerca de nosotros*/
 
 
+<<<<<<< HEAD
 
 .row {
     margin: 40px;
@@ -370,11 +426,17 @@ background-color: #AAC9E5;
     background-color: #AAC9E5;
 >>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
     font-family: "Patrick Hand", cursive;
+=======
+/* Desarrolladores*/
+.devtitle{
+    font-family: "Lily Script One", system-ui;
+>>>>>>> develop
     font-weight: 400;
     font-style: normal;
     text-align: left;
     border-radius: 28px;
     align-content: center;
+<<<<<<< HEAD
     box-sizing: border-box;
 <<<<<<< HEAD
   }
@@ -544,18 +606,72 @@ footer {
 
 .grid-container > * {
 >>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
+=======
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nombredev{
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.desarrolladores {
+    text-align: center;
+    padding: 20px;
+}
+
+.devcontainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.developer {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.img_desarrolladores {
+    width: 100%;
+    border-radius: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    bottom: 0;
+}
+/*-----RESPONSIVIDAD------*/
+.grid-container>*{
+>>>>>>> develop
     text-align: center;
     border-radius: 15px;
     padding: 10px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .desarrolladores{
     grid-area: division;
     background: white;
+=======
+.desarrolladores{
+    grid-area: division;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, #E18BF8 0%, #FF86D2 27%, #FFB17D 55%, #FFFF99 74%, #FFD567 85.5%, #F9F871 100%);
+>>>>>>> develop
 }
 
 .footer{
     grid-area: footer;
+<<<<<<< HEAD
     background-color: #046CB8;
 }
 /*Vista para el telefono*/
@@ -574,12 +690,19 @@ footer {
 /* Vista para el teléfono */
 .grid-container {
 >>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
+=======
+    background-color: #ffffff;
+}
+/*Vista para el telefono*/
+.grid-container{
+>>>>>>> develop
     display: grid;
     gap: 10px;
     grid-template-columns: auto;
     grid-template-areas:
     "header"
     "navbar"
+<<<<<<< HEAD
     "articulo"
     "sidebar"
     "division"
@@ -597,10 +720,21 @@ footer {
 @media (min-width: 768px) {
     .grid-container {
 >>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
+=======
+    "division"
+    "sidebar"
+    "articulo"
+    "footer" ;
+}
+/*Vista tablet*/
+@media(min-width:768px){
+    .grid-container{
+>>>>>>> develop
         grid-template-columns: auto;
         grid-template-areas:
         "header header"
         "navbar navbar"
+<<<<<<< HEAD
         "articulo articulo"
         "sidebar sidebar"
         "division division"
@@ -666,3 +800,22 @@ footer {
 }
 >>>>>>> LAMC
 >>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
+=======
+        "division division"
+        "sidebar sidebar"
+        "articulo articulo"
+        "footer footer";
+    }
+}
+@media(min-width:900px){
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-areas:
+        "navbar navbar navbar"
+        "header header header"
+        "division division division"
+        "articulo articulo sidebar"
+        "footer footer footer";
+    }
+}
+>>>>>>> develop
