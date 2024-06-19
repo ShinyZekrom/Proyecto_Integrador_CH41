@@ -32,14 +32,14 @@
       }
 
       // Validar teléfono (solo números)
-      const numCel = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; //{10} significa que solo pueden ser 10 números
+      const numCel = /^(?!0{10})[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; // Se coloca negación al inicio que indique que no puedan ser puros 0s, y se utiliza función de ihateRegex para utilizar cualquier número de algún país donde se pueda añadir el + y clave lada o solo los 10 dígitos 
       if (!numCel.test(phone)) {
         phoneError.textContent = "Ingresa tu número celular.";
         Isvalid = false;
       }
 
       // Validar correo electrónico
-      const patronCorreo = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
+      const patronCorreo = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/; // expresión ihateregex que indica los posibles patrones de correo.
       if (!patronCorreo.test(email)) {
         emailError.textContent = "Ingresa un correo electrónico.";
         Isvalid = false;
