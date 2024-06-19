@@ -125,11 +125,39 @@ font-family: "Comic Neue", cursive;
     padding: 10px;
 }
 
+.options-form #btn-registro {
+  justify-content: center; 
+  align-items: center; 
+  margin-left: 40%; 
+  margin-right: auto; 
+
+}
+#btn-registro{
+  margin-left: auto; 
+  margin-right: auto; 
+  justify-content: center; 
+align-items: center; 
+}
+#btn-registro{
+  background-color: transparent; 
+    color: black; 
+    padding: 4x 2px; 
+    text-align: center;
+    text-decoration: underline; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    border: none; 
+    margin-left: auto; 
+    margin-right: auto; 
+    justify-content: center; 
+  align-items: center; 
+}
+
 /*Footer*/
 
 footer {
   text-align: center;
-  padding: 10px;
   background-color: #046CB8;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
