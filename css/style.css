@@ -125,9 +125,9 @@ a.nav-link{
 
 =======
 .acercade {
-    border-radius: 45%;
+    border-radius: 20%;
     background: #AAC9E5;
-    padding: 50px 50px;
+    padding: 20px;
     display: inline-block;
     line-height: normal;
     box-sizing: border-box;
@@ -355,14 +355,14 @@ body {
     font-style: normal;
     color: black;
     box-sizing: border-box;
-    margin: 10px;
+    margin: 10px 0;
 }
 .card-text {
     background-color: #D9D9D9;
     border-radius: 25px;
     color: black;
     font-family: "Comic Neue", cursive;
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     color: black;
     padding: 15px;
