@@ -18,7 +18,7 @@ body {
   .navbar-brand {
     font-family: 'Patrick Hand', cursive;
     font-size: 1.5rem;
-    color: white; //logo
+    color: white;
   }
   .fotoperfil {
     width: 30px;
@@ -67,10 +67,10 @@ body {
     min-height: 100vh;
   }
   .contact-form {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     height: 100%;
     font-family: "Comic Neue", cursive;
     font-weight: 400;
@@ -98,6 +98,7 @@ body {
     border-radius: 10px;
     object-fit: cover;
     justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   }
   @media (max-width: 768px) {
         .contact-section {
@@ -135,3 +136,4 @@ body {
         bottom: 0;
         color: white;
     }
+  }

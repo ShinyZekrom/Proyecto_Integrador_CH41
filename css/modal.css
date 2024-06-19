@@ -60,7 +60,11 @@
 
 /* Contenido de la ventana modal */
 .infodev1, .infodev2, .infodev3, .infodev4, .infodev5, .infodev6, .infodev7, .infodev8 {
+<<<<<<< HEAD
     background-color: #d4b5ebbb;
+=======
+    background-color: rgba(162, 216, 241, 0.712);
+>>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
     margin: auto;
     width: 90%;
     max-width: 600px;
@@ -68,8 +72,13 @@
     padding: 3em 2.5em;
     gap: 1em;
     place-items: center;
+<<<<<<< HEAD
     border: 1px solid rgba(129, 99, 158, 0.712);
     border-radius: 60px;
+=======
+    border: 1px solid rgba(99, 139, 158, 0.712);
+    border-radius: 50px;
+>>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
     box-shadow: 0 0 10px #61baad;
     font-family: "Comic Neue", cursive;
     font-weight: 400;
@@ -92,7 +101,11 @@
 @media (min-width: 768px) {
     .infodev1, .infodev2, .infodev3, .infodev4, .infodev5, .infodev6, .infodev7, .infodev8 {
         padding: 2em 2em;
+<<<<<<< HEAD
         font-size: 14px;
+=======
+        font-size: 13px;
+>>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
     }
 }
 

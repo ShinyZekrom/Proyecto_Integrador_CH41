@@ -25,7 +25,11 @@ function addPost(post){
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     `;
+=======
+    <br>`;
+>>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += postHTML;
 }
@@ -92,7 +96,11 @@ const posts = [
         'username': 'usuario9',
         'profileImg': 'https://m.media-amazon.com/images/I/712Z3RqOOJL._AC_UF894,1000_QL80_.jpg',
         'timestamp': '2024-06-10 20:30',
+<<<<<<< HEAD
         'description': '', //post sin descripción pero con imágen 
+=======
+        'description': 'Hola', //post sin descripción pero con imágen 
+>>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
         'img': 'https://i.pinimg.com/originals/cf/32/28/cf32289918dc21d4b4f79ec1f9fac0fb.jpg'
     },
     {
@@ -105,4 +113,54 @@ const posts = [
 ];
 
 // Agregar los 10 objetos a la lista
+<<<<<<< HEAD
 posts.forEach(post => addPost(post));
+=======
+posts.forEach(post => addPost(post));
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const publicationContainer = document.getElementById('publication-container');
+  
+    // Recuperar los datos del LocalStorage
+    const formData = localStorage.getItem('formData');
+    
+    if (formData) {
+      const parsedData = JSON.parse(formData);
+      
+      // Crear el contenido HTML para mostrar la publicación
+      const publicationHTML =  `
+      <div class="post">
+          <div class="card">
+              <div class="card-body">
+                  <div class="detalle-usuario">
+                      <div class="perfil-imagen">
+                          <img src="${parsedData.profileImg}" alt="Imagen de perfil">
+                      </div>
+                      <h5 class="name-usuario">${parsedData.username}</h5>
+                  </div>
+                  <p class="post-text">${parsedData.description}</p>
+                  <p class="date-act"><small class="text-body-secondary">${parsedData.timestamp}</small></p>
+              </div>
+              ${parsedData.img ? `<img src="${parsedData.img}" class="img-poster" alt="postimg">` : ''}
+              <div class="interacciones">
+                  <button type="btn-like" class="btn like"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
+                      <path d="M0 0h24v24H0V0z" fill="none" />
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                  </svg>Me gusta</button>
+                  <button type="btn-commet" class="btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
+                      <path d="M0 0h24v24H0V0z" fill="none" />
+                      <path d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z" />
+                  </svg>Comentar</button>
+              </div>
+          </div>
+      </div>
+      <br>`;
+      
+      // Añadir el contenido HTML al contenedor
+      publicationContainer.innerHTML = publicationHTML;
+    } else {
+      publicationContainer.innerHTML = '<p>No hay publicaciones nuevas.</p>';
+    }
+  });
+>>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
