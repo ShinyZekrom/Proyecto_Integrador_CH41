@@ -32,22 +32,14 @@
       }
 
       // Validar teléfono (solo números)
-<<<<<<< HEAD
-      const numCel = /^[0-9]{10}$/; //{10} significa que solo pueden ser 10 números
-=======
       const numCel = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; //{10} significa que solo pueden ser 10 números
->>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
       if (!numCel.test(phone)) {
         phoneError.textContent = "Ingresa tu número celular.";
         Isvalid = false;
       }
 
       // Validar correo electrónico
-<<<<<<< HEAD
-      const patronCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-=======
       const patronCorreo = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
->>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
       if (!patronCorreo.test(email)) {
         emailError.textContent = "Ingresa un correo electrónico.";
         Isvalid = false;

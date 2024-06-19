@@ -25,11 +25,7 @@ function addPost(post){
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-    `;
-=======
     <br>`;
->>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += postHTML;
 }
@@ -96,11 +92,7 @@ const posts = [
         'username': 'usuario9',
         'profileImg': 'https://m.media-amazon.com/images/I/712Z3RqOOJL._AC_UF894,1000_QL80_.jpg',
         'timestamp': '2024-06-10 20:30',
-<<<<<<< HEAD
-        'description': '', //post sin descripción pero con imágen 
-=======
         'description': 'Hola', //post sin descripción pero con imágen 
->>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
         'img': 'https://i.pinimg.com/originals/cf/32/28/cf32289918dc21d4b4f79ec1f9fac0fb.jpg'
     },
     {
@@ -113,9 +105,6 @@ const posts = [
 ];
 
 // Agregar los 10 objetos a la lista
-<<<<<<< HEAD
-posts.forEach(post => addPost(post));
-=======
 posts.forEach(post => addPost(post));
 
 
@@ -163,4 +152,3 @@ document.addEventListener("DOMContentLoaded", function() {
       publicationContainer.innerHTML = '<p>No hay publicaciones nuevas.</p>';
     }
   });
->>>>>>> 4ebe86a08401f939d42f37559eb9ddf2a1054244
