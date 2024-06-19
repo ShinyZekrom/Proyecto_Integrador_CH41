@@ -1,11 +1,11 @@
 // Función para obtener la fecha y hora actual
 function getCurrentDateTime() {
-  var today = new Date();
-  var yyyy = today.getFullYear();
-  var mm = String(today.getMonth() + 1); // Enero inicia en 0
-  var dd = String(today.getDate());
-  var hh = String(today.getHours());
-  var min = String(today.getMinutes()).padStart(2, '0');
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1); // Enero inicia en 0
+  const dd = String(today.getDate());
+  const hh = String(today.getHours());
+  const min = String(today.getMinutes()) ;
 
 //Se obtiene la fecha a través de date para obtenerla completa
   return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
       const alertSuccess = document.getElementById('alertSuccess');
     
-      const usernameRegex = /^[a-zA-Z0-9]{5,15}$/;
+      const usernameRegex = /^[a-z0-9_-]{3,15}$/;
       const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
     
       submitBtn.addEventListener('click', function() {
