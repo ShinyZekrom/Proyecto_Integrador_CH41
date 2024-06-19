@@ -15,7 +15,6 @@ a.nav-link{
   color: white;
 }
 
-<<<<<<< HEAD
   .navbar-brand {
     font-family: 'Patrick Hand', cursive;
     font-size: 1.5rem;
@@ -47,39 +46,6 @@ a.nav-link{
     font-family: "Comic Neue", cursive;
     cursor: pointer; 
     margin-right: 10px;
-=======
-.navbar-brand {
-  font-family: 'Patrick Hand', cursive;
-  font-size: 1.5rem;
-  color: white;
-}
-.fotoperfil {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-.dropdown-menu {
-  right: 0; /* Asegura que el menú se alinee a la derecha */
-  left: auto;
-}
-.navbar .navbar-toggler{
-  background-color: #ffffff; 
-  color: #046CB8; 
-  border: none; 
-}
-
-.btn-buscar {
-  background-color: #ffffff; 
-  color: #046CB8;
-  border: none; 
-  height: 38px;
-  border-radius: 5px; 
-  padding: 5px 5px; 
-  font-size: 16px; 
-  font-family: "Comic Neue", cursive;
-  cursor: pointer; 
-  margin-right: 10px;
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
 }
 .btn-buscar:hover {
   background-color: #04b822;
@@ -159,7 +125,6 @@ a.nav-link{
           font-size: 2rem;
       }
   }
-<<<<<<< HEAD
   .contact-form {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -229,17 +194,3 @@ a.nav-link{
         bottom: 0;
         color: white;
     }
-=======
-  /*Footer*/
-
-  footer {
-      text-align: center;
-      padding: 10px;
-      background-color: rgba(4, 108, 184, 1);
-      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      bottom: 0;
-      color: white;
-  }
-}
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
