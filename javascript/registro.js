@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const usernameRegex = /^[a-zA-Z0-9_-]{5,15}$/; //usuarios que pueden llevar
   const numCelRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; //{10} significa que solo pueden ser 10 números
   const correoRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/; 
-  const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+  const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/;
 
   submitBtn.addEventListener('click', function() {
     let errors = [];
