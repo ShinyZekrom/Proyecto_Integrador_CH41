@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Validación usuario
     if (!username) {
-      errors.push('* El nombre de usuario es obligatorio.');
+      errors.push('* El nombre de usuario es obligatorio');
       document.getElementById('username').classList.add('is-invalid');
     } else if (!usernameRegex.test(username)) {
       errors.push('* El nombre de usuario debe contener entre 5 y 15 caracteres solo se permiten guiones y guiones bajos. Ej: Delhaz_1, Delhaz-1');

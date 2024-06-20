@@ -10,11 +10,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="/paginaPrincipal.html">Inicio</a></li>
-<<<<<<< HEAD
-          <li class="nav-item"><a class="nav-link" href="/formularioPublicacion.html">Publica aquí</a></li>
-=======
           <li class="nav-item"><a class="nav-link" href="/formularioPublicacion.html">Crear Publicación</a></li>
->>>>>>> 3cde40747bac124ac6e49757dccad286720ffe8b
           <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contáctanos</a></li>
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
         </ul>
@@ -29,11 +25,7 @@
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Mi perfil</a></li>
             <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
-<<<<<<< HEAD
-            <li><a class="dropdown-item" href="/registrate.html">Registrate</a></li>
-=======
             <li><a class="dropdown-item" href="/registrate.html">Regístrate</a></li>
->>>>>>> 3cde40747bac124ac6e49757dccad286720ffe8b
           </ul>
         </div>
       </div>
