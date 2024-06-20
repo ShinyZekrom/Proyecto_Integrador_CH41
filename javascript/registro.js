@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
       errors.push('* Número de celular obligatorio');
       document.getElementById('phone').classList.add('is-invalid');
     } else if (!numCelRegex.test(phone)) {
-      errors.push('* Coloca tu número a 10 dígitos');
+      errors.push('* Coloca un número válido');
       document.getElementById('phone').classList.add('is-invalid');
     } else {
       document.getElementById('phone').classList.remove('is-invalid');
