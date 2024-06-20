@@ -131,7 +131,8 @@ h5{
   font-family: "Patrick Hand", cursive;
 }
 .form-group label {
-padding: 5px;
+margin-bottom: 0;
+margin-top: 5px;
 font-size: 20px; 
 font-family: "Comic Neue", cursive;
 }
