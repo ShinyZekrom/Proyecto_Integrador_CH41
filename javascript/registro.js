@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function() {
   const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
   const alertSuccess = document.getElementById('alertSuccess');
 
-  const nameRegex = /^[a-zA-Z\s]+$/;
+  const nameRegex = /^[a-zA-Z\s]+$/; //Unicamente pueden ser letras y espacios
   const usernameRegex = /^[a-zA-Z0-9_-]{5,15}$/; //usuarios que pueden llevar
-  const numCelRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; //{10} significa que solo pueden ser 10 números
-  const correoRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/; 
-  const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/;
+  const numCelRegex = /^(?!0{10})[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; // Se coloca negación al inicio que indique que no puedan ser puros 0s, y se utiliza función de ihateRegex para utilizar cualquier número de algún país donde se pueda añadir el + y clave lada o solo los 10 dígitos 
+  const correoRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/; // expresión ihateregex que indica los posibles patrones de correo.
+  const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/; //regex que indica la extensión de contraseña de 8 a 15 caracteres que debe incluir una minuscula, una mayuscula, un número y un caracter especial.
 
   submitBtn.addEventListener('click', function() {
     let errors = [];
