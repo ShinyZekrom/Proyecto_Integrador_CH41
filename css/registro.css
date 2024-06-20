@@ -166,6 +166,35 @@ font-family: "Comic Neue", cursive;
   align-items: center; 
 }
 
+.options-form #btn-registro {
+  justify-content: center; 
+  align-items: center; 
+  margin-left: 40%; 
+  margin-right: auto; 
+
+}
+#btn-registro{
+  margin-left: auto; 
+  margin-right: auto; 
+  justify-content: center; 
+align-items: center; 
+}
+#btn-registro{
+  background-color: transparent; 
+    color: black; 
+    padding: 4x 2px; 
+    text-align: center;
+    text-decoration: underline; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    border: none; 
+    margin-left: auto; 
+    margin-right: auto; 
+    justify-content: center; 
+  align-items: center; 
+}
+
 /*Footer*/
 
 footer {

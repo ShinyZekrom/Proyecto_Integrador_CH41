@@ -2,10 +2,10 @@
 function getCurrentDateTime() {
   const today = new Date();
   const yyyy = today.getFullYear();
-  const mm = String(today.getMonth() + 1); // Enero inicia en 0
+  const mm = String(today.getMonth() + 1).padStart(2 , "0"); // Enero inicia en 0
   const dd = String(today.getDate());
   const hh = String(today.getHours());
-  const min = String(today.getMinutes()) ;
+  const min = String(today.getMinutes()).padStart(2 , "0") ;
 
 //Se obtiene la fecha a través de date para obtenerla completa
   return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
