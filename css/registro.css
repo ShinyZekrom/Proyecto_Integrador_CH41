@@ -200,3 +200,24 @@ footer {
     width: 40%;
   }
 }
+
+@media (max-width: 767px) {
+  h1 {
+      font-size: 1.5rem;
+  }
+  .form-container h6 {
+      font-size: 0.85 rem;
+      /*margin-bottom: 25px;*/
+  }
+  #description, #img {
+      height: 60px;
+  }
+  #left-container{
+    height: 40%;
+    margin-bottom: 20px;
+
+  }
+  #img-left{
+    width: 40%;
+  }
+}
