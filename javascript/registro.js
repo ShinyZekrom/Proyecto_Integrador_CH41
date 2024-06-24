@@ -1,106 +1,120 @@
-// Función para obtener la fecha y hora actual
-function getCurrentDateTime() {
-    var today = new Date();
-    var yyyy = today.getFullYear();
-    var mm = String(today.getMonth() + 1); // Enero inicia en 0
-    var dd = String(today.getDate());
-    var hh = String(today.getHours());
-    var min = String(today.getMinutes()).padStart(2, '0');
-  
-  //Se obtiene la fecha a través de date para obtenerla completa
-    return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
-  }
-  
-      // Actualiza el campo de fecha y hora en el formulario
-      // este se ejecuta cuando el DOM ha sido cargado y busca al
-      // elemento con el id "timestamp" y establece su valor con la fecha y hora actual.
-  document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("timestamp").value = getCurrentDateTime();
-      });
-  
-      // Función validar y enviar formulario
-      document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById('post-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const alertValidaciones = document.getElementById('alertValidaciones');
-        const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
-        const alertSuccess = document.getElementById('alertSuccess');
+// Función validar y enviar formulario
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById('post-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const alertValidaciones = document.getElementById('alertValidaciones');
+  const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
+  const alertSuccess = document.getElementById('alertSuccess');
+
+  const nameRegex = /^[a-zA-Z\s]+$/; //Unicamente pueden ser letras y espacios
+  const usernameRegex = /^[a-zA-Z0-9_-]{5,15}$/; //usuarios que pueden llevar
+  const numCelRegex = /^(?!0{10})[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; // Se coloca negación al inicio que indique que no puedan ser puros 0s, y se utiliza función de ihateRegex para utilizar cualquier número de algún país donde se pueda añadir el + y clave lada o solo los 10 dígitos 
+  const correoRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/; // expresión ihateregex que indica los posibles patrones de correo.
+  const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/; //regex que indica la extensión de contraseña de 8 a 15 caracteres que debe incluir una minuscula, una mayuscula, un número y un caracter especial.
+
+  submitBtn.addEventListener('click', function() {
+    let errors = [];
+    
+    const name = document.getElementById('name').value;
+    const username = document.getElementById('username').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('inputPassword1').value;
+    const confirmPassword = document.getElementById('inputPassword2').value;
+
+    // Validación nombre
+    if (!name) {
+      errors.push('* Coloca tu nombre correctamente');
+      document.getElementById('name').classList.add('is-invalid');
+    } else if (!nameRegex.test(name)) {
+      errors.push('* Nombre inválido');
+      document.getElementById('name').classList.add('is-invalid');
+    } else {
+      document.getElementById('name').classList.remove('is-invalid');
+    }
+
+    // Validación usuario
+    if (!username) {
+      errors.push('* El nombre de usuario es obligatorio');
+      document.getElementById('username').classList.add('is-invalid');
+    } else if (!usernameRegex.test(username)) {
+      errors.push('* El nombre de usuario debe contener entre 5 y 15 caracteres solo se permiten guiones y guiones bajos. Ej: Delhaz_1, Delhaz-1');
+      document.getElementById('username').classList.add('is-invalid');
+    } else {
+      document.getElementById('username').classList.remove('is-invalid');
+    }
+
+    // Validación teléfono
+    if (!phone) {
+      errors.push('* Número de celular obligatorio');
+      document.getElementById('phone').classList.add('is-invalid');
+    } else if (!numCelRegex.test(phone)) {
+      errors.push('* Coloca un número válido');
+      document.getElementById('phone').classList.add('is-invalid');
+    } else {
+      document.getElementById('phone').classList.remove('is-invalid');
+    }
+    
+    // Validación del correo
+    if (!email) {
+      errors.push('* Correo electrónico obligatorio');
+      document.getElementById('email').classList.add('is-invalid');
+    } else if (!correoRegex.test(email)) {
+      errors.push('* Correo inválido');
+      document.getElementById('email').classList.add('is-invalid');
+    } else {
+      document.getElementById('email').classList.remove('is-invalid');
+    }
+
+    // Validación contraseña
+    if (!password) {
+      errors.push('* Se requiere una contraseña');
+      document.getElementById('inputPassword1').classList.add('is-invalid');
+    } else if (!passwordRegex.test(password)) {
+      errors.push('* La contraseña debe contener mínimo 8 caracteres incluyendo una mayúscula, una minúscula, un número y un caracter especial.');
+      document.getElementById('inputPassword1').classList.add('is-invalid');
+    } else {
+      document.getElementById('inputPassword1').classList.remove('is-invalid');
+    }
+
+    // Validación confirmar contraseña
+    if (!confirmPassword) {
+      errors.push('* Se requiere confirmar la contraseña');
+      document.getElementById('inputPassword2').classList.add('is-invalid');
+    } else if (confirmPassword !== password) {
+      errors.push('* Las contraseñas no coinciden');
+      document.getElementById('inputPassword2').classList.add('is-invalid');
+    } else {
+      document.getElementById('inputPassword2').classList.remove('is-invalid');
+    }
+
+    // Mostrar los errores
+    if (errors.length > 0) {
+      alertValidaciones.style.display = 'block';
+      alertValidacionesTexto.innerHTML = errors.join('<br>');
+      alertSuccess.style.display = 'none';
+    } else {
+      alertValidaciones.style.display = 'none';
       
-        const usernameRegex = /^[a-zA-Z0-9]{5,10}$/;
-        const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+      // Crear objeto JSON con la información del formulario
+      const formRegistro = {
+        name: name,
+        username: username,
+        phone: phone,
+        email: email,
+        password: password,
+      };
       
-        submitBtn.addEventListener('click', function() {
-          let errors = [];
-          
-          const username = document.getElementById('username').value.trim();
-          const profileImg = document.getElementById('profileImg').value.trim();
-          const description = document.getElementById('description').value.trim();
-          const img = document.getElementById('img').value.trim();
-          const timestamp = new Date().toLocaleString(); // Obtener fecha y hora actual
-          
-          // Validación del nombre de usuario
-          if (!username) {
-            errors.push('El nombre de usuario es obligatorio.');
-            document.getElementById('username').classList.add('is-invalid');
-          } else if (!usernameRegex.test(username)) {
-            errors.push('El nombre de usuario debe iniciar con letra y tener entre 5 y 10 carácteres, solo puede contener letras y números.');
-            document.getElementById('username').classList.add('is-invalid');
-          } else {
-            document.getElementById('username').classList.remove('is-invalid');
-          }
-          
-          // Validación de la descripción
-          if (!description) {
-            errors.push('La descripción es obligatoria.');
-            document.getElementById('description').classList.add('is-invalid');
-          } else {
-            document.getElementById('description').classList.remove('is-invalid');
-          }
+      console.log("Datos del formulario en formato JSON:", JSON.stringify(formRegistro));
+
+      // Guardar el objeto actualizado en LocalStorage
+      localStorage.setItem('formRegistro', JSON.stringify(formRegistro));
       
-          // Validación de la imagen de perfil
-          if (profileImg && !urlRegex.test(profileImg)) {
-            errors.push('La URL de la imagen de perfil no es válida.');
-            document.getElementById('profileImg').classList.add('is-invalid');
-          } else {
-            document.getElementById('profileImg').classList.remove('is-invalid');
-          }
-      
-          // Validación de la imagen/video
-          if (img && !urlRegex.test(img)) {
-            errors.push('La URL de la imagen/video no es válida.');
-            document.getElementById('img').classList.add('is-invalid');
-          } else {
-            document.getElementById('img').classList.remove('is-invalid');
-          }
-      
-          if (errors.length > 0) {
-            alertValidaciones.style.display = 'block';
-            alertValidacionesTexto.innerHTML = errors.join('<br>');
-            alertSuccess.style.display = 'none';
-          } else {
-            alertValidaciones.style.display = 'none';
-            
-            // Crear objeto JSON con la información del formulario
-            const formData = {
-              username: username,
-              profileImg: profileImg,
-              timestamp: timestamp,
-              description: description,
-              img: img
-            };
-            
-            console.log("Datos del formulario en formato JSON:", JSON.stringify(formData));
-  
-      
-            // Guardar el objeto actualizado en LocalStorage
-            localStorage.setItem('formData', JSON.stringify(formData));
-            
-            // Limpiar el formulario
-            form.reset();
-      
-            // Mostrar mensaje de éxito
-            alertSuccess.style.display = 'block';
-          }
-        });
-      });
-      
+      // Limpiar el formulario
+      form.reset();
+
+      // Mostrar mensaje de éxito
+      alertSuccess.style.display = 'block';
+    }
+  });
+});
