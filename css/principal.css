@@ -209,37 +209,21 @@
 .post-text {
     text-align: justify;
     font-family: "Comic Neue", cursive;
-<<<<<<< HEAD
     
-=======
-    margin: 10px 0;
-    padding-bottom: 10px; /* Espacio antes de la línea */
-
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
 }
 
 .date-act {
     text-align: left;
-<<<<<<< HEAD
 }
 
 .interacciones {
     text-align: left;
     margin-left: 100px;
-=======
-    padding-bottom: 10px; /* Espacio antes de la línea */
-
-}
-
-.interacciones {
-    text-align: center;
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
 }
 
 .btn {
     margin-right: 10px;
     font-family: "Open Sans", sans-serif;
-<<<<<<< HEAD
     
    
 }
@@ -251,24 +235,12 @@
     gap: 20px;
 }
 .container1 {
-=======
-}
-
-/* Publicidad */
-.containers {
-    display: grid;
-    gap: 20px;
-
-}
-.container1, .container2 {
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
     background-color: #928f8f;
     align-self: start;
     border-radius: 15px;
-<<<<<<< HEAD
 }
 .container1 img {
     max-width: 100%;
@@ -277,22 +249,10 @@
     
 }
 .container1 a {
-=======
-    max-width: 300px;
-    margin: auto;
-}
-.container1 img, .container2 img {
-    max-width: 100%;
-    height: 200px;
-    border-radius: 10px;
-}
-.container1 a, .container2 a {
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
     text-decoration: none;
     color: #333;
     font-weight: bold;
 }
-<<<<<<< HEAD
 .container2 {
     border: 1px solid #ccc;
     padding: 10px;
@@ -315,10 +275,6 @@
     font-weight: bold;
 }
 /*FOOTER*/
-=======
-
-/* FOOTER */
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
 footer {
     text-align: center;
     padding: 10px;
@@ -328,23 +284,3 @@ footer {
     background-color: #046CB8;
     color: #FFFFFF;
 }
-<<<<<<< HEAD
-=======
-
-/* Ajustes adicionales para responsividad */
-@media (max-width: 600px) {
-    .btn-buscar {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .crear-post, .card-body-public {
-        width: 90%;
-    }
-    .publicaciones {
-        width: 100%;
-    }
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-}
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb

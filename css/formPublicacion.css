@@ -54,7 +54,6 @@
   filter: invert(100%);
 }
 
-<<<<<<< HEAD
  /*Contact*/
  .contact-section {
     display: flex;
@@ -91,39 +90,6 @@
   }
 
 
-=======
-.container {
-  max-width: 450px;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  text-align: left;
-  margin: 15px;
-}
-h1 {
-  font-size: 5 rem;
-  margin-bottom: 10px;
-  text-align: center;
-  font-family: "Patrick Hand", cursive;
-}
-h6 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: gray;
-  text-align: center;
-  font-family: "Patrick Hand", cursive;
-}
-.form-group label {
-padding: 5px;
-font-size: 18px; 
-font-family: "Comic Neue", cursive;
-}
-.btn-primary {
-  width: 100%;
-  padding: 10px;
-}
->>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
 
 /*Footer*/
 

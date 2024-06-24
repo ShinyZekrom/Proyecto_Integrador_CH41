@@ -1,18 +1,9 @@
 function getCurrentDateTime() {
-<<<<<<< HEAD
     var yyyy = today.getFullYear();
     var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
     var dd = String(today.getDate()).padStart(2, '0');
     var hh = String(today.getHours()).padStart(2, '0');
     var min = String(today.getMinutes()).padStart(2, '0');
-=======
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  const mm = String(today.getMonth() + 1).padStart(2 , "0"); // Enero inicia en 0
-  const dd = String(today.getDate());
-  const hh = String(today.getHours());
-  const min = String(today.getMinutes()).padStart(2 , "0") ;
->>>>>>> 43317b0ba3cf8cbbf07554eedf624bde718b337b
 
 =======
     });
