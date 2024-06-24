@@ -19,6 +19,4 @@ Equipo: Java Dynamite
 * García Lara Karen Aidee
 * Hernandez Cuatecontzi Carol Heli
 * Maldonado Cabrera Luis Alberto
-* Perez Pedro
-* Rosas Álvarez Claudia Angélica
 * Trejo García Alan Alfredo
