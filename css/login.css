@@ -14,7 +14,7 @@
   }
   .form-container {
     background-color: #add8e6;
-    padding: 2rem;
+    padding: 2rem 2rem 10rem 2rem;
     border-radius: 15px;
     width: 90%;
     max-width: 650px;
@@ -116,6 +116,7 @@ h6 {
 }
 .form-group label {
 padding: 5px;
+padding-bottom: 0;
 font-size: 20px; 
 font-family: "Comic Neue", cursive;
 }
@@ -125,19 +126,21 @@ font-family: "Comic Neue", cursive;
     padding: 10px;
 }
 
-.options-form #btn-registro {
+h5 {
+  display: flex;
+  flex-direction: column;
   justify-content: center; 
   align-items: center; 
-  margin-left: 40%; 
-  margin-right: auto; 
+}
 
-}
-#btn-registro{
-  margin-left: auto; 
-  margin-right: auto; 
+.options-form #btn-registro {
+  display: flex;
+  flex-direction: column;
   justify-content: center; 
-align-items: center; 
+  align-items: center; 
+  margin-right: auto; 
 }
+
 #btn-registro{
   background-color: transparent; 
     color: black; 
