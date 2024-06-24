@@ -59,17 +59,10 @@ a.nav-link {
     max-height: 38px;
     width: auto;
     filter: invert(100%);
-<<<<<<< HEAD
   }
 /*GRID*/
 .grid-container> {
     
-=======
-}
-
-/* GRID */
-.grid-container>* {
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
     text-align: center;
     border-radius: 15px;
     padding: 5px;

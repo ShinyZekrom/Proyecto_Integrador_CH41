@@ -4,13 +4,7 @@ body {
 }
 
 /* Nav */
-<<<<<<< HEAD
 .navbar { 
-=======
-.navbar {
-position: fixed;
-  background-color: #046cb8;
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
   position: fixed;
 }
 .nav-item {
