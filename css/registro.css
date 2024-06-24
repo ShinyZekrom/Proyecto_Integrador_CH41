@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     
   }
   .right-section {
@@ -107,15 +107,32 @@ h1 {
     font-family: "Patrick Hand", cursive;
     font-style: normal;
 }
-h6 {
-    font-size: 2rem;
+h5{
+  font-size: 2 rem;
+  margin-bottom: 20px;
+  color: gray;
+  text-align: center;
+  font-family: "Patrick Hand", cursive;
+
+}
+.form-container h6 {
+    font-size: 2 rem;
     margin-bottom: 20px;
-    color: gray;
+    color: #212529;
     text-align: center;
     font-family: "Patrick Hand", cursive;
+    height: 24px;
+    font-size: 1.2rem;
+}
+#passwordHelpBlock{
+  text-align: justify;
+  font-size: 1.2rem;
+  color: #212529;
+  font-family: "Patrick Hand", cursive;
 }
 .form-group label {
-padding: 5px;
+margin-bottom: 0;
+margin-top: 5px;
 font-size: 20px; 
 font-family: "Comic Neue", cursive;
 }
@@ -124,27 +141,23 @@ font-family: "Comic Neue", cursive;
     width: 100%;
     padding: 10px;
 }
-
 .options-form #btn-registro {
-  justify-content: center; 
-  align-items: center; 
-  margin-left: 40%; 
-  margin-right: auto; 
+  display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+}
 
-}
-#btn-registro{
-  margin-left: auto; 
-  margin-right: auto; 
-  justify-content: center; 
-align-items: center; 
-}
+
 #btn-registro{
   background-color: transparent; 
     color: black; 
+    font-family: "Comic Neue", cursive;
     padding: 4x 2px; 
     text-align: center;
     text-decoration: underline; 
-    font-size: 16px; 
+    font-size: 1.25rem; 
+    height: 24px;
     font-weight: bold; 
     cursor: pointer; 
     border: none; 
@@ -172,10 +185,40 @@ footer {
   h1 {
       font-size: 1.5rem;
   }
-  h6 {
-      font-size: 0.8rem;
+  .form-container h6 {
+      font-size: 0.85 rem;
+      /*margin-bottom: 25px;*/
   }
   #description, #img {
       height: 60px;
+  }
+  #left-container{
+    height: 40%;
+    margin-bottom: 20px;
+
+  }
+  #img-left{
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+      font-size: 1.5rem;
+  }
+  .form-container h6 {
+      font-size: 0.85 rem;
+      /*margin-bottom: 25px;*/
+  }
+  #description, #img {
+      height: 60px;
+  }
+  #left-container{
+    height: 40%;
+    margin-bottom: 20px;
+
+  }
+  #img-left{
+    width: 40%;
   }
 }

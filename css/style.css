@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patrick+Hand&display=swap');
 
 body {
-  background: white;
+    background: white;
 }
 
 /* Nav */
+<<<<<<< HEAD
 <<<<<<< HEAD
 .acercade{
     margin-right: 100px;
@@ -124,6 +125,8 @@ a.nav-link{
 }
 
 =======
+=======
+>>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
 .acercade {
     border-radius: 20%;
     background: #AAC9E5;
@@ -262,6 +265,7 @@ a.nav-link {
     width: auto;
     filter: invert(100%);
 }
+<<<<<<< HEAD
 >>>>>>> LAMC
 =======
 body {
@@ -317,6 +321,8 @@ body {
 
 
 >>>>>>> develop
+=======
+>>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
 
 /*Acerca de nosotros*/
 
@@ -398,6 +404,7 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Desarrolladores*/
 .devtitle{
   background-color: #AAC9E5;
@@ -422,6 +429,8 @@ background-color: #AAC9E5;
 }
 
 =======
+=======
+>>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
 .devtitle {
     background-color: #AAC9E5;
 >>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
@@ -450,26 +459,17 @@ background-color: #AAC9E5;
     font-weight: 400;
     font-style: normal;
 }
->>>>>>> LAMC
 .desarrolladores {
-  text-align: center;
-  padding: 20px;
+    text-align: center;
+    padding: 20px;
 }
 .devcontainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .developer {
-<<<<<<< HEAD
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-
-  text-align: center;
-  width: 200px;
-=======
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
@@ -479,12 +479,12 @@ background-color: #AAC9E5;
 >>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
     text-align: center;
     width: 200px;
->>>>>>> LAMC
 }
 .img_desarrolladores {
-  width: 100%;
-  border-radius: 20px;
+    width: 100%;
+    border-radius: 20px;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -588,6 +588,15 @@ footer {
   }
 }
 =======
+=======
+.biografia {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+}
+footer {
+>>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
     text-align: center;
     padding: 10px;
     background-color: #046CB8;
@@ -789,6 +798,7 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
         align-items: center;
     }
 }
+<<<<<<< HEAD
 >>>>>>> LAMC
 >>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
 =======
@@ -810,3 +820,5 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
     }
 }
 >>>>>>> develop
+=======
+>>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687

@@ -103,4 +103,7 @@ function getCurrentDateTime() {
       });
     });
     
+<<<<<<< HEAD
 >>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
+=======
+>>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687

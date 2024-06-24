@@ -18,8 +18,8 @@
   <div class="container-fluid">
     <div class="row">
       <!-- Left Section -->
-      <div class="col-md-4 left-section">
-        <img src="/src/logooficial2.svg" alt="Delhaz Logo" class="logo">
+      <div class="col-md-4 left-section" id="left-container">
+        <img src="/src/logooficial2.svg" alt="Delhaz Logo" class="logo" id="img-left">
       </div>
       <!-- Right Section -->
       <div class="col-md-8 right-section">
@@ -29,7 +29,7 @@
           <div id="alert-container"></div>
           <form id="post-form">
             <div class="form-group">
-              <label for="name" class="form-label">Nombre Completo</label>
+              <label for="name" class="form-label">Nombre completo</label>
               <input type="text" class="form-control" id="name" placeholder="Nombre y apellido" autocomplete="on">
               <div id="nameError" class="form-text text-danger"></div>
             </div>
@@ -44,7 +44,7 @@
                 <div id="phoneError" class="form-text text-danger"></div>
               </div>
             <div class="form-group">
-              <label for="email" class="form-label">Correo Electrónico</label>
+              <label for="email" class="form-label">Correo electrónico</label>
               <input type="email" class="form-control" id="email" placeholder="correo@delhaz.com" autocomplete="on">
               <div id="emailError" class="form-text text-danger"></div>
             </div>
@@ -60,7 +60,7 @@
             </div>
             <br>
             <button type="button" class="btn btn-primary" id="submit-btn">Regístrate</button>
-            <div id="passwordHelpBlock" class="tyc mt-2">
+            <div id="passwordHelpBlock" class="tyc mt-2" style="text-align: center;" >
               Al registrarse, aceptas los Términos de servicio y la Política de privacidad.
             </div>
           </form>
@@ -71,10 +71,11 @@
             <p id="alertValidacionesTexto"></p>
           </div>
           <br>
-          <div class="options-form" style="justify-content: center;">
-            <div class="gotaccount"><h5>¿Ya tienes cuenta?</h5></div>
-            <button type="button" class="btn" id= "btn-registro">Inicia Sesión</button>
-          </div>
+          <div class="options-form">
+          <div class="gotaccount"><h5>¿Ya tienes cuenta?</h5></div>
+          <button type="button" class="btn" id= "btn-registro">Inicia sesión</button>
+        </div>
+        </div>
       </div>
     </div>
   </div>

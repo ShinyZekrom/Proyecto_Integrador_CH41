@@ -136,6 +136,7 @@ a.nav-link{
     font-style: normal;
     text-align: justify;
   }
+<<<<<<< HEAD
   .contact-title {
     font-size: 2.3rem;
     text-align: center;
@@ -194,3 +195,6 @@ a.nav-link{
         bottom: 0;
         color: white;
     }
+=======
+}
+>>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
