@@ -95,23 +95,6 @@ function enviarFormulario(event) {
   }
 }// función enviarFormulario
 
-<<<<<<< HEAD
-let alertMessage = document.getElementById("alertMessage").innerHTML
-
-<<<<<<< HEAD
-      document.getElementById("contactForm").addEventListener("submit", function(event) {
-      validateForm(); // Validar formulario antes de enviar
-      enviarFormulario(event); // Enviar formulario si es válido
-    }); //evento submit botón 
-
-
-    
-=======
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
-  validateForm(); // Validar formulario antes de enviar
-=======
 document.getElementById("contactForm").addEventListener("submit", function(event) {
->>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
   enviarFormulario(event); // Enviar formulario si es válido
 }); //evento submit botón 
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
