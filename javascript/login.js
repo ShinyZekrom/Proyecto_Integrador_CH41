@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Almacenar usuario como JSON
     localStorage.setItem('usuarioPrueba', JSON.stringify(usuarioPrueba));
 
+    //Constantes para funciones
     const submitBtn = document.getElementById('submit-btn');
     const errorMessage = document.getElementById('errorMessage');
     const alertSuccess = document.getElementById('alertSuccess');
