@@ -10,14 +10,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="/paginaPrincipal.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="/formularioPublicacion.html">Crear Publicación</a></li>
           <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contáctanos</a></li>
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar aquí" aria-label="Search">
-          <button class="btn-buscar" type="submit">Buscar</button>
-        </form>
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img class="fotoperfil" src="./src/imagenperfil.webp" alt="Foto de perfil">
