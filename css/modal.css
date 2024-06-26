@@ -15,7 +15,11 @@
     padding: 22px;
     margin: 15px;
     border-radius: 60px;
+
     
+}
+.descrip{
+    background: white;
 }
 
 /* Ajustes para pantallas grandes */
@@ -91,8 +95,12 @@
 
 @media (min-width: 768px) {
     .infodev1, .infodev2, .infodev3, .infodev4, .infodev5, .infodev6, .infodev7, .infodev8 {
-        padding: 2em 2em;
-        font-size: 13px;
+        padding: 1em 1em;
+        font-size: 19px;
+        font-weight: bold;
+        overflow: hidden;
+        box-sizing: border-box;
+        word-wrap: break-word;
     }
 }
 

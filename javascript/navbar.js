@@ -23,8 +23,7 @@
             <img class="fotoperfil" src="./src/imagenperfil.webp" alt="Foto de perfil">
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-            <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
+            <li><a class="dropdown-item" href="/login.html">Iniciar Sesión</a></li>
             <li><a class="dropdown-item" href="/registrate.html">Regístrate</a></li>
           </ul>
         </div>

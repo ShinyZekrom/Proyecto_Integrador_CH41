@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
       const alertSuccess = document.getElementById('alertSuccess');
     
-      const usernameRegex = /^[a-z0-9_-]{3,15}$/;
+      const usernameRegex = /^[a-zA-Z0-9_-]{5,15}$/;;
       const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
     
       submitBtn.addEventListener('click', function() {
