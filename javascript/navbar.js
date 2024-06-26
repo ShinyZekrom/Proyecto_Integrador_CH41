@@ -15,7 +15,7 @@
         </ul>
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img class="fotoperfil" src="./src/imagenperfil.webp" alt="Foto de perfil">
+          <img id="navbarProfilePic" class="fotoperfil" src="./src/imagenperfil.webp" alt="Foto de perfil">
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="/login.html">Iniciar Sesión</a></li>
@@ -30,3 +30,17 @@
 
 document.addEventListener("DOMContentLoaded", cargarNavbar);
 //cargará el navbar
+
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarProfilePic = document.getElementById('navbarProfilePic');
+
+  // Cargar la información del usuario al cargar la página
+  cargarInfoUsuario();
+
+  function cargarInfoUsuario() {
+    const usuarioLogueado = JSON.parse(localStorage.getItem('loggedInUser'));
+    if (usuarioLogueado && usuarioLogueado.profileImg) {
+      navbarProfilePic.src = usuarioLogueado.profileImg;
+    }
+  }
+});

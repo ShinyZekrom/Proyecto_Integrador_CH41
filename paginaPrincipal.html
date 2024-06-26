@@ -28,17 +28,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="/paginaPrincipal.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="/formularioPublicacion.html">Crear Publicación</a></li>
           <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contáctanos</a></li>
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
         </ul>
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img class="fotoperfil" src="./src/imagenperfil.webp" alt="Foto de perfil">
+            <img id="navbarProfilePic" class="fotoperfil" src="./src/imagenperfil.webp" alt="Foto de perfil">
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" href="#" id="cerrarSesion">Cerrar Sesión</a></li>
           </ul>
         </div>
       </div>
@@ -99,6 +98,7 @@
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="/javascript/postlist.js"></script>
+    <script src="/javascript/cerrarSesion.js"></script>
   </body>
 
 </html>
