@@ -18,8 +18,8 @@
   <div class="container-fluid">
     <div class="row">
       <!-- Left Section -->
-      <div class="col-md-4 left-section">
-        <img src="/src/logooficial2.svg" alt="Delhaz Logo" class="logo">
+      <div class="col-md-4 left-section" id="left-container">
+        <img src="/src/logooficial2.svg" alt="Delhaz Logo" class="logo" id="img-left">
       </div>
       <!-- Right Section -->
       <div class="col-md-8 right-section">
@@ -29,7 +29,7 @@
           <div id="alert-container"></div>
           <form id="post-form">
             <div class="form-group">
-              <label for="name" class="form-label">Nombre Completo</label>
+              <label for="name" class="form-label">Nombre completo</label>
               <input type="text" class="form-control" id="name" placeholder="Nombre y apellido" autocomplete="on">
               <div id="nameError" class="form-text text-danger"></div>
             </div>
@@ -44,40 +44,43 @@
                 <div id="phoneError" class="form-text text-danger"></div>
               </div>
             <div class="form-group">
-              <label for="email" class="form-label">Correo Electrónico</label>
+              <label for="email" class="form-label">Correo electrónico</label>
               <input type="email" class="form-control" id="email" placeholder="correo@delhaz.com" autocomplete="on">
               <div id="emailError" class="form-text text-danger"></div>
             </div>
             <div class="form-group">
-              <label for="inputPassword5" class="form-label">Contraseña</label>
-              <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" id="inputPassword1" class="form-control" aria-describedby="passwordHelpBlock">
+              <div id="passwordHelpBlock" class="form-text">
+                Tu contraseña debe contener de 8 a 15 caracteres incluyendo una mayúscula, una minúscula, un número y un cáracter especial
+              </div>
               <div class="form-group">
-                <label for="inputPassword5" class="form-label">Confirmar contraseña</label>
-                <input type="password" id="inputPassword" class="form-control" aria-describedby="passwordHelpBlock">
-                <div id="passwordHelpBlock" class="form-text">
-                  Tu contraseña debe contener de 8 a 20 caracteres de largo, solo letras y números
-                </div>
+                <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                <input type="password" id="inputPassword2" class="form-control" aria-describedby="passwordHelpBlock">
             </div>
             <br>
             <button type="button" class="btn btn-primary" id="submit-btn">Regístrate</button>
-            <div id="passwordHelpBlock" class="tyc mt-2">
+            <div id="passwordHelpBlock" class="tyc mt-2" style="text-align: center;" >
               Al registrarse, aceptas los Términos de servicio y la Política de privacidad.
             </div>
-            <div class="alert alert-success fade show mt-3" style="display:none;" role="alert" id="alertSuccess">
-              ¡Registro exitoso! Bienvenid@ a DELHAZ TRAVEL
-            </div>
-            <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
-              <p id="alertValidacionesTexto"></p>
-            </div>
           </form>
+          <div class="alert alert-success fade show mt-3" style="display:none;" role="alert" id="alertSuccess">
+            ¡Registro exitoso! Bienvenid@ a DELHAZ TRAVEL
+          </div>
+          <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+            <p id="alertValidacionesTexto"></p>
+          </div>
           <br>
+          <div class="options-form">
           <div class="gotaccount"><h5>¿Ya tienes cuenta?</h5></div>
-          <button type="button" class="btn">Inicia Sesión</button>
+          <button type="button" class="btn" id= "btn-registro">Inicia sesión</button>
+        </div>
         </div>
       </div>
     </div>
   </div>
   <br>
+  
   <!--Footer-->
   <footer class="bg-primary text-center py-2">
     <p>©2024 DELHAZ TRAVEL. All Rights Reserved.</p>
@@ -86,5 +89,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="/javascript/navbar.js"></script>
+  <script src="/javascript/registro.js"></script>
 </body>
 </html>
