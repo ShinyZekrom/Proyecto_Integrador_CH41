@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         id: Date.now(), // Genera un ID único basado en la marca de tiempo
         username: loggedInUser.username,
         profileImg: loggedInUser.profileImg,
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toLocaleString(),
         description: description,
         img: img
       };
