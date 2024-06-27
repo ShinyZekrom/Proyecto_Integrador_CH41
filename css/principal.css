@@ -188,14 +188,14 @@ a.nav-link {
 .img-poster {
     width: 100%;
     height: auto;
-    margin: 20px auto;
+    margin: 0px auto;
     border-radius: 20px;
 }
 
 .post-text {
     text-align: justify;
     font-family: "Comic Neue", cursive;
-    margin: 10px 0;
+    margin: 15px 0 5px;  /*CAMBIE AQUI*/
     padding-bottom: 10px; /* Espacio antes de la línea */
     font-size: 1.25 rem; /*CAMBIE AQUI*/
 
@@ -203,8 +203,9 @@ a.nav-link {
 
 .date-act {
     text-align: left;
-    padding-bottom: 10px; /* Espacio antes de la línea */
+   /* padding-bottom: 10px; /* Espacio antes de la línea */
     font-size: 1 rem; /*CAMBIE AQUI*/
+    margin-bottom: 10px;
 
 }
 
@@ -218,6 +219,10 @@ a.nav-link {
 }
 
 /* Publicidad */
+.publicidad{
+    margin-top: 20px;
+
+}
 .containers {
     display: grid;
     gap: 20px;
@@ -257,6 +262,22 @@ footer {
 
 /* Ajustes adicionales para responsividad */
 @media (max-width: 600px) {
+    .btn-buscar {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .crear-post, .card-body-public {
+        width: 90%;
+    }
+    .publicaciones {
+        width: 100%;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
     .btn-buscar {
         width: 100%;
         margin: 10px 0;
