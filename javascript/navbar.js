@@ -10,12 +10,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="/paginaPrincipal.html">Inicio</a></li>
-<<<<<<< HEAD
           <li class="nav-item"><a class="nav-link" href="/formularioPublicacion.html">Publica aquí</a></li>
           <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contactanos</a></li>
-=======
-          <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contáctanos</a></li>
->>>>>>> 74d61bc4a1259197500875bfcde349c74d054606
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
         </ul>
         <div class="dropdown">
@@ -33,25 +29,6 @@
         document.getElementById("navbarAqui").innerHTML = navbarHTML;
     } // función cargar navbar
 
-<<<<<<< HEAD
     document.addEventListener("DOMContentLoaded", cargarNavbar);
     //cargará el navbar
   
-=======
-document.addEventListener("DOMContentLoaded", cargarNavbar);
-//cargará el navbar
-
-document.addEventListener('DOMContentLoaded', function() {
-  const navbarProfilePic = document.getElementById('navbarProfilePic');
-
-  // Cargar la información del usuario al cargar la página
-  cargarInfoUsuario();
-
-  function cargarInfoUsuario() {
-    const usuarioLogueado = JSON.parse(localStorage.getItem('loggedInUser'));
-    if (usuarioLogueado && usuarioLogueado.profileImg) {
-      navbarProfilePic.src = usuarioLogueado.profileImg;
-    }
-  }
-});
->>>>>>> 74d61bc4a1259197500875bfcde349c74d054606

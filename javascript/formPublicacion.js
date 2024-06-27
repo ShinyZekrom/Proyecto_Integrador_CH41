@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function getCurrentDateTime() {
     var yyyy = today.getFullYear();
     var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
@@ -6,16 +5,6 @@ function getCurrentDateTime() {
     var hh = String(today.getHours()).padStart(2, '0');
     var min = String(today.getMinutes()).padStart(2, '0');
 
-=======
-    });
-=======
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.getElementById('post-form');
-  const submitBtn = document.getElementById('submit-btn');
-  const alertValidaciones = document.getElementById('alertValidaciones');
-  const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
-  const alertSuccess = document.getElementById('alertSuccess');
->>>>>>> 74d61bc4a1259197500875bfcde349c74d054606
 
   // Recuperar información del usuario que ha iniciado sesión
   const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
