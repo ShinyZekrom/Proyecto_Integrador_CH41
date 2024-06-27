@@ -130,15 +130,16 @@ a.nav-link {
 .publicaciones {
     .post .card {
         margin: auto;
-        border-radius: 50px;
+        border-radius: 20px; /*CAMBIE AQUI*/
         /* Esquinas redondeadas */
-        border: 5px solid #046CB8;
+        border: 1.5px solid #046CB8;
         /* Borde grueso de color rosa */
         background-color: #ffffff;
         /* Fondo blanco */
-        padding: 50px;
+        padding: 20px; /*CAMBIE AQUI*/
         /* Espacio interno */
         top: 20px;
+        max-width: 850px; /*CAMBIE AQUI*/
     }
 }
 
@@ -159,6 +160,7 @@ a.nav-link {
     display: flex;
     align-items: center;
     font-family: "Patrick Hand", cursive;
+    font-size: 1.3rem; /*CAMBIE AQUI*/
 }
 
 .perfil-imagen img {
@@ -171,6 +173,7 @@ a.nav-link {
 .name-usuario {
     margin: 0;
     font-family: "Patrick Hand", cursive;
+    font-size: 1.25rem; /*CAMBIE AQUI*/
 }
 
 .card-body-public {
@@ -194,12 +197,14 @@ a.nav-link {
     font-family: "Comic Neue", cursive;
     margin: 10px 0;
     padding-bottom: 10px; /* Espacio antes de la línea */
+    font-size: 1.25 rem; /*CAMBIE AQUI*/
 
 }
 
 .date-act {
     text-align: left;
     padding-bottom: 10px; /* Espacio antes de la línea */
+    font-size: 1 rem; /*CAMBIE AQUI*/
 
 }
 
