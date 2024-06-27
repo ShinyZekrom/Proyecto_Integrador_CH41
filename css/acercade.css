@@ -211,6 +211,13 @@ section .section-title {
 .frontside .card .card-title,
 .backside .card .card-title {
     color: #305893 !important;
+    font-family: "Patrick Hand", cursive;
+    font-size: 2rem;
+}
+
+.backside .card .dev-name{
+    font-family: "Patrick Hand", cursive;
+
 }
 
 .frontside .card .card-body img {
@@ -386,3 +393,4 @@ body .h5,
     font-weight: bold;
     font-family: "Patrick Hand", cursive;
 }
+
