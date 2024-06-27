@@ -1,11 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patrick+Hand&display=swap');
 
+=======
+>>>>>>> 74d61bc4a1259197500875bfcde349c74d054606
 body {
-    background: white;
+  background: linear-gradient(white);
+
 }
 
 /* Nav */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .acercade{
@@ -163,15 +168,17 @@ a.nav-link{
     width: 50px;
 }
 
+=======
+>>>>>>> 74d61bc4a1259197500875bfcde349c74d054606
 .navbar {
-    position: fixed;
-    top: 0;
-    background-color: #046CB8;
-    width: 100%;
+position: fixed;
+  background-color: #046cb8;
+  position: fixed;
 }
 .nav-item {
-    margin-right: 20px;
+  margin-right: 20px; /* Espacio entre los elementos del nav */
 }
+<<<<<<< HEAD
 a.nav-link {
     font-family: "Comic Neue", cursive;
     font-weight: 400;
@@ -210,6 +217,13 @@ a.nav-link {
     font-family: "Comic Neue", cursive;
     cursor: pointer; 
     margin-right: 10px;
+=======
+a.nav-link{
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+>>>>>>> 74d61bc4a1259197500875bfcde349c74d054606
 }
 .btn-buscar:hover {
     background-color: #04b822;
@@ -226,44 +240,46 @@ a.nav-link {
 >>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
 
 .navbar-brand {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 1.5rem;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5rem;
+  color: white;
 }
 .fotoperfil {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 .dropdown-menu {
-    right: 0;
-    left: auto;
+  right: 0; /* Asegura que el menú se alinee a la derecha */
+  left: auto;
 }
-.navbar .navbar-toggler {
-    background-color: #ffffff;
-    color: #046CB8;
-    border: none;
-}
-.btn-buscar {
-    background-color: #ffffff;
-    color: #046CB8;
-    border: none;
-    height: 38px;
-    border-radius: 5px;
-    padding: 5px 5px;
-    font-size: 16px;
-    font-family: "Comic Neue", cursive;
-    cursor: pointer;
-    margin-right: 10px;
-}
-.btn-buscar:hover {
-    background-color: #04b822;
-    color: #ffffff;
+.navbar .navbar-toggler{
+  background-color: #ffffff; 
+  color: #046CB8; 
+  border: none; 
 }
 
-.logoOficial {
-    max-height: 38px;
-    width: auto;
-    filter: invert(100%);
+.btn-buscar {
+  background-color: #ffffff; 
+  color: #046CB8;
+  border: none; 
+  height: 38px;
+  border-radius: 5px; 
+  padding: 5px 5px; 
+  font-size: 16px; 
+  font-family: "Comic Neue", cursive;
+  cursor: pointer; 
+  margin-right: 10px;
+}
+.btn-buscar:hover {
+  background-color: #04b822;
+  color: #ffffff; 
+}
+
+.logoOficial{
+  max-height: 38px; 
+  width: auto; 
+  filter: invert(100%);
 }
 <<<<<<< HEAD
 >>>>>>> LAMC
@@ -324,16 +340,55 @@ body {
 =======
 >>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
 
-/*Acerca de nosotros*/
+
+/* main*/
+
+h1 {
+  font-size: 4rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+div p {
+color: white;
+font-family: 'Comic Neue';
+}
+
+
+.logo {
+  width: 100%;
+  max-width: 500px;
+}
+h2 {
+  font-size: calc(1rem + 1vw);
+  font-family: 'Patrick Hand';
+}
+
+
+.comment {
+  background: #046cb8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+  margin: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comment p {
+text-align: justify; /* Justifica el texto dentro de los comentarios */
+}
 
 
 <<<<<<< HEAD
 
-.row {
-    margin: 40px;
-    width: 100%;
-    padding: 20px;
+.comment img {
+  margin-right: 10px;
+  width: 30%;
+  height: 60%;
 }
+<<<<<<< HEAD
 .title {
     text-align: center;
     font-family: "Patrick Hand", cursive;
@@ -374,35 +429,34 @@ body {
     padding: 15px;
     box-sizing: border-box;
     margin: 10px;
+=======
+
+.comments-carousel .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+>>>>>>> 74d61bc4a1259197500875bfcde349c74d054606
 }
 
 @media (max-width: 767px) {
-    .row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .col-tittle {
-        width: 100%;
-    }
-    .col {
-        width: 100%;
-    }
-    .aboutus {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    .descrip {
-        margin: 20px;
-    }
-    .acercade {
-        margin: 20px;
-    }
+  .row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .col-md-6 {
+      width: 100%;
+      text-align: center;
+  }
+
+  .comment img {
+      margin-bottom: 10px;
+      margin-right: 0;
+  }
+
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /* Desarrolladores*/
@@ -797,6 +851,16 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linea
         flex-direction: column-reverse;
         align-items: center;
     }
+=======
+/*Footer*/
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #046CB8;
+  width: 100%;
+  color: white;
+>>>>>>> 74d61bc4a1259197500875bfcde349c74d054606
 }
 <<<<<<< HEAD
 >>>>>>> LAMC

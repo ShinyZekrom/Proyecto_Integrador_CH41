@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patrick+Hand&display=swap');
+
+body {
+    background: white;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    background-color: #046CB8;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+a.nav-link {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.navbar .navbar-toggler {
+    background-color: #ffffff;
+    color: #046CB8;
+    border: none;
+}
+
+.btn-buscar {
+    background-color: #ffffff;
+    color: #046CB8;
+    border: none;
+    height: 38px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    font-size: 16px;
+    font-family: "Comic Neue", cursive;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-buscar:hover {
+    background-color: #04b822;
+    color: #ffffff;
+}
+
+.logoOficial {
+    max-height: 38px;
+    width: auto;
+    filter: invert(100%);
+}
+
+.fotoperfil {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+/* Acerca de */
+.experiencia {
+    padding: 40px 40px 60px 40px;
+}
+
+.experiencia .columna {
+    padding: 20px;
+    border: 2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.experiencia .columna:hover {
+    background-color: #AAC9E5;
+}
+
+.experiencia i {
+    font-size: 2.5rem;
+    color: #ffffff;
+    background-color: #0a0a23;
+    padding: 8px 19px;
+    border-radius: 50%;
+    
+}
+
+.experiencia-titulo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: "Patrick Hand", cursive;
+}
+
+.info{
+    text-align: justify;
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+/* Team Cards */
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #305893;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside, .backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.frontside, .backside {
+    box-shadow: 9px 9px 9px 9px rgb(158, 158, 158);
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 400px;
+}
+
+.frontside .card .card-body,
+.backside .card .card-body {
+    padding: 20px;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #305893 !important;
+}
+
+.frontside .card .card-body img {
+    width: 170px;
+    height: 190px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.backside .card .card-body .card-text {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #305893 !important;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    color: #305893;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #AAC9E5;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-icon:active {
+    background-color: #254a7a;
+    color: #ffffff;
+}
+
+.social-icon:focus {
+    outline: 2px solid #305893;
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #305891;
+    border-color: #305893;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #108d6f;
+    border-color: #108d6f;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #046CB8;
+    width: 100%;
+    color: white;
+}
+
+/* Grid Container */
+.grid-container > * {
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.desarrolladores {
+    grid-area: division;
+    background: white;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #046CB8;
+    width: 100%;
+}
+
+/* Responsive Design */
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "header"
+    "navbar"
+    "articulo"
+    "sidebar"
+    "division"
+    "footer";
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header header"
+        "navbar navbar"
+        "articulo articulo"
+        "sidebar sidebar"
+        "division division"
+        "footer footer";
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: auto;
+        grid-template-areas:
+        "header header header"
+        "navbar navbar navbar"
+        "articulo articulo articulo"
+        "division division division"
+        "footer footer footer";
+    }
+}
+
+@media (max-width: 767px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-tittle, .col {
+        width: 100%;
+    }
+    .aboutus {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .descrip, .acercade {
+        margin: 20px;
+    }
+}
+
+
+/* Ajustes para las cards */
+
+/* para que las cards no sean demasiado anchas en pantallas muy grandes */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Justificar texto en las cards frente y reverso */
+#team .frontside .card .card-body .card-text,
+#team .backside .card .card-body .card-text {
+    text-align: justify;
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+    font-size: 1rem;
+
+}
+
+body h5,
+body .h5,
+.container h5,
+.container .h5 {
+    text-transform: none;
+    font-weight: bold;
+    font-family: "Patrick Hand", cursive;
+}

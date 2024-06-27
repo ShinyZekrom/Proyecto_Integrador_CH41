@@ -1,0 +1,184 @@
+.left-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    
+  }
+  .right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .form-container {
+    background-color: #add8e6;
+    padding: 2rem 2rem 10rem 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 650px;
+  }
+  .logo {
+    max-width: 80%;
+    height: auto;
+  }
+  .gotaccount {
+    text-align: center;
+  }
+  h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  h6 {
+    font-family: 'Arial', sans-serif;
+  }
+  .btn-primary {
+    width: 100%;
+  }
+/* Nav */
+.navbar {
+    background-color: #046CB8;
+  }
+  .nav-item {
+    margin-right: 20px; /* Espacio entre los elementos del nav */
+  }
+  a.nav-link{
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+  }
+
+  .navbar-brand {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+  }
+  .fotoperfil {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .dropdown-menu {
+    right: 0; /* Asegura que el menú se alinee a la derecha */
+    left: auto;
+  }
+  .navbar .navbar-toggler{
+    background-color: #ffffff; 
+    color: #046CB8; 
+    border: none; 
+  }
+  
+  .btn-buscar {
+    background-color: #ffffff; 
+    color: #046CB8;
+    border: none; 
+    height: 38px;
+    border-radius: 5px; 
+    padding: 5px 5px; 
+    font-size: 16px; 
+    font-family: "Comic Neue", cursive;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+.btn-buscar:hover {
+    background-color: #04b822;
+    color: #ffffff; 
+}
+
+  .logoOficial{
+    max-height: 38px; 
+    width: auto; 
+    filter: invert(100%);
+  }
+
+.container {
+    max-width: 450px;
+    background: rgb(47, 97, 204);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    margin: 15px;
+}
+h1 {
+    font-size: 5 rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
+    font-style: normal;
+}
+h6 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: gray;
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
+}
+.form-group label {
+padding: 5px;
+padding-bottom: 0;
+font-size: 20px; 
+font-family: "Comic Neue", cursive;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+}
+
+h5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.options-form #btn-registro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  margin-right: auto; 
+}
+
+#btn-registro{
+  background-color: transparent; 
+    color: black; 
+    padding: 4x 2px; 
+    text-align: center;
+    text-decoration: underline; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    border: none; 
+    margin-left: auto; 
+    margin-right: auto; 
+    justify-content: center; 
+  align-items: center; 
+}
+
+/*Footer*/
+
+footer {
+  text-align: center;
+  background-color: #046CB8;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  color: white;
+}
+
+.bg-primary {
+  background-color: #046CB8;
+}
+
+@media (max-width: 576px) {
+  h1 {
+      font-size: 1.5rem;
+  }
+  h6 {
+      font-size: 0.8rem;
+  }
+  #description, #img {
+      height: 60px;
+  }
+}
