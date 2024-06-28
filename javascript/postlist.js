@@ -9,8 +9,9 @@ function addPost(post){
                         </div>
                         <h5 class="name-usuario">${post.username}</h5>
                     </div>
-                    <p class="post-text">${post.description}</p>
                     <p class="date-act"><small class="text-body-secondary">${post.timestamp}</small></p>
+                    <p class="post-text">${post.description}</p>
+                    
                 </div>
                 ${post.img ? `<img src="${post.img}" class="img-poster" alt="postimg">` : ''}
                 <div class="interacciones">
@@ -128,8 +129,8 @@ document.addEventListener("DOMContentLoaded", function() {
                       </div>
                       <h5 class="name-usuario">${parsedData.username}</h5>
                   </div>
-                  <p class="post-text">${parsedData.description}</p>
                   <p class="date-act"><small class="text-body-secondary">${parsedData.timestamp}</small></p>
+                  <p class="post-text">${parsedData.description}</p>
               </div>
               ${parsedData.img ? `<img src="${parsedData.img}" class="img-poster" alt="postimg">` : ''}
               <div class="interacciones">
