@@ -37,15 +37,9 @@ function addPost(post){
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
                     <path d="M0 0h24v24H0V0z" fill="none" />
                     <path d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z" />
-                </svg>Comentar
+                </svg>Me interesa
             </button>
         </div>
-        <div class="comments-section" style="display: none;">
-            <textarea class="form-control" rows="2" placeholder="Escribe un comentario..."></textarea>
-            <button class="btn btn-primary mt-2" onclick="addComment(this)">Enviar</button>
-            <div class="comments-list"></div>
-        </div>
-    </div>
 </div>
     <br>`;
     return postHTML;
@@ -163,32 +157,4 @@ function toggleLike(button) {
     } else {
         svg.setAttribute('fill', '#5f6368');
     }
-}
-//función para el boton de comentarios 
-function toggleComments(button) {
-    const commentsSection = button.closest('.card').querySelector('.comments-section');
-    if (commentsSection.style.display === 'none') {
-        commentsSection.style.display = 'block';
-    } else {
-        commentsSection.style.display = 'none';
-    }
-}
-//función para añadir comentarios, en espera de implementación del back-end para relacionarlos con el id del post y se guarden los comentarios en la respetiva publicación.
-function addComment(button) {
-    const card = button.closest('.card');
-    const textarea = card.querySelector('textarea');
-    const commentsList = card.querySelector('.comments-list');
-    
-    if (textarea.value.trim() !== '') {
-        const comment = document.createElement('p');
-        comment.textContent = textarea.value;
-        commentsList.appendChild(comment);
-        textarea.value = '';
-    }
-}
-//función para mostrar comentarios
-function displayComment(commentsList, comment) {
-    const commentElement = document.createElement('p');
-    commentElement.textContent = comment.text;
-    commentsList.appendChild(commentElement);
 }
