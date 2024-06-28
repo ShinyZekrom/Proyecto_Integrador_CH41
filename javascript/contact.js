@@ -1,4 +1,3 @@
-
 function validateForm() {
   // Obtener valores de los campos del formulario
   const name = document.getElementById("name").value;
@@ -31,26 +30,25 @@ function validateForm() {
     Isvalid = false;
   }
 
-      // Validar teléfono (solo números)
-      const numCel = /^(?!0{10})[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; // Se coloca negación al inicio que indique que no puedan ser puros 0s, y se utiliza función de ihateRegex para utilizar cualquier número de algún país donde se pueda añadir el + y clave lada o solo los 10 dígitos 
-      if (!numCel.test(phone)) {
-        phoneError.textContent = "Ingresa tu número celular.";
-        Isvalid = false;
-      }
-
-      // Validar correo electrónico
-      const patronCorreo = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/; // expresión ihateregex que indica los posibles patrones de correo.
-      if (!patronCorreo.test(email)) {
-        emailError.textContent = "Ingresa un correo electrónico.";
-        Isvalid = false;
-      }
-
-  // Validar mensaje
-  if (message.trim() === "") {
-    messageError.textContent = "Mensaje Inválido.";
+  // Validar teléfono (solo números)
+  const numCel = /^(?!01)(?!0{2,})(?!0{3,})(?!0{4,})(?!0{5,})(?!0{6,})(?!0{7,})(?!0{8,})(?!0{9,})(?!0+$)[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/ // Se coloca negaciones de distintos patrones que indique que no puedan ser puros 0s, y se utiliza función de ihateRegex para utilizar cualquier número de algún país donde se pueda añadir el + y clave lada o solo los 10 dígitos 
+  if (!numCel.test(phone)) {
+    phoneError.textContent = "Ingresa un número de celular valido.";
     Isvalid = false;
   }
 
+  // Validar correo electrónico
+  const patronCorreo = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/; // expresión ihateregex que indica los posibles patrones de correo.
+  if (!patronCorreo.test(email)) {
+    emailError.textContent = "Ingresa un correo electrónico.";
+    Isvalid = false;
+  }
+
+  // Validar mensaje
+  if (message.trim() === "" || !message.match(/^(?!0+$).+$/)) {
+    messageError.textContent = "Mensaje Inválido.";
+    Isvalid = false;
+  }
   // Retornar validación
   return Isvalid;
 }// función validateform
@@ -61,6 +59,13 @@ function limpiarFormulario(){
   document.getElementById("email").value = "";
   document.getElementById("message").value = "";
 }// función limpiarformulario
+
+function mostrarAlerta(tipo, mensaje) {
+  const alertMessage = document.getElementById("alertMessage");
+  alertMessage.className = `alert alert-${tipo}`;
+  alertMessage.textContent = mensaje;
+  alertMessage.classList.remove("d-none");
+}
 
 function enviarFormulario(event) {
   event.preventDefault(); // Prevenir el envío del formulario por defecto
@@ -73,21 +78,22 @@ function enviarFormulario(event) {
     const message = document.getElementById("message").value;
 
     // Enviar el correo electrónico usando EmailJS
-      emailjs.send("service_xlnbxdg", "template_vr8df8f", {
+    emailjs.send("service_xlnbxdg", "template_vr8df8f", {
       from_name: name,
       from_phone: phone,
       from_email: email,
       message: message
     }).then(function(response) {
-      alert("Mensaje enviado") 
+      mostrarAlerta("success", "Mensaje enviado exitosamente.");
       limpiarFormulario();
+    }).catch(function(error) {
+      mostrarAlerta("danger", "Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
     });
-  } else {console.log("datos invalidos")};
+  } else {
+    mostrarAlerta("danger", "Por favor, corrige los errores en el formulario.");
+  }
 }// función enviarFormulario
 
-let alertMessage = document.getElementById("alertMessage").innerHTML
-
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
-  validateForm(); // Validar formulario antes de enviar
+document.getElementById("contactForm").addEventListener("submit", function(event) {
   enviarFormulario(event); // Enviar formulario si es válido
 }); //evento submit botón 
