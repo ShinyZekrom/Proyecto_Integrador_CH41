@@ -30,10 +30,6 @@ function validateForm() {
     Isvalid = false;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
   // Validar teléfono (solo números)
   const numCel = /^(?!01)(?!0{2,})(?!0{3,})(?!0{4,})(?!0{5,})(?!0{6,})(?!0{7,})(?!0{8,})(?!0{9,})(?!0+$)[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/ // Se coloca negaciones de distintos patrones que indique que no puedan ser puros 0s, y se utiliza función de ihateRegex para utilizar cualquier número de algún país donde se pueda añadir el + y clave lada o solo los 10 dígitos 
   if (!numCel.test(phone)) {
@@ -47,24 +43,6 @@ function validateForm() {
     emailError.textContent = "Ingresa un correo electrónico.";
     Isvalid = false;
   }
-<<<<<<< HEAD
-=======
-      // Validar teléfono (solo números)
-      const numCel = /^(?!0{10})[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; // Se coloca negación al inicio que indique que no puedan ser puros 0s, y se utiliza función de ihateRegex para utilizar cualquier número de algún país donde se pueda añadir el + y clave lada o solo los 10 dígitos 
-      if (!numCel.test(phone)) {
-        phoneError.textContent = "Ingresa tu número celular.";
-        Isvalid = false;
-      }
-
-      // Validar correo electrónico
-      const patronCorreo = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/; // expresión ihateregex que indica los posibles patrones de correo.
-      if (!patronCorreo.test(email)) {
-        emailError.textContent = "Ingresa un correo electrónico.";
-        Isvalid = false;
-      }
->>>>>>> 43317b0ba3cf8cbbf07554eedf624bde718b337b
-=======
->>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
 
   // Validar mensaje
   if (message.trim() === "" || !message.match(/^(?!0+$).+$/)) {

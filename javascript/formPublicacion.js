@@ -1,10 +1,9 @@
-function getCurrentDateTime() {
-    var yyyy = today.getFullYear();
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-    var dd = String(today.getDate()).padStart(2, '0');
-    var hh = String(today.getHours()).padStart(2, '0');
-    var min = String(today.getMinutes()).padStart(2, '0');
-
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById('post-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const alertValidaciones = document.getElementById('alertValidaciones');
+  const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
+  const alertSuccess = document.getElementById('alertSuccess');
 
   // Recuperar información del usuario que ha iniciado sesión
   const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
@@ -28,12 +27,6 @@ function getCurrentDateTime() {
     
     let errors = [];
     
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 920641b42fab1d692f33e76784a691c9bb064cfb
-=======
->>>>>>> 7db0d1ac658900171e3ce9186eeff48147a88687
-=======
     const description = document.getElementById('description').value;
     const img = document.getElementById('img').value;
 
@@ -83,4 +76,3 @@ function getCurrentDateTime() {
     }
   });
 });
->>>>>>> 74d61bc4a1259197500875bfcde349c74d054606
