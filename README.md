@@ -14,7 +14,6 @@ responsable y sostenible en todo el mundo.
 
 
 Equipo: Java Dynamite
-* Díaz Páez Fernando Gibran
 * Eslava Alarcón Gabriel
 * García Lara Karen Aidee
 * Hernandez Cuatecontzi Carol Heli
