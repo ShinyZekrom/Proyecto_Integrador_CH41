@@ -1,6 +1,6 @@
 //función para colocar el HTML de la estructura del post
 function addPost(post){
-        // Convertir el timestamp a una fecha legible en formato mexicano
+        // Convertir el timestamp a una fecha legible en formato cdmx
     const date = new Date(post.timestamp);
     const formattedDate = date.toLocaleString('es-MX', { 
         year: 'numeric', 
@@ -12,9 +12,9 @@ function addPost(post){
         timeZone: 'America/Mexico_City' // Zona horaria de Ciudad de México
 });
     
-    const postHTML = `
+const postHTML = `
         <div class="post">
-            <div class="card" >
+            <div class="card">
                 <div class="card-body">
                     <div class="detalle-usuario">
                         <div class="perfil-imagen">
@@ -26,22 +26,46 @@ function addPost(post){
                     <p class="date-act"><small class="text-body-secondary">${formattedDate}</small></p>
                 </div>
                 ${post.img ? `<img src="${post.img}" class="img-poster" alt="postimg">` : ''}
-            <div class="interacciones">
-                <button type="button" class="btn like" onclick="toggleLike(this)">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
-                    <path d="M0 0h24v24H0V0z" fill="none" />
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                </svg>Me gusta
-                </button>
-                <button type="button" class="btn comment" onclick="toggleComments(this)">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
-                    <path d="M0 0h24v24H0V0z" fill="none" />
-                    <path d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z" />
-                </svg>Me interesa
-            </button>
+                <div class="interacciones">
+                    <button type="button" class="btn reaction" onclick="toggleReaction(this, 'like')" title="Me gusta">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span class="reaction-count like-count">0</span>
+                    </button>
+                    <button type="button" class="btn reaction" onclick="toggleReaction(this, 'love')" title="Me encanta">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span class="reaction-count love-count">0</span>
+                    </button>
+                    <button type="button" class="btn reaction" onclick="toggleReaction(this, 'haha')" title="Me divierte">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                        <span class="reaction-count haha-count">0</span>
+                    </button>
+                    <button type="button" class="btn reaction" onclick="toggleReaction(this, 'wow')" title="Me asombra">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9c.83 0 1.5-.67 1.5-1.5S7.83 8 7 8s-1.5.67-1.5 1.5S6.17 11 7 11zm10 0c.83 0 1.5-.67 1.5-1.5S17.83 8 17 8s-1.5.67-1.5 1.5.67 1.5 1.5 1.5zm-5 7c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                        </svg>
+                        <span class="reaction-count wow-count">0</span>
+                    </button>
+                    <button type="button" class="btn reaction" onclick="toggleReaction(this, 'sad')" title="Me entristece">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 3c-2.33 0-4.31 1.46-5.11 3.5h10.22c-.8-2.04-2.78-3.5-5.11-3.5z"/>
+                        </svg>
+                        <span class="reaction-count sad-count">0</span>
+                    </button>
+                </div>
+            </div>
         </div>
-</div>
-    <br>`;
+        <br>`;
     return postHTML;
 }
 
@@ -149,12 +173,36 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-//función para el boton de like
-function toggleLike(button) {
-    const svg = button.querySelector('svg');
-    if (svg.getAttribute('fill') === '#5f6368') {
-        svg.setAttribute('fill', '#e25555');
+// Objeto para almacenar el estado de las reacciones
+const reactionState = {
+    like: false,
+    love: false,
+    haha: false,
+    wow: false,
+    sad: false
+};
+
+function toggleReaction(element, reactionType) {
+    const post = element.closest('.post');
+    const countElement = post.querySelector(`.${reactionType}-count`);
+    
+    // Toggle the state
+    const isActive = element.classList.toggle('active');
+    
+    // Actualizar el estilo del botón
+    if (isActive) {
+        element.querySelector('svg').style.fill = '#1877f2'; // Color azul de Facebook cuando está activo
     } else {
-        svg.setAttribute('fill', '#5f6368');
+        element.querySelector('svg').style.fill = '#5f6368'; // Color gris original
     }
+    
+    // Actualizar el contador
+    if (countElement) {
+        let count = parseInt(countElement.textContent);
+        count += isActive ? 1 : -1;
+        countElement.textContent = count;
+    }
+    
+    // Aquí podrías añadir lógica adicional, como enviar la reacción al servidor
+    console.log(`Reacción ${reactionType} toggle: ${isActive}`);
 }
