@@ -1,6 +1,5 @@
-//función para colocar el HTML de la estructura del post
 function addPost(post){
-        // Convertir el timestamp a una fecha legible en formato cdmx
+        // Convertir el timestamp a una fecha legible 
     const date = new Date(post.timestamp);
     const formattedDate = date.toLocaleString('es-MX', { 
         year: 'numeric', 
@@ -191,7 +190,7 @@ function toggleReaction(element, reactionType) {
     
     // Actualizar el estilo del botón
     if (isActive) {
-        element.querySelector('svg').style.fill = '#1877f2'; // Color azul de Facebook cuando está activo
+        element.querySelector('svg').style.fill = '#1877f2'; // Color azul cuando está activo
     } else {
         element.querySelector('svg').style.fill = '#5f6368'; // Color gris original
     }
@@ -202,7 +201,5 @@ function toggleReaction(element, reactionType) {
         count += isActive ? 1 : -1;
         countElement.textContent = count;
     }
-    
-    // Aquí podrías añadir lógica adicional, como enviar la reacción al servidor
-    console.log(`Reacción ${reactionType} toggle: ${isActive}`);
+
 }
