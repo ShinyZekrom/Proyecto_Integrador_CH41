@@ -277,18 +277,19 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
-    .btn-buscar {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .crear-post, .card-body-public {
-        width: 90%;
-    }
-    .publicaciones {
-        width: 100%;
-    }
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
+/*Comentarios*/
+
+.comments-section {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+.comments-list {
+    margin-top: 10px;
+}
+.comments-list p {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
 }

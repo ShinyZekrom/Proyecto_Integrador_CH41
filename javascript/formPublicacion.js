@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       // Crear objeto con la información de la publicación
       const nuevaPublicacion = {
-        id: Date.now(), // Genera un ID único basado en la marca de tiempo
+        id: Date.now(),
         username: loggedInUser.username,
         profileImg: loggedInUser.profileImg,
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toUTCString(), // Guarda la fecha en formato UTC
         description: description,
         img: img
-      };
+    };
       
       // Recuperar publicaciones existentes o inicializar un array vacío
       let publicaciones = JSON.parse(localStorage.getItem('publicaciones')) || [];
