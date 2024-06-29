@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
   const correoRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/; // expresión ihateregex que indica los posibles patrones de correo.
   const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/; //regex que indica la extensión de contraseña de 8 a 15 caracteres que debe incluir una minuscula, una mayuscula, un número y un caracter especial.
 
+  function isEmailRegistered(email) {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    return users.some(user => user.email === email);
+  }
+
   submitBtn.addEventListener('click', function() {
     let errors = [];
     
@@ -75,6 +80,9 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (!correoRegex.test(email)) {
       errors.push('* Correo inválido');
       document.getElementById('email').classList.add('is-invalid');
+    } else if (isEmailRegistered(email)) {
+      errors.push('* Este correo electrónico ya está registrado');
+      document.getElementById('email').classList.add('is-invalid');
     } else {
       document.getElementById('email').classList.remove('is-invalid');
     }
@@ -107,34 +115,40 @@ document.addEventListener("DOMContentLoaded", function() {
       alertValidacionesTexto.innerHTML = errors.join('<br>');
       alertSuccess.style.display = 'none';
     } else {
-      alertValidaciones.style.display = 'none';
-      
-      // Crear objeto con la información del formulario
-      const newUser = {
-        name: name,
-        username: username,
-        profileImg: profileImg,
-        phone: phone,
-        email: email,
-        password: password,
-      };
-      
-      // Obtener usuarios existentes o crear un nuevo array
-      let users = JSON.parse(localStorage.getItem('users')) || [];
-      
-      // Añadir el nuevo usuario
-      users.push(newUser);
-      
-      // Guardar el array actualizado en LocalStorage
-      localStorage.setItem('users', JSON.stringify(users));
-      
-      console.log("Usuarios registrados:", JSON.stringify(users));
-      
-      // Limpiar el formulario
-      form.reset();
+      if (isEmailRegistered(email)) {
+        alertValidaciones.style.display = 'block';
+        alertValidacionesTexto.innerHTML = '* Este correo electrónico ya está registrado';
+        alertSuccess.style.display = 'none';
+      } else {
+        alertValidaciones.style.display = 'none';
+        
+        // Crear objeto con la información del formulario
+        const newUser = {
+          name: name,
+          username: username,
+          profileImg: profileImg,
+          phone: phone,
+          email: email,
+          password: password,
+        };
+        
+        // Obtener usuarios existentes o crear un nuevo array
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        
+        // Añadir el nuevo usuario
+        users.push(newUser);
+        
+        // Guardar el array actualizado en LocalStorage
+        localStorage.setItem('users', JSON.stringify(users));
+        
+        console.log("Usuarios registrados:", JSON.stringify(users));
+        
+        // Limpiar el formulario
+        form.reset();
 
-      // Mostrar mensaje de éxito
-      alertSuccess.style.display = 'block';
+        // Mostrar mensaje de éxito
+        alertSuccess.style.display = 'block';
+      }
     }
   });
 });
