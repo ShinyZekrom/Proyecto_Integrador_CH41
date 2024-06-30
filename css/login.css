@@ -159,11 +159,13 @@ h5 {
 
 /*Footer*/
 
-footer {
+.footer {
   text-align: center;
-  background-color: #046CB8;
+  padding: 10px;
+  background-color: rgba(4, 108, 184, 1);
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
+  bottom: 0;
   color: white;
 }
 

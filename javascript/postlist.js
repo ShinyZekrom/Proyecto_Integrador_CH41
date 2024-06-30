@@ -1,4 +1,3 @@
-//función para colocar el HTML de la estructura del post
 function addPost(post){
     // Convertir el timestamp a una fecha legible en formato mexicano
 const date = new Date(post.timestamp);
