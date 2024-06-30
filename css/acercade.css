@@ -206,6 +206,7 @@ section .section-title {
 .frontside .card .card-body,
 .backside .card .card-body {
     padding: 20px;
+    font-size: 1.5rem;
 }
 
 .frontside .card .card-title,
@@ -221,8 +222,8 @@ section .section-title {
 }
 
 .frontside .card .card-body img {
-    width: 170px;
-    height: 190px;
+    width: 200px;
+    height: 250px;
     border-radius: 50%;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
@@ -242,13 +243,16 @@ section .section-title {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 60px;  
+    height: 60px; 
     border-radius: 50%;
     background-color: #f8f9fa;
     color: #305893;
-    font-size: 1.25rem;
     transition: all 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 2rem; 
 }
 
 .social-icon:hover {
@@ -394,3 +398,15 @@ body .h5,
     font-family: "Patrick Hand", cursive;
 }
 
+p.card-text{
+    align-self: center;
+    text-align: center;
+}
+
+.card-body{
+    align-self: center;
+    text-align: center;
+    text-align: justify;
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+}
