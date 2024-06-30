@@ -1,106 +1,78 @@
-// Función para obtener la fecha y hora actual
-function getCurrentDateTime() {
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  const mm = String(today.getMonth() + 1).padStart(2 , "0"); // Enero inicia en 0
-  const dd = String(today.getDate());
-  const hh = String(today.getHours());
-  const min = String(today.getMinutes()).padStart(2 , "0") ;
-
-//Se obtiene la fecha a través de date para obtenerla completa
-  return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
-}
-
-    // Actualiza el campo de fecha y hora en el formulario
-    // este se ejecuta cuando el DOM ha sido cargado y busca al
-    // elemento con el id "timestamp" y establece su valor con la fecha y hora actual.
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("timestamp").value = getCurrentDateTime();
-    });
+  const form = document.getElementById('post-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const alertValidaciones = document.getElementById('alertValidaciones');
+  const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
+  const alertSuccess = document.getElementById('alertSuccess');
 
-    // Función validar y enviar formulario
-    document.addEventListener("DOMContentLoaded", function() {
-      const form = document.getElementById('post-form');
-      const submitBtn = document.getElementById('submit-btn');
-      const alertValidaciones = document.getElementById('alertValidaciones');
-      const alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
-      const alertSuccess = document.getElementById('alertSuccess');
-    
-      const usernameRegex = /^[a-zA-Z0-9_-]{5,15}$/;;
-      const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
-    
-      submitBtn.addEventListener('click', function() {
-        let errors = [];
-        
-        const username = document.getElementById('username').value.trim();
-        const profileImg = document.getElementById('profileImg').value.trim();
-        const description = document.getElementById('description').value.trim();
-        const img = document.getElementById('img').value.trim();
-        const timestamp = new Date().toLocaleString(); // Obtener fecha y hora actual
-        
-        // Validación del nombre de usuario
-        if (!username) {
-          errors.push('El nombre de usuario es obligatorio.');
-          document.getElementById('username').classList.add('is-invalid');
-        } else if (!usernameRegex.test(username)) {
-          errors.push('El nombre de usuario debe iniciar con letra y tener entre 5 y 15 carácteres, solo puede contener letras y números.');
-          document.getElementById('username').classList.add('is-invalid');
-        } else {
-          document.getElementById('username').classList.remove('is-invalid');
-        }
-        
-        // Validación de la descripción
-        if (!description) {
-          errors.push('La descripción es obligatoria.');
-          document.getElementById('description').classList.add('is-invalid');
-        } else {
-          document.getElementById('description').classList.remove('is-invalid');
-        }
-    
-        // Validación de la imagen de perfil
-        if (profileImg && !urlRegex.test(profileImg)) {
-          errors.push('La URL de la imagen de perfil no es válida.');
-          document.getElementById('profileImg').classList.add('is-invalid');
-        } else {
-          document.getElementById('profileImg').classList.remove('is-invalid');
-        }
-    
-        // Validación de la imagen/video
-        if (img && !urlRegex.test(img)) {
-          errors.push('La URL de la imagen/video no es válida.');
-          document.getElementById('img').classList.add('is-invalid');
-        } else {
-          document.getElementById('img').classList.remove('is-invalid');
-        }
-    
-        if (errors.length > 0) {
-          alertValidaciones.style.display = 'block';
-          alertValidacionesTexto.innerHTML = errors.join('<br>');
-          alertSuccess.style.display = 'none';
-        } else {
-          alertValidaciones.style.display = 'none';
-          
-          // Crear objeto JSON con la información del formulario
-          const formData = {
-            username: username,
-            profileImg: profileImg,
-            timestamp: timestamp,
-            description: description,
-            img: img
-          };
-          
-          console.log("Datos del formulario en formato JSON:", JSON.stringify(formData));
+  // Recuperar información del usuario que ha iniciado sesión
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
+  // Mostrar el nombre de usuario
+  if (loggedInUser && loggedInUser.username) {
+    document.getElementById('username').textContent = loggedInUser.username;
+  }
+
+  // Pre-llenar campos si existe información del usuario
+  if (loggedInUser) {
+    document.getElementById('username').value = loggedInUser.username;
+    document.getElementById('username').readOnly = true;
+  }
+
+  //Regex para url de imagen
+  const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+
+  submitBtn.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
     
-          // Guardar el objeto actualizado en LocalStorage
-          localStorage.setItem('formData', JSON.stringify(formData));
-          
-          // Limpiar el formulario
-          form.reset();
+    let errors = [];
     
-          // Mostrar mensaje de éxito
-          alertSuccess.style.display = 'block';
-        }
-      });
-    });
-    
+    const description = document.getElementById('description').value;
+    const img = document.getElementById('img').value;
+
+    // Validaciones de la descripción
+    if (!description) {
+      errors.push('* La descripción es obligatoria');
+      document.getElementById('description').classList.add('is-invalid');
+    } else {
+      document.getElementById('description').classList.remove('is-invalid');
+    }
+
+    if (errors.length > 0) {
+      alertValidaciones.style.display = 'block';
+      alertValidacionesTexto.innerHTML = errors.join('<br>');
+      alertSuccess.style.display = 'none';
+    } else {
+      // Crear objeto con la información de la publicación
+      const nuevaPublicacion = {
+        id: Date.now(),
+        username: loggedInUser.username,
+        profileImg: loggedInUser.profileImg,
+        timestamp: new Date().toUTCString(), // Guarda la fecha en formato UTC
+        description: description,
+        img: img
+    };
+      
+      // Recuperar publicaciones existentes o inicializar un array vacío
+      let publicaciones = JSON.parse(localStorage.getItem('publicaciones')) || [];
+      
+      // Añadir la nueva publicación
+      publicaciones.push(nuevaPublicacion);
+      
+      // Guardar el array actualizado en localStorage
+      localStorage.setItem('publicaciones', JSON.stringify(publicaciones));
+      
+      console.log("Nueva publicación añadida:", nuevaPublicacion);
+      console.log("Total de publicaciones:", publicaciones.length);
+
+      // Mostrar mensaje de éxito
+      alertSuccess.style.display = 'block';
+      alertValidaciones.style.display = 'none';
+
+      // Redirigir a la página de publicaciones después de un breve delay
+      setTimeout(() => {
+        window.location.href = 'paginaPrincipal.html';
+      }, 2000); // Espera 2 segundos antes de redirigir
+    }
+  });
+});

@@ -28,21 +28,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="/paginaPrincipal.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="/formularioPublicacion.html">Crear Publicación</a></li>
           <li class="nav-item"><a class="nav-link" href="/contactUs.html">Contáctanos</a></li>
           <li class="nav-item"><a class="nav-link" href="/acercaDeNosotros.html">Acerca de Nosotros</a></li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar aquí" aria-label="Search">
-          <button class="btn-buscar" type="submit">Buscar</button>
-        </form>
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img class="fotoperfil" src="./src/imagenperfil.webp" alt="Foto de perfil">
+            <img id="navbarProfilePic" class="fotoperfil" src="./src/imagenperfil.webp" alt="Foto de perfil">
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-            <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+            <li><a class="dropdown-item" href="#" id="cerrarSesion">Cerrar Sesión</a></li>
           </ul>
         </div>
       </div>
@@ -76,18 +71,18 @@
   </div>
   
   <!--Publicidad-->
-  <aside class="publicidad">Publicidad
+  <aside class="publicidad">
     <div class="containers">     
       <div class="container1">
-          <a href="https://www.ejemplo.com" target="_blank">
-              <img src="https://via.placeholder.com/300x100?text=Publicidad+Ejemplo" alt="Publicidad">
-              <p>¡Contenido Publicitario!</p>
+          <a href="https://samsonite.com.mx/?gad_source=1&gclid=CjwKCAjw-O6zBhASEiwAOHeGxUWEXGAOOE_yl1MeXVGG6sQ4Ad7i5nR21bd9gSzYBmFUCFToKCwfRBoCa94QAvD_BwE" target="_blank">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUERZyKBxEr9l_yC2SoI0pzgBLRuqTIIC-d-bL9_4PGGOJz2RigImsX8mroaExMG40VYM&usqp=CAU" alt="Publicidad">
+              <p>¡Da click para conocer más ofertas!</p>
           </a>
           </div>
               <div class="container2">
-              <a href="https://www.ejemplo.com" target="_blank">
-                  <img src="https://via.placeholder.com/300x100?text=Publicidad+Ejemplo" alt="Publicidad">
-                  <p>¡Visita nuestra pagina web para más información!</p>
+              <a href="https://lc.cx/_qmDoc" target="_blank">
+                  <img src="https://cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/I5H5K7OAFVCWHBVF6C5QFNYG7E.jpg" alt="Publicidad">
+                  <p>¡Visita Aeroméxico para descubrir ofertas!</p>
               </a>
           </div>
       </div>
@@ -103,6 +98,7 @@
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="/javascript/postlist.js"></script>
+    <script src="/javascript/cerrarSesion.js"></script>
   </body>
 
 </html>

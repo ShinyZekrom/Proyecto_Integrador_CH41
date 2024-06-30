@@ -31,9 +31,9 @@ function validateForm() {
   }
 
   // Validar teléfono (solo números)
-  const numCel = /^(?!0{10})[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/; // Se coloca negación al inicio que indique que no puedan ser puros 0s, y se utiliza función de ihateRegex para utilizar cualquier número de algún país donde se pueda añadir el + y clave lada o solo los 10 dígitos 
+  const numCel = /^(?!01)(?!0{2,})(?!0{3,})(?!0{4,})(?!0{5,})(?!0{6,})(?!0{7,})(?!0{8,})(?!0{9,})(?!0+$)[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/ // Se coloca negaciones de distintos patrones que indique que no puedan ser puros 0s, y se utiliza función de ihateRegex para utilizar cualquier número de algún país donde se pueda añadir el + y clave lada o solo los 10 dígitos 
   if (!numCel.test(phone)) {
-    phoneError.textContent = "Ingresa tu número celular.";
+    phoneError.textContent = "Ingresa un número de celular valido.";
     Isvalid = false;
   }
 
@@ -45,11 +45,10 @@ function validateForm() {
   }
 
   // Validar mensaje
-  if (message.trim() === "") {
+  if (message.trim() === "" || !message.match(/^(?!0+$).+$/)) {
     messageError.textContent = "Mensaje Inválido.";
     Isvalid = false;
   }
-
   // Retornar validación
   return Isvalid;
 }// función validateform

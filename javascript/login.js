@@ -1,13 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Almacenar usuario de prueba en localStorage
-    const usuarioPrueba = {
-        email: 'delhazsocialmedia@gmail.com',
-        password: 'Pa$$w0rd'
-    };
-    // Almacenar usuario como JSON
-    localStorage.setItem('usuarioPrueba', JSON.stringify(usuarioPrueba));
 
-    //Constantes para las funciones
+    //Constantes para funciones
     const submitBtn = document.getElementById('submit-btn');
     const errorMessage = document.getElementById('errorMessage');
     const alertSuccess = document.getElementById('alertSuccess');
@@ -27,13 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Obtener usuarios del localStorage
-        const usuarioGuardado = JSON.parse(localStorage.getItem('usuarioPrueba'));
-        const formRegistro = JSON.parse(localStorage.getItem('formRegistro'));
+        const users = JSON.parse(localStorage.getItem('users')) || [];
 
-        // Validar usuarios, se utiliza un else if para poder validar tanto la prueba de un usuario como el obtenido en el form registro
-        if (email === usuarioGuardado.email && password === usuarioGuardado.password) {
-            loginExitoso();
-        } else if (formRegistro && email === formRegistro.email && password === formRegistro.password) {
+        // Buscar usuario que coincida con el email y password
+        const user = users.find(u => u.email === email && u.password === password);
+
+        if (user) {
+            // Guardar información del usuario que ha iniciado sesión
+            localStorage.setItem('loggedInUser', JSON.stringify(user));
             loginExitoso();
         } else {
             showAlert('Correo electrónico y/o contraseña incorrectos.', 'danger');
