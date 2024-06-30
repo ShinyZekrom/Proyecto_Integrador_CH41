@@ -1,0 +1,39 @@
+Scripts para añadir información a la tabla
+-- insert usuario
+
+INSERT INTO `delhaz_socialmedia`.`usuarios` (`nombre`, `username`, `email`, `contraseña`, `fecha_registro`, `foto_perfil`) VALUES 
+('Karen Garcia', 'karen_garcia', 'karen123@hotmail.com', 'Dk_170195', '2023-06-20 17:00:30', 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719518028/WhatsApp_Image_2024-06-20_at_11.30.09_tl2flj.jpg'),
+('Luis Maldonado', 'luis_mald', 'luis456@hotmail.com', 'Luis0123#', '2024-06-27 15:30:45', 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719518755/98_t149wy.jpg'),
+('Carol Hernandez', 'carol_hrdz','carol789@hotmail.com', 'Hrdz?4567',  '2024-06-20 12:30:40' , 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719523146/conoce-5-lenguajes-de-programacion-basicos_s4lbwy.jpg'),
+('Alan Trejo', 'alan_trejo', 'alan123@hotmail.com','Trejo.890', '2024-06-18 10:30:30', 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719523691/images_1_bovq12.jpg'),
+('Gibran Diaz', 'gibran_12di', 'gibran456@hotmail.com', 'Di234569?', '2024-06-10 13:30:40', 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719523749/images_tlbyg9.jpg');
+
+
+-- insert publicaciones
+
+INSERT INTO `delhaz_socialmedia`.`publicaciones` ( `usuario_id`, `descripcion`, `fecha_publicacion`, `contenido`) VALUES 
+(1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2024-08-27 15:30:46', 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719523118/photo-1718114885158-a3157f5fc443_nup4mp.jpg'),
+(2, 'Phasellus vehicula justo eget diam posuere sollicitudin.', '2024-05-17 17:30:47', 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719523639/photo-1719216324207-3b9727413913_b8ozzz.jpg'),
+(3, 'Integer vitae justo eget magna fermentum iaculis eu non diam.', '2024-06-28 14:30:48', 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719523727/photo-1718988056007-c85a778d33e9_fipgmk.jpg'),
+(4, 'Sed do eiusmod tempor.', '2024-06-27 19:30:49', NULL),
+(5, 'Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.',  '2024-09-13 01:30:50', 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719523835/photo-1718781209037-df4b89ec44b2_mee75s.jpg');
+
+
+-- insert perfiles
+
+INSERT INTO `delhaz_socialmedia`.`perfiles` (`usuario_id`, `biografia`) VALUES
+(1, 'Amante de la naturaleza y la fotografía'),
+(2, 'Desarrollador de software y entusiasta de la tecnología'),
+(3, 'Estudiante de medicina, apasionada por la salud'),
+(4, 'Chef profesional, creador de sabores únicos'),
+(5, 'Artista visual y diseñadora gráfica');
+
+
+-- insert reacciones
+
+INSERT INTO `delhaz_socialmedia`.`reacciones` (`usuario_id`, `publicacion_id`, `me_encanta`, `me_inspira`, `me_divierte`, `me_interesa`, `me_entristece`) VALUES
+(2, 1, 1, 0, 0, 1, 0),
+(3, 2, 1, 1, 0, 1, 0),
+(4, 3, 1, 1, 0, 1, 0),
+(5, 4, 1, 0, 0, 1, 0),
+(1, 5, 1, 1, 0, 1, 0);
