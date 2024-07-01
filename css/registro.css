@@ -1,3 +1,4 @@
+
 .left-section {
     display: flex;
     justify-content: center;
@@ -167,19 +168,6 @@ font-family: "Comic Neue", cursive;
   align-items: center; 
 }
 
-/*Footer*/
-
-/*Footer*/
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: rgba(4, 108, 184, 1);
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  bottom: 0;
-  color: white;
-}
 
 .bg-primary {
   background-color: #046CB8;
@@ -225,4 +213,13 @@ footer {
   #img-left{
     width: 40%;
   }
-}
+  }
+  /*FOOTER*/
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #046CB8;
+    width: 100%;
+    color: white;
+  }
+

@@ -157,18 +157,6 @@ h5 {
   align-items: center; 
 }
 
-/*Footer*/
-
-.footer {
-  text-align: center;
-  padding: 10px;
-  background-color: rgba(4, 108, 184, 1);
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  bottom: 0;
-  color: white;
-}
-
 .bg-primary {
   background-color: #046CB8;
 }
@@ -183,4 +171,15 @@ h5 {
   #description, #img {
       height: 60px;
   }
+}
+/*FOOTER*/
+footer {
+  text-align: center;
+  padding: 8px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  bottom: 0;
+  background-color: #046CB8;
+  color: #FFFFFF;
+  
 }

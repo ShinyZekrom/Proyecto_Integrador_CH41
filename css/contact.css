@@ -124,10 +124,10 @@ a.nav-link{
           font-style: normal;
           font-size: 2rem;
       }
-  }
+}
   /*Footer*/
 
-  footer {
+footer {
       text-align: center;
       padding: 10px;
       background-color: rgba(4, 108, 184, 1);
@@ -135,5 +135,5 @@ a.nav-link{
       width: 100%;
       bottom: 0;
       color: white;
-  }
+}
 }
