@@ -142,4 +142,17 @@ footer {
   background-color: #046CB8;
   width: 100%;
   color: white;
+<<<<<<< HEAD
 }
+=======
+}
+
+.options-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  margin-right: auto; 
+  font-family: 'Patrick Hand';
+}
+>>>>>>> 5d4ef968087680b9f12abd3c9c1b1425a2f84f86

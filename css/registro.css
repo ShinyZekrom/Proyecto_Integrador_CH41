@@ -168,6 +168,18 @@ font-family: "Comic Neue", cursive;
   align-items: center; 
 }
 
+<<<<<<< HEAD
+=======
+/*Footer*/
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #046CB8;
+  width: 100%;
+  color: white;
+}
+>>>>>>> 5d4ef968087680b9f12abd3c9c1b1425a2f84f86
 
 .bg-primary {
   background-color: #046CB8;

@@ -157,6 +157,22 @@ h5 {
   align-items: center; 
 }
 
+<<<<<<< HEAD
+=======
+/*Footer*/
+
+footer {
+  text-align: center;
+  padding: 8px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  bottom: 0;
+  background-color: #046CB8;
+  color: #FFFFFF;
+
+}
+
+>>>>>>> 5d4ef968087680b9f12abd3c9c1b1425a2f84f86
 .bg-primary {
   background-color: #046CB8;
 }

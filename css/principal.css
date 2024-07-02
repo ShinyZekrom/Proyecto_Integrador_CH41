@@ -51,6 +51,7 @@
   .btn-buscar {
     background-color: #ffffff; 
     color: #046CB8;
+<<<<<<< HEAD
     border: none; 
     height: 38px;
     border-radius: 5px; 
@@ -64,6 +65,12 @@
     background-color: #04b822;
     color: #ffffff; 
 }
+=======
+    border: none;
+}
+
+
+>>>>>>> 5d4ef968087680b9f12abd3c9c1b1425a2f84f86
 
   .logoOficial{
     max-height: 38px; 
