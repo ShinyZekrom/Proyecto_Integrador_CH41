@@ -1,0 +1,159 @@
+body {
+  background: linear-gradient(white);
+
+}
+
+/* Nav */
+.navbar {
+position: fixed;
+  background-color: #046cb8;
+  position: fixed;
+}
+.nav-item {
+  margin-right: 20px; /* Espacio entre los elementos del nav */
+}
+a.nav-link{
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.navbar-brand {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5rem;
+  color: white;
+}
+.fotoperfil {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.dropdown-menu {
+  right: 0; /* Asegura que el menú se alinee a la derecha */
+  left: auto;
+}
+.navbar .navbar-toggler{
+  background-color: #ffffff; 
+  color: #046CB8; 
+  border: none; 
+}
+
+.btn-buscar {
+  background-color: #ffffff; 
+  color: #046CB8;
+  border: none; 
+  height: 38px;
+  border-radius: 5px; 
+  padding: 5px 5px; 
+  font-size: 16px; 
+  font-family: "Comic Neue", cursive;
+  cursor: pointer; 
+  margin-right: 10px;
+}
+.btn-buscar:hover {
+  background-color: #04b822;
+  color: #ffffff; 
+}
+
+.logoOficial{
+  max-height: 38px; 
+  width: auto; 
+  filter: invert(100%);
+}
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gif-bienvenida {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ajusta este valor si es necesario */
+  animation: slow 10s infinite;
+}
+
+.gif-bienvenida img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.container-bienvenida {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.logo-bienvenida img {
+  max-width: 200px;
+  margin-bottom: 20px;
+  filter: invert(100%);
+}
+
+.bienvenida h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-size: 1.6rem;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.inicio-sesion {
+  font-size: 1.2rem;
+}
+#btn-inicio-sesion{
+  color: white;
+}
+
+
+/* Media queries para hacerlo responsive */
+@media (max-width: 768px) {
+  .container-bienvenida {
+      max-width: 80%;
+  }
+
+  .bienvenida h1 {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .bienvenida h1 {
+      font-size: 1.2rem;
+  }
+}
+
+/*Footer*/
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #046CB8;
+  width: 100%;
+  color: white;
+}
+
+.options-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  margin-right: auto; 
+  font-family: 'Patrick Hand';
+}
