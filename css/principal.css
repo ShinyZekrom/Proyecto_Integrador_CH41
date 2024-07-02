@@ -38,22 +38,7 @@ a.nav-link {
     border: none;
 }
 
-.btn-buscar {
-    background-color: #ffffff;
-    color: #046CB8;
-    border: none;
-    height: 38px;
-    border-radius: 5px;
-    padding: 5px 5px;
-    font-size: 16px;
-    font-family: "Comic Neue", cursive;
-    cursor: pointer;
-    margin-right: 10px;
-}
-.btn-buscar:hover {
-    background-color: #04b822;
-    color: #ffffff;
-}
+
 
 .logoOficial {
     max-height: 38px;
@@ -132,10 +117,11 @@ a.nav-link {
         margin: auto;
         border-radius: 20px; /*CAMBIE AQUI*/
         /* Esquinas redondeadas */
-        border: 1.5px solid #046CB8;
-        /* Borde grueso de color rosa */
-        background-color: #ffffff;
+        /*border: 2px solid #046CB8;
+        /* Borde grueso de color azul */
+        background-color:  rgb(170, 201, 229, 0.3);
         /* Fondo blanco */
+        backdrop-filter: blur(1px);
         padding: 10px; /*CAMBIE AQUI*/
         /* Espacio interno */
         top: 20px;
@@ -146,7 +132,7 @@ a.nav-link {
 
 .crear-post {
     border-radius: 20px;
-    border: 5px solid #AAC9E5;
+    border: 5px solid rgb(170, 201, 229);
     background-color: #ffffff;
     margin: 20px auto;
     padding: 10px;
@@ -170,9 +156,10 @@ a.nav-link {
 
 .perfil-imagen img {
     width: 50px;
-    height: 50x;
+    height: 50px;
     border-radius: 50%;
     margin-right: 10px;
+    object-fit: cover;
 }
 
 .name-usuario {
@@ -183,7 +170,7 @@ a.nav-link {
 
 .card-body-public {
     max-width: 100%;
-    background: #ffffff;
+    background: #86bcd6;
     border-radius: 10px;
     margin: 20px auto;
     padding: 20px;
@@ -214,7 +201,7 @@ a.nav-link {
    /* margin-bottom: 10px;*/
 
     margin: 0;
-    margin-left: 15px;
+    margin-left: 430px;
     font-family: "Patrick Hand", cursive;
     font-size: 1.4rem; /*CAMBIE AQUI*/
     text-align: right;
