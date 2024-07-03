@@ -170,11 +170,19 @@ align-items: center;
 /*Footer*/
 
 footer {
+<<<<<<< HEAD
 text-align: center;
 background-color: #046CB8;
 box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 width: 100%;
 color: white;
+=======
+  text-align: center;
+  padding: 10px;
+  background-color: #046CB8;
+  width: 100%;
+  color: white;
+>>>>>>> 2c6011debbf73d1d534b08b948de159dd40503cf
 }
 
 .bg-primary {
