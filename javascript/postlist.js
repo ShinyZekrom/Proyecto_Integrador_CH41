@@ -148,6 +148,7 @@ if (posts.length === 0) {
 }
 });
 
+<<<<<<< HEAD
 //función para el boton de like
 function toggleLike(button) {
 const svg = button.querySelector('svg');
@@ -157,3 +158,54 @@ if (svg.getAttribute('fill') === '#5f6368') {
     svg.setAttribute('fill', '#5f6368');
 }
 }
+=======
+// Objeto para almacenar el estado de las reacciones
+const reactionState = {
+    like: false,
+    love: false,
+    haha: false,
+    wow: false,
+    sad: false
+};
+
+// Variable global para almacenar la reacción activa actual
+let activeReaction = null;
+
+function toggleReaction(element, reactionType) {
+    const post = element.closest('.post');
+    const allReactions = post.querySelectorAll('.reaction');
+    
+    // Si ya hay una reacción activa y no es la misma que se está clickeando
+    if (activeReaction && activeReaction !== element) {
+        // Desactivar la reacción anterior
+        const prevReactionType = activeReaction.onclick.toString().match(/toggleReaction\(this, '(\w+)'/)[1];
+        const prevCountElement = activeReaction.querySelector(`.${prevReactionType}-count`);
+        activeReaction.classList.remove('active');
+        activeReaction.querySelector('svg').style.fill = '#5f6368';
+        if (prevCountElement) {
+            let prevCount = parseInt(prevCountElement.textContent);
+            prevCountElement.textContent = Math.max(0, prevCount - 1);
+        }
+    }
+    
+    // Toggle la nueva reacción
+    const isActive = element.classList.toggle('active');
+    const countElement = element.querySelector(`.${reactionType}-count`);
+    
+    if (isActive) {
+        element.querySelector('svg').style.fill = '#1877f2';
+        activeReaction = element;
+        if (countElement) {
+            let count = parseInt(countElement.textContent);
+            countElement.textContent = count + 1;
+        }
+    } else {
+        element.querySelector('svg').style.fill = '#5f6368';
+        activeReaction = null;
+        if (countElement) {
+            let count = parseInt(countElement.textContent);
+            countElement.textContent = Math.max(0, count - 1);
+        }
+    }
+}
+>>>>>>> 2c6011debbf73d1d534b08b948de159dd40503cf
