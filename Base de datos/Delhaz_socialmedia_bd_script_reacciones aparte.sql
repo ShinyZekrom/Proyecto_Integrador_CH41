@@ -5,15 +5,15 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema delhaz_socialmedia
+-- Schema delhaz
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `delhaz_socialmedia` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
-USE `delhaz_socialmedia` ;
+CREATE SCHEMA IF NOT EXISTS `delhaz` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `delhaz` ;
 
 -- -----------------------------------------------------
--- Table `delhaz_socialmedia`.`usuarios`
+-- Table `delhaz`.`usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `delhaz_socialmedia`.`usuarios` (
+CREATE TABLE IF NOT EXISTS `delhaz`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(80) NOT NULL,
   `username` VARCHAR(15) NOT NULL,
@@ -26,9 +26,9 @@ CREATE TABLE IF NOT EXISTS `delhaz_socialmedia`.`usuarios` (
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 -- -----------------------------------------------------
--- Table `delhaz_socialmedia`.`perfiles`
+-- Table `delhaz`.`perfiles`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `delhaz_socialmedia`.`perfiles` (
+CREATE TABLE IF NOT EXISTS `delhaz`.`perfiles` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `usuario_id` INT NOT NULL,
   `biografia` TEXT NULL DEFAULT NULL,
@@ -36,15 +36,15 @@ CREATE TABLE IF NOT EXISTS `delhaz_socialmedia`.`perfiles` (
   UNIQUE INDEX `usuario_id` (`usuario_id` ASC) VISIBLE,
   CONSTRAINT `perfiles_ibfk_1`
     FOREIGN KEY (`usuario_id`)
-    REFERENCES `delhaz_socialmedia`.`usuarios` (`id`)
+    REFERENCES `delhaz`.`usuarios` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 -- -----------------------------------------------------
--- Table `delhaz_socialmedia`.`publicaciones`
+-- Table `delhaz`.`publicaciones`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `delhaz_socialmedia`.`publicaciones` (
+CREATE TABLE IF NOT EXISTS `delhaz`.`publicaciones` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `usuario_id` INT NOT NULL,
   `descripcion` TEXT NOT NULL,
@@ -54,15 +54,15 @@ CREATE TABLE IF NOT EXISTS `delhaz_socialmedia`.`publicaciones` (
   INDEX `usuario_id` (`usuario_id` ASC) VISIBLE,
   CONSTRAINT `publicaciones_ibfk_1`
     FOREIGN KEY (`usuario_id`)
-    REFERENCES `delhaz_socialmedia`.`usuarios` (`id`)
+    REFERENCES `delhaz`.`usuarios` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 -- -----------------------------------------------------
--- Table `delhaz_socialmedia`.`tipos_reacciones`
+-- Table `delhaz`.`tipos_reacciones`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `delhaz_socialmedia`.`tipos_reacciones` (
+CREATE TABLE IF NOT EXISTS `delhaz`.`tipos_reacciones` (
   `id` TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(50) NOT NULL,
   `icono` VARCHAR(255) NULL,
@@ -70,9 +70,9 @@ CREATE TABLE IF NOT EXISTS `delhaz_socialmedia`.`tipos_reacciones` (
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
 
 -- -----------------------------------------------------
--- Table `delhaz_socialmedia`.`reacciones`
+-- Table `delhaz`.`reacciones`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `delhaz_socialmedia`.`reacciones` (
+CREATE TABLE IF NOT EXISTS `delhaz`.`reacciones` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `usuario_id` INT NOT NULL,
   `publicacion_id` INT NOT NULL,
@@ -84,17 +84,17 @@ CREATE TABLE IF NOT EXISTS `delhaz_socialmedia`.`reacciones` (
   INDEX `tipo_reaccion_id` (`tipo_reaccion_id` ASC) VISIBLE,
   CONSTRAINT `reacciones_ibfk_1`
     FOREIGN KEY (`usuario_id`)
-    REFERENCES `delhaz_socialmedia`.`usuarios` (`id`)
+    REFERENCES `delhaz`.`usuarios` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `reacciones_ibfk_2`
     FOREIGN KEY (`publicacion_id`)
-    REFERENCES `delhaz_socialmedia`.`publicaciones` (`id`)
+    REFERENCES `delhaz`.`publicaciones` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `reacciones_ibfk_3`
     FOREIGN KEY (`tipo_reaccion_id`)
-    REFERENCES `delhaz_socialmedia`.`tipos_reacciones` (`id`)
+    REFERENCES `delhaz`.`tipos_reacciones` (`id`)
     ON DELETE RESTRICT
     ON UPDATE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
@@ -104,7 +104,7 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- Insertar tipos de reacciones
-INSERT INTO `delhaz_socialmedia`.`tipos_reacciones` (nombre, icono) VALUES
+INSERT INTO `delhaz`.`tipos_reacciones` (nombre, icono) VALUES
 ('Me encanta', '/path/to/love_icon.svg'),
 ('Me inspira', '/path/to/inspire_icon.svg'),
 ('Me divierte', '/path/to/laugh_icon.svg'),
