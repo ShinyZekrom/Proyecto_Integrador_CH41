@@ -92,11 +92,11 @@ CREATE TABLE IF NOT EXISTS `delhaz`.`reacciones` (
   `fecha_reaccion` DATETIME(6) NOT NULL,
   `usuarios_id` BIGINT NOT NULL,
   `publicacion_id` BIGINT NOT NULL,
-  `tipos_reacciones_id` BIGINT NOT NULL,
+  `tipos_reaccion_id` BIGINT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_reacciones_usuarios_idx` (`usuarios_id` ASC) VISIBLE,
   INDEX `fk_reacciones_publicacion1_idx` (`publicacion_id` ASC) VISIBLE,
-  INDEX `fk_reacciones_tipos_reacciones1_idx` (`tipos_reacciones_id` ASC) VISIBLE,
+  INDEX `fk_reacciones_tipos_reacciones1_idx` (`tipos_reaccion_id` ASC) VISIBLE,
   CONSTRAINT `fk_reacciones_usuarios`
     FOREIGN KEY (`usuarios_id`)
     REFERENCES `delhaz`.`usuarios` (`id`)
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `delhaz`.`reacciones` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_reacciones_tipos_reacciones1`
-    FOREIGN KEY (`tipos_reacciones_id`)
+    FOREIGN KEY (`tipos_reaccion_id`)
     REFERENCES `delhaz`.`tipos_reacciones` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
