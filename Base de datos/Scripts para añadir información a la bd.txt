@@ -1,7 +1,7 @@
 Scripts para añadir información a la tabla
 -- insert usuario
 
-INSERT INTO `delhaz`.`usuarios` (`nombre`, `username`, `email`, `contraseña`, `fecha_registro`, `foto_perfil`) VALUES 
+INSERT INTO `delhaz`.`usuarios` (`nombre`, `username`, `email`, `password`, `fecha_registro`, `foto_perfil`) VALUES 
 ('Karen Garcia', 'karen_garcia', 'karen123@hotmail.com', 'Dk_170195', '2023-06-20 17:00:30', 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719518028/WhatsApp_Image_2024-06-20_at_11.30.09_tl2flj.jpg'),
 ('Luis Maldonado', 'luis_mald', 'luis456@hotmail.com', 'Luis0123#', '2024-06-27 15:30:45', 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719518755/98_t149wy.jpg'),
 ('Carol Hernandez', 'carol_hrdz','carol789@hotmail.com', 'Hrdz?4567',  '2024-06-20 12:30:40' , 'https://res.cloudinary.com/dtlbnmahy/image/upload/v1719523146/conoce-5-lenguajes-de-programacion-basicos_s4lbwy.jpg'),
