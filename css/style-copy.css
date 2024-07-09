@@ -117,13 +117,14 @@ body, html {
 }
 
 .inicio-sesion {
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   font-family: "Patrick Hand", cursive;
 }
 #btn-inicio-sesion{
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   font-family: "Patrick Hand", cursive;
+  font-weight: bold;
 }
 
 
@@ -140,8 +141,12 @@ body, html {
 
 @media (max-width: 576px) {
   .bienvenida h1 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
   }
+  .inicio-sesion {
+    font-size: 1.2rem;
+    
+}
 }
 
 /*Footer*/
