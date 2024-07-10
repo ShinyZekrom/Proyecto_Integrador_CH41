@@ -38,22 +38,7 @@ a.nav-link {
     border: none;
 }
 
-.btn-buscar {
-    background-color: #ffffff;
-    color: #046CB8;
-    border: none;
-    height: 38px;
-    border-radius: 5px;
-    padding: 5px 5px;
-    font-size: 16px;
-    font-family: "Comic Neue", cursive;
-    cursor: pointer;
-    margin-right: 10px;
-}
-.btn-buscar:hover {
-    background-color: #04b822;
-    color: #ffffff;
-}
+
 
 .logoOficial {
     max-height: 38px;
@@ -130,35 +115,43 @@ a.nav-link {
 .publicaciones {
     .post .card {
         margin: auto;
-        border-radius: 50px;
+        border-radius: 20px; /*CAMBIE AQUI*/
         /* Esquinas redondeadas */
-        border: 5px solid #046CB8;
-        /* Borde grueso de color rosa */
-        background-color: #ffffff;
+        /*border: 2px solid #046CB8;
+        /* Borde grueso de color azul */
+        background-color:  rgb(170, 201, 229, 0.3);
         /* Fondo blanco */
-        padding: 50px;
+        backdrop-filter: blur(1px);
+        padding: 10px; /*CAMBIE AQUI*/
         /* Espacio interno */
         top: 20px;
+        max-width: 850px; /*CAMBIE AQUI*/
+        /*background-color: #f3f4f5;*/
     }
 }
 
 .crear-post {
     border-radius: 20px;
-    border: 5px solid #AAC9E5;
+    border: 5px solid rgb(170, 201, 229);
     background-color: #ffffff;
     margin: 20px auto;
     padding: 10px;
     font-family: "Comic Neue", cursive;
     max-width: 600px;
+    font-size: 1.4rem;
 }
-.card-title {
+.crear-post .card-title {
     font-family: "Patrick Hand", cursive;
+    font-size: 1.4rem;
 }
-
+.card-text {
+    font-size: 1.2rem;
+}
 .detalle-usuario {
     display: flex;
     align-items: center;
     font-family: "Patrick Hand", cursive;
+    font-size: 1.4rem; /*CAMBIE AQUI*/
 }
 
 .perfil-imagen img {
@@ -166,16 +159,18 @@ a.nav-link {
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
+    object-fit: cover;
 }
 
 .name-usuario {
     margin: 0;
     font-family: "Patrick Hand", cursive;
+    font-size: 1.4rem; /*CAMBIE AQUI*/
 }
 
 .card-body-public {
     max-width: 100%;
-    background: #ffffff;
+    background: #86bcd6;
     border-radius: 10px;
     margin: 20px auto;
     padding: 20px;
@@ -185,26 +180,40 @@ a.nav-link {
 .img-poster {
     width: 100%;
     height: auto;
-    margin: 20px auto;
+    margin: 0px auto;
     border-radius: 20px;
 }
 
 .post-text {
     text-align: justify;
     font-family: "Comic Neue", cursive;
-    margin: 10px 0;
+    margin: 15px 0 0px;  /*CAMBIE AQUI*/
     padding-bottom: 10px; /* Espacio antes de la línea */
+    font-size: 1.4 rem; /*CAMBIE AQUI*/
 
 }
 
 .date-act {
-    text-align: right;
-    padding-bottom: 10px; /* Espacio antes de la línea */
+    
+   /* text-align: left;
+   /* padding-bottom: 10px; /* Espacio antes de la línea */
+   /* font-size: 1.4 rem; /*CAMBIE AQUI*/
+   /* margin-bottom: 10px;*/
 
+    margin: 0;
+    margin-left: 430px;
+    font-family: "Patrick Hand", cursive;
+    font-size: 1.4rem; /*CAMBIE AQUI*/
+    text-align: right;
+
+}
+.name-usuario, .post-text, .date-act {
+    font-size: 1.4rem; /*CAMBIE AQUI*/
 }
 
 .interacciones {
     text-align: center;
+    margin-top: 2px;
 }
 
 .btn {
@@ -213,6 +222,10 @@ a.nav-link {
 }
 
 /* Publicidad */
+.publicidad{
+    margin-top: 20px;
+
+}
 .containers {
     display: grid;
     gap: 20px;
@@ -265,4 +278,21 @@ footer {
     .navbar-brand {
         font-size: 1.2rem;
     }
+}
+
+/*Comentarios*/
+
+.comments-section {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+.comments-list {
+    margin-top: 10px;
+}
+.comments-list p {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
 }
