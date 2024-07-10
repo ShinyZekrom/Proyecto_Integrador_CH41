@@ -161,11 +161,13 @@ h5 {
 
 footer {
   text-align: center;
-  background-color: #046CB8;
+  padding: 8px;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  color: white;
   width: 100%;
-  margin: 0;
+  bottom: 0;
+  background-color: #046CB8;
+  color: #FFFFFF;
+
 }
 
 .bg-primary {
