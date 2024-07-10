@@ -53,19 +53,54 @@ document.addEventListener("DOMContentLoaded", function() {
         img: img
     };
       
-      // Recuperar publicaciones existentes o inicializar un array vacío
-      let publicaciones = JSON.parse(localStorage.getItem('publicaciones')) || [];
+      /*// Recuperar publicaciones existentes o inicializar un array vacío
+      let publicaciones = JSON.parse(publicaciones.get('publicaciones')) || [];
       
       // Añadir la nueva publicación
-      publicaciones.push(nuevaPublicacion);
-      
-      // Guardar el array actualizado en localStorage
-      localStorage.setItem('publicaciones', JSON.stringify(publicaciones));
-      
-      console.log("Nueva publicación añadida:", nuevaPublicacion);
-      console.log("Total de publicaciones:", publicaciones.length);
+      publicaciones.push(nuevaPublicacion);*/
 
-      // Mostrar mensaje de éxito
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: nuevaPublicacion,
+      redirect: "follow"
+    };
+      
+      // Configurar la solicitud fetch para enviar la nueva publicación al servidor
+      fetch('http://localhost:8080/api/publicaciones/', requestOptions)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error al enviar la publicación: ${response.status}`);
+        }
+        return response.json(); // Convertir la respuesta a JSON
+      })
+      .then(data => {
+        console.log('Respuesta del servidor:', data);
+        // Mostrar mensaje de éxito
+        alertSuccess.style.display = 'block';
+        alertValidaciones.style.display = 'none';
+
+        // Redirigir a la página de publicaciones
+        setTimeout(() => {
+          window.location.href = 'paginaPrincipal.html';
+        }, 2000); // Espera 2 segundos antes de redirigir
+      })
+      .catch(error => {
+        console.error('Error al enviar la publicación:', error);
+        // Mostrar mensaje de error al usuario si la publicación no se pudo enviar
+        alertValidaciones.style.display = 'block';
+        alertValidacionesTexto.innerHTML = 'Error al enviar la publicación. Por favor, intenta de nuevo más tarde.';
+        alertSuccess.style.display = 'none';
+      });
+    }
+  });
+});
+      
+
+ /*     // Mostrar mensaje de éxito
       alertSuccess.style.display = 'block';
       alertValidaciones.style.display = 'none';
 
@@ -75,4 +110,4 @@ document.addEventListener("DOMContentLoaded", function() {
       }, 2000); // Espera 2 segundos antes de redirigir
     }
   });
-});
+});*/
