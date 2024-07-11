@@ -34,18 +34,38 @@ function getPublicaciones() {
   
   // Función modificada para agregar una publicación
   function addPost(post) {
-      let date = new Date(post.fechaPublicacion);
-      
-   // Formatear la fecha para mostrarla
-   const formattedDate = date.toLocaleString('es-MX', { 
-    year: 'numeric', 
-    month: '2-digit', 
-    day: '2-digit', 
-    hour: '2-digit', 
-    minute: '2-digit', 
-    hour12: true,
-    timeZone: 'America/Mexico_City'
-});
+    console.log('Fecha recibida:', post.fechaPublicacion);
+    
+    let date;
+    if (post.fechaPublicacion && Array.isArray(post.fechaPublicacion)) {
+        // Extraer los componentes de la fecha del array
+        const [year, month, day, hour, minute, second, millisecond] = post.fechaPublicacion;
+        
+        // Crear un objeto Date
+        // Nota: los meses en JavaScript son 0-indexados, por lo que restamos 1 del mes
+        date = new Date(year, month - 1, day, hour, minute, second, millisecond / 1000000);
+    } else {
+        console.error('Formato de fecha inesperado:', post.fechaPublicacion);
+        date = new Date();
+    }
+    
+    // Verificar si la fecha es válida
+    if (isNaN(date.getTime())) {
+        console.error('Fecha inválida:', post.fechaPublicacion);
+        // Usar la fecha actual si la fecha proporcionada no es válida
+        date = new Date();
+    }
+    
+    // Formatear la fecha para mostrarla
+    const formattedDate = date.toLocaleString('es-MX', { 
+        year: 'numeric', 
+        month: '2-digit', 
+        day: '2-digit', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        hour12: true,
+        timeZone: 'America/Mexico_City'
+    });
       
      // Usar los campos directamente del objeto post
     const username = post.username || 'Usuario desconocido';
@@ -53,20 +73,23 @@ function getPublicaciones() {
     const descripcion = post.descripcion || 'Sin descripción';
     const contenido = post.contenido || '';
 
-    const postHTML = `
-    <div class="post">
-        <div class="card">
-            <div class="card-body">
-                <div class="detalle-usuario">
-                    <div class="perfil-imagen">
-                        <img src="${fotoPerfil}" alt="Imagen de perfil">
-                    </div>
-                    <h5 class="name-usuario">${username}</h5>
-                    <p class="date-act"><small class="text-body-secondary">&bull;${formattedDate}</small></p>
-                    </div>
-                <p class="post-text">${descripcion}</p>   
-            </div>
-            ${contenido ? `<img src="${contenido}" class="img-poster" alt="postimg">` : ''}
+       // Asegurarse de que formattedDate tenga un valor
+       const dateDisplay = formattedDate || 'Fecha no disponible';
+
+       const postHTML = `
+       <div class="post">
+           <div class="card">
+               <div class="card-body">
+                   <div class="detalle-usuario">
+                       <div class="perfil-imagen">
+                           <img src="${fotoPerfil}" alt="Imagen de perfil">
+                       </div>
+                       <h5 class="name-usuario">${username}</h5>
+                       <p class="date-act"><small class="text-body-secondary">${dateDisplay}</small></p>
+                   </div>
+                   <p class="post-text">${descripcion}</p>   
+               </div>
+               ${contenido ? `<img src="${contenido}" class="img-poster" alt="postimg">` : ''}
             <div class="interacciones">
                 <button type="button" class="btn reaction" onclick="toggleReaction(this, 'like')" title="Me gusta">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#5f6368">
@@ -118,7 +141,11 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(posts => {
             if (posts.length > 0) {
                 // Ordenar las publicaciones por fecha, las más recientes primero
-                posts.sort((a, b) => new Date(b.fechaPublicacion) - new Date(a.fechaPublicacion));
+                posts.sort((a, b) => {
+                    const dateA = Array.isArray(a.fechaPublicacion) ? new Date(...a.fechaPublicacion) : new Date(a.fechaPublicacion);
+                    const dateB = Array.isArray(b.fechaPublicacion) ? new Date(...b.fechaPublicacion) : new Date(b.fechaPublicacion);
+                    return dateB - dateA;
+                });
                 
                 // Crear el contenido HTML para mostrar todas las publicaciones
                 const publicationsHTML = posts.map(post => addPost(post)).join('');
