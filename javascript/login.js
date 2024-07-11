@@ -19,20 +19,45 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Obtener usuarios del localStorage
-        const users = JSON.parse(localStorage.getItem('users')) || [];
+    
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
-        // Buscar usuario que coincida con el email y password
-        const user = users.find(u => u.email === email && u.password === password);
-
-        if (user) {
-            // Guardar información del usuario que ha iniciado sesión
-            localStorage.setItem('loggedInUser', JSON.stringify(user));
-            loginExitoso();
-        } else {
-            showAlert('Correo electrónico y/o contraseña incorrectos.', 'danger');
-        }
+    const raw = JSON.stringify({
+        "email": email,
+        "password": password
     });
+
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+
+    fetch("http://localhost:8080/api/login/", requestOptions)
+    .then((response) => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Correo electrónico y/o contraseña incorrectos.');
+        }
+    })
+
+    .then((result) => {
+        console.log('Access Token:', result);
+        // Guardar información del usuario que ha iniciado sesión
+        localStorage.setItem('loggedInUser', JSON.stringify(result));
+        loginExitoso();
+    })
+    .catch((error) => {
+        console.error('Problema en la llamada a fetch:', error);
+        showAlert(error.message, 'danger');
+    });
+});
+
+
 
     // Función para redirigir a la página de inicio 
     function loginExitoso() {

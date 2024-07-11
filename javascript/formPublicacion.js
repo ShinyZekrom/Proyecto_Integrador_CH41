@@ -6,31 +6,29 @@ document.addEventListener("DOMContentLoaded", function() {
   const alertSuccess = document.getElementById('alertSuccess');
 
   // Recuperar información del usuario que ha iniciado sesión
-  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')); //getUsuarios
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
-  // Mostrar el nombre de usuario
-  if (loggedInUser && loggedInUser.username) {
+  // Verificar si el usuario ha iniciado sesión
+  if (!loggedInUser || !loggedInUser.id) {
+    // Redirigir al login si no hay usuario logueado o falta el ID
+    window.location.href = 'login.html';
+    return;
+  }
+
+  // Mostrar el email del usuario si está disponible
+  if (loggedInUser.email) {
     document.getElementById('username').textContent = loggedInUser.username;
   }
 
-  // Pre-llenar campos si existe información del usuario
-  if (loggedInUser) {
-    document.getElementById('username').value = loggedInUser.username;
-    document.getElementById('username').readOnly = true;
-  }
-
-  //Regex para url de imagen
-  const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
-
   submitBtn.addEventListener('click', function(e) {
-    e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+    e.preventDefault();
     
     let errors = [];
     
     const description = document.getElementById('description').value;
-    const img = document.getElementById('img').value;
+    const contenido = document.getElementById('img').value;
 
-    // Validaciones de la descripción
+    // Validaciones
     if (!description) {
       errors.push('* La descripción es obligatoria');
       document.getElementById('description').classList.add('is-invalid');
@@ -45,35 +43,49 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       // Crear objeto con la información de la publicación
       const nuevaPublicacion = {
-        id: Date.now(),
-        username: loggedInUser.username,
-        profileImg: loggedInUser.profileImg,
-        timestamp: new Date().toUTCString(), // Guarda la fecha en formato UTC
-        description: description,
-        img: img
-    };
+        usuarioId: loggedInUser.id,
+        descripcion: description,
+        contenido: contenido
+      };
       
-    //postPubliciones
-      // Recuperar publicaciones existentes o inicializar un array vacío
-      let publicaciones = JSON.parse(localStorage.getItem('publicaciones')) || [];
-      
-      // Añadir la nueva publicación
-      publicaciones.push(nuevaPublicacion);
-      
-      // Guardar el array actualizado en localStorage
-      localStorage.setItem('publicaciones', JSON.stringify(publicaciones));
-      
-      console.log("Nueva publicación añadida:", nuevaPublicacion);
-      console.log("Total de publicaciones:", publicaciones.length);
+      // Enviar la publicación al backend
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      // Añadir el token de acceso al header
+      myHeaders.append("Authorization", "Bearer " + loggedInUser.accessToken);
 
-      // Mostrar mensaje de éxito
-      alertSuccess.style.display = 'block';
-      alertValidaciones.style.display = 'none';
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: JSON.stringify(nuevaPublicacion),
+        redirect: "follow"
+      };
 
-      // Redirigir a la página de publicaciones después de un breve delay
-      setTimeout(() => {
-        window.location.href = 'paginaPrincipal.html';
-      }, 2000); // Espera 2 segundos antes de redirigir
+      fetch("http://localhost:8080/api/publicaciones/", requestOptions)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(result => {
+          console.log("Publicación creada:", result);
+          
+          // Mostrar mensaje de éxito
+          alertSuccess.style.display = 'block';
+          alertValidaciones.style.display = 'none';
+
+          // Redirigir a la página de publicaciones después de un breve delay
+          setTimeout(() => {
+            window.location.href = 'paginaPrincipal.html';
+          }, 2000);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alertValidaciones.style.display = 'block';
+          alertValidacionesTexto.innerHTML = 'Error al crear la publicación. Por favor, intenta de nuevo.';
+          alertSuccess.style.display = 'none';
+        });
     }
   });
 });
