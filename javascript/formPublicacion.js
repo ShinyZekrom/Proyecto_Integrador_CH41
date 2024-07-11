@@ -87,9 +87,8 @@ document.addEventListener("DOMContentLoaded", function() {
         body: raw,
         redirect: "follow"
     };
-
    
-    fetch("http://localhost:8080/api/login/", requestOptions)
+  fetch("http://localhost:8080/api/login/", requestOptions)
   .then((response) => {
     if (!response.ok) {
       throw new Error('Error al enviar la publicación');
@@ -110,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   });
 
-  
+
   ///////////////////Fin Fetch 
 
       // Mostrar mensaje de éxito
