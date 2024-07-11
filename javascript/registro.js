@@ -13,17 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const correoRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/; // expresión ihateregex que indica los posibles patrones de correo.
   const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/; //regex que indica la extensión de contraseña de 8 a 15 caracteres que debe incluir una minuscula, una mayuscula, un número y un caracter especial.
 
-  function isEmailRegistered(email) {
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    return users.some(user => user.email === email);
-  }
-
-  function isUsernameRegistered(username) {
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    return users.some(user => user.username === username);
-  }
-
-  submitBtn.addEventListener('click', function() {
+  submitBtn.addEventListener('click', function(e) {
+    e.preventDefault();
     let errors = [];
     
     const name = document.getElementById('name').value;
@@ -34,136 +25,134 @@ document.addEventListener("DOMContentLoaded", function() {
     const password = document.getElementById('inputPassword1').value;
     const confirmPassword = document.getElementById('inputPassword2').value;
 
+    // Función para manejar errores de campo
+    function setFieldError(fieldId, errorMessage) {
+      const field = document.getElementById(fieldId);
+      field.classList.add('is-invalid');
+      const errorDiv = document.getElementById(fieldId + 'Error');
+      if (errorDiv) {
+        errorDiv.textContent = errorMessage;
+      }
+      errors.push(errorMessage);
+    }
+
     // Validación nombre
-    if (!name) {
-      errors.push('* Coloca tu nombre correctamente');
-      document.getElementById('name').classList.add('is-invalid');
-    } else if (!nameRegex.test(name)) {
-      errors.push('* Nombre inválido');
-      document.getElementById('name').classList.add('is-invalid');
+    if (!name || !nameRegex.test(name)) {
+      setFieldError('name', 'Nombre inválido');
     } else {
       document.getElementById('name').classList.remove('is-invalid');
+      document.getElementById('nameError').textContent = '';
     }
 
     // Validación usuario
-    if (!username) {
-      errors.push('* El nombre de usuario es obligatorio');
-      document.getElementById('username').classList.add('is-invalid');
-    } else if (!usernameRegex.test(username)) {
-      errors.push('* El nombre de usuario debe contener entre 5 y 15 caracteres solo se permiten guiones y guiones bajos. Ej: Delhaz_1, Delhaz-1');
-      document.getElementById('username').classList.add('is-invalid');
-    } else if (isUsernameRegistered(username)) {
-      errors.push('* Este nombre de usuario ya está registrado');
-      document.getElementById('username').classList.add('is-invalid');
+    if (!username || !usernameRegex.test(username)) {
+      setFieldError('username', 'El nombre de usuario debe contener entre 5 y 15 caracteres, solo se permiten guiones y guiones bajos.');
     } else {
       document.getElementById('username').classList.remove('is-invalid');
+      document.getElementById('username-error').textContent = '';
     }
 
     // Validación imagen de perfil
-    if (!profileImg) {
-      errors.push('* La imagen de perfil es obligatoria');
-      document.getElementById('profileImg').classList.add('is-invalid');
-    } else if (!urlRegex.test(profileImg)) {
-      errors.push('* La URL de la imagen de perfil no es válida');
-      document.getElementById('profileImg').classList.add('is-invalid');
+    if (!profileImg || !urlRegex.test(profileImg)) {
+      setFieldError('profileImg', 'La URL de la imagen de perfil no es válida');
     } else {
       document.getElementById('profileImg').classList.remove('is-invalid');
     }
 
     // Validación teléfono
-    if (!phone) {
-      errors.push('* Número de celular obligatorio');
-      document.getElementById('phone').classList.add('is-invalid');
-    } else if (!numCelRegex.test(phone)) {
-      errors.push('* Coloca un número válido');
-      document.getElementById('phone').classList.add('is-invalid');
+    if (!phone || !numCelRegex.test(phone)) {
+      setFieldError('phone', 'Número de teléfono inválido');
     } else {
       document.getElementById('phone').classList.remove('is-invalid');
+      document.getElementById('phoneError').textContent = '';
     }
     
     // Validación del correo
-    if (!email) {
-      errors.push('* Correo electrónico obligatorio');
-      document.getElementById('email').classList.add('is-invalid');
-    } else if (!correoRegex.test(email)) {
-      errors.push('* Correo inválido');
-      document.getElementById('email').classList.add('is-invalid');
-    } else if (isEmailRegistered(email)) {
-      errors.push('* Este correo electrónico ya está registrado');
-      document.getElementById('email').classList.add('is-invalid');
+    if (!email || !correoRegex.test(email)) {
+      setFieldError('email', 'Correo electrónico inválido');
     } else {
       document.getElementById('email').classList.remove('is-invalid');
+      document.getElementById('emailError').textContent = '';
     }
 
     // Validación contraseña
-    if (!password) {
-      errors.push('* Se requiere una contraseña');
-      document.getElementById('inputPassword1').classList.add('is-invalid');
-    } else if (!passwordRegex.test(password)) {
-      errors.push('* La contraseña debe contener mínimo 8 caracteres incluyendo una mayúscula, una minúscula, un número y un caracter especial.');
-      document.getElementById('inputPassword1').classList.add('is-invalid');
+    if (!password || !passwordRegex.test(password)) {
+      setFieldError('inputPassword1', 'La contraseña debe contener mínimo 8 caracteres incluyendo una mayúscula, una minúscula, un número y un caracter especial.');
     } else {
       document.getElementById('inputPassword1').classList.remove('is-invalid');
     }
 
     // Validación confirmar contraseña
-    if (!confirmPassword) {
-      errors.push('* Se requiere confirmar la contraseña');
-      document.getElementById('inputPassword2').classList.add('is-invalid');
-    } else if (confirmPassword !== password) {
-      errors.push('* Las contraseñas no coinciden');
-      document.getElementById('inputPassword2').classList.add('is-invalid');
+    if (!confirmPassword || confirmPassword !== password) {
+      setFieldError('inputPassword2', 'Las contraseñas no coinciden');
     } else {
       document.getElementById('inputPassword2').classList.remove('is-invalid');
     }
 
-    // Mostrar los errores
+    // Mostrar los errores o enviar el formulario
     if (errors.length > 0) {
       alertValidaciones.style.display = 'block';
       alertValidacionesTexto.innerHTML = errors.join('<br>');
       alertSuccess.style.display = 'none';
     } else {
-      if (isEmailRegistered(email) || isUsernameRegistered(username)) {
-        alertValidaciones.style.display = 'block';
-        let errorMessage = '';
-        if (isEmailRegistered(email)) {
-          errorMessage += '* Este correo electrónico ya está registrado<br>';
-        }
-        if (isUsernameRegistered(username)) {
-          errorMessage += '* Este nombre de usuario ya está registrado';
-        }
-        alertValidacionesTexto.innerHTML = errorMessage;
-        alertSuccess.style.display = 'none';
-      } else {
-        alertValidaciones.style.display = 'none';
-        
-        // Crear objeto con la información del formulario
-        const newUser = {
-          name: name,
-          username: username,
-          profileImg: profileImg,
-          phone: phone,
-          email: email,
-          password: password,
-        };
-        
-        // Obtener usuarios existentes o crear un nuevo array
-        let users = JSON.parse(localStorage.getItem('users')) || [];
-        
-        // Añadir el nuevo usuario
-        users.push(newUser);
-        
-        // Guardar el array actualizado en LocalStorage
-        localStorage.setItem('users', JSON.stringify(users));
-        
-        console.log("Usuarios registrados:", JSON.stringify(users));
-        
-        // Limpiar el formulario
-        form.reset();
+      alertValidaciones.style.display = 'none';
+      
+      const newUser = {
+        nombre: name,
+        username: username,
+        email: email,
+        password: password,
+        fechaRegistro: new Date().toISOString(),
+        fotoPerfil: profileImg,
+        telefono: phone
+      };
 
-        // Mostrar mensaje de éxito
-        alertSuccess.style.display = 'block';
-      }
+      const requestOptions = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newUser)
+      };
+
+      // Mostrar estado de cargando
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Registrando...';
+
+      //vinculación con BD
+      fetch("http://localhost:8080/api/usuarios/", requestOptions)
+        .then(response => {
+          if (!response.ok) {
+            return response.json().then(err => {
+              throw new Error(err.message || 'Error en la respuesta del servidor');
+            });
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Usuario registrado:', data);
+          form.reset();
+          alertSuccess.style.display = 'block';
+          alertSuccess.textContent = '¡Usuario registrado con éxito!';
+
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alertValidaciones.style.display = 'block';
+          
+          if (error.message.includes('email ya registrado')) {
+            setFieldError('email', 'Este correo electrónico ya está registrado.');
+          } else if (error.message.includes('nombre de usuario ya registrado')) {
+            setFieldError('username', 'Este nombre de usuario ya está registrado.');
+          } else {
+            alertValidacionesTexto.innerHTML = `Error al registrar el usuario: ${error.message}`;
+          }
+        })
+        .finally(() => {
+          // Restaurar el botón
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Regístrate';
+        });
     }
   });
 });
