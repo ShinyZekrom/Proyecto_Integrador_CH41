@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const alertSuccess = document.getElementById('alertSuccess');
 
   // Recuperar información del usuario que ha iniciado sesión
-  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')); //getUsuarios
 
   // Mostrar el nombre de usuario
   if (loggedInUser && loggedInUser.username) {
@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         img: img
     };
       
+    //postPubliciones
       // Recuperar publicaciones existentes o inicializar un array vacío
       let publicaciones = JSON.parse(localStorage.getItem('publicaciones')) || [];
       
