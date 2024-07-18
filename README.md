@@ -14,8 +14,6 @@ responsable y sostenible en todo el mundo.
 
 
 Equipo: Java Dynamite
-* Eslava Alarcón Gabriel
 * García Lara Karen Aidee
 * Hernandez Cuatecontzi Carol Heli
 * Maldonado Cabrera Luis Alberto
-* Trejo García Alan Alfredo
